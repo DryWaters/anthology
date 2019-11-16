@@ -8,8 +8,9 @@ import classes from "./Header.module.scss";
 const Header = props => (
   <div className={classes.Header}>
     <div className={classes.Logo}>
-      <Logo />
+      <Logo color="white" />
     </div>
+    <div className={classes.logoText}>NTHOLOGY</div>
     <Button>Add</Button>
   </div>
 );

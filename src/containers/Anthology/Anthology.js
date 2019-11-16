@@ -12,7 +12,7 @@ class Anthology extends Component {
   state = {
     books: [],
     selectedBook: null,
-    showSummary: true
+    showSummary: false
   };
 
   componentDidMount() {

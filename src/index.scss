@@ -4,12 +4,12 @@
 * {
   margin: 0;
   padding: 0;
-}
-
-*,
-*:before,
-*:after {
   box-sizing: inherit;
+
+  &:before,
+  &:after {
+    box-sizing: inherit;
+  }
 }
 
 html {
