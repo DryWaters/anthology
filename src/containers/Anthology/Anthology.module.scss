@@ -1,10 +1,16 @@
 @import "../../variables.scss";
 
 .Anthology {
-  padding-top: 20rem;
+  padding-top: 10rem;
   background-color: $color-light-brown;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+@media (min-width: 500px) {
+  .Anthology {
+    padding-top: 20rem;
+  }
 }

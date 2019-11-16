@@ -1,2 +1,24 @@
+@import "../../../variables.scss";
 .BookButton {
+  max-width: 5rem;
+  background-color: transparent;
+  border: 1px solid #000;
+  cursor: pointer;
+  outline: none;
+}
+
+.delete {
+  background-color: $color-danger;
+}
+
+.loan {
+  background-color: $color-warning;
+}
+
+.return {
+  background-color: $color-warning;
+}
+
+.image {
+  width: 80%;
 }
