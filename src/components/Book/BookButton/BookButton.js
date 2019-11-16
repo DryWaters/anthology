@@ -6,11 +6,10 @@ import returnImg from "../../../assets/images/return-book.png";
 import classes from "./BookButton.module.scss";
 
 const BookButton = props => {
-  console.log(typeof props.btnType);
-  const altText = "";
-  // props.btnType.charAt(0).toUppercase() + props.btnType.slice(1) + " Book";
-  let imageSrc = null;
+  const altText =
+    props.btnType.charAt(0).toUpperCase() + props.btnType.slice(1) + " Book";
 
+  let imageSrc = null;
   switch (props.btnType) {
     case "delete":
       imageSrc = deleteImg;
@@ -22,6 +21,7 @@ const BookButton = props => {
       imageSrc = returnImg;
       break;
     default:
+      imageSrc = deleteImg;
       break;
   }
   return (
