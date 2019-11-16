@@ -4,8 +4,13 @@
 }
 
 .image {
+  position: relative;
   max-width: 100%;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5);
+}
+
+.return {
+  filter: grayscale(100%) brightness(40%);
 }
 
 .title {

@@ -5,13 +5,14 @@ import BookButton from "./BookButton/BookButton";
 import classes from "./Book.module.scss";
 
 const Book = props => {
-  const loaned = props.loaned ? "loan" : "return";
+  const status = props.loaned ? "loan" : "return";
+
   return (
     <div>
       <div className={classes.Book}>
         <BookButton clicked={props.deleteBook} btnType={"delete"} />
         <img
-          className={classes.image}
+          className={[classes.image, classes[status]].join(" ")}
           src={props.image}
           onClick={props.clickBook}
           alt={props.title}
@@ -20,7 +21,7 @@ const Book = props => {
             err.target.src = "./images/book-image-error.png";
           }}
         />
-        <BookButton clicked={props.toggleLoan} btnType={loaned} />
+        <BookButton clicked={props.toggleLoan} btnType={status} />
       </div>
       <div className={classes.title}>{props.title}</div>
     </div>
