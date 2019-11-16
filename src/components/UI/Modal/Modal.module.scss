@@ -4,21 +4,22 @@
   position: fixed;
   z-index: 500;
   background-color: $color-light;
-  width: 50rem;
+  min-width: 30rem;
+  width: 50%;
   border: 1px solid $color-primary;
   box-shadow: 1px 1px 1px $color-dark;
   padding: 1.6rem;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
   transition: all 0.3s ease-out;
 }
 
 .show {
+  transform: translate(-50%, -50%);
   opacity: 1;
 }
 
 .hide {
-  transform: translateY(-100vh);
+  transform: translate(-50vh, -50vh);
   opacity: 0;
 }

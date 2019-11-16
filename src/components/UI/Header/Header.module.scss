@@ -1,7 +1,7 @@
 @import "../../../variables.scss";
 
 .Header {
-  height: 6rem;
+  height: 8rem;
   width: 100%;
   position: fixed;
   top: 0;
@@ -13,6 +13,7 @@
   padding: 0 2rem;
   box-sizing: border-box;
   z-index: 90;
+  color: $text-color-light;
 }
 
 .Logo {

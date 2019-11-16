@@ -6,6 +6,8 @@ import Header from "../../components/UI/Header/Header";
 import Modal from "../../components/UI/Modal/Modal";
 import Spinner from "../../components/UI/Spinner/Spinner";
 
+import classes from "./Anthology.module.scss";
+
 class Anthology extends Component {
   state = {
     books: [],
@@ -20,16 +22,13 @@ class Anthology extends Component {
       .catch(err => console.log(err));
   }
 
-  render() {
-    let showSummary = null;
-    if (this.state.showSummary) {
-      showSummary = (
-        <Modal show={this.state.showSummary}>
-          <BookSummary />
-        </Modal>
-      );
-    }
+  handleCloseSummary = () => {
+    this.setState({
+      showSummary: false
+    });
+  };
 
+  render() {
     let books = <Spinner />;
     if (this.state.books) {
       books = this.state.books.map(book => (
@@ -43,9 +42,14 @@ class Anthology extends Component {
     }
 
     return (
-      <div>
+      <div className={classes.Anthology}>
         <Header />
-        {showSummary}
+        <Modal
+          show={this.state.showSummary}
+          modalClose={this.handleCloseSummary}
+        >
+          <BookSummary />
+        </Modal>
         {books}
       </div>
     );
