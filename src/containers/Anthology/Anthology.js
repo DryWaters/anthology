@@ -48,7 +48,7 @@ class Anthology extends Component {
 
   render() {
     let books = <Spinner />;
-    if (this.state.books) {
+    if (this.state.books.length > 0) {
       books = this.state.books.map(book => (
         <Book
           key={book.id}
