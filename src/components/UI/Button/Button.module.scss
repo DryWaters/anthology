@@ -1,0 +1,53 @@
+@import "../../../variables.scss";
+
+.Button {
+  background-color: transparent;
+  border: 5px solid #efeacc;
+  border-radius: 1.5rem;
+  color: #efeacc;
+  cursor: pointer;
+  font: inherit;
+  font-weight: bold;
+  letter-spacing: 1rem;
+  margin: 1rem;
+  outline: none;
+  padding: 1rem 4rem;
+  text-transform: uppercase;
+
+  &:disabled {
+    color: $color-dark;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  &:active {
+    box-shadow: inset 5px 5px 30px rgba(0, 0, 0, 0.7);
+  }
+}
+
+.primary {
+  background-color: transparent;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.danger {
+  background-color: $color-danger;
+
+  &:hover {
+    background-color: rgba($color-danger, 0.3);
+  }
+}
+
+.success {
+  background-color: $color-success;
+
+  &:hover {
+    background-color: rgba($color-success, 0.3);
+  }
+}

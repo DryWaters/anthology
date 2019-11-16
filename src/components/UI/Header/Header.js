@@ -11,7 +11,9 @@ const Header = props => (
       <Logo color="white" />
     </div>
     <div className={classes.logoText}>NTHOLOGY</div>
-    <Button>Add</Button>
+    <Button clicked={props.clicked} btnType="primary">
+      Add Book
+    </Button>
   </div>
 );
 
