@@ -28,13 +28,24 @@ class Anthology extends Component {
     });
   };
 
+  handleDeleteBook = id => {};
+
+  handleToggleLoan = id => {};
+
+  handleSelectBook = id => {
+    console.log("Clicked book");
+  };
+
   render() {
     let books = <Spinner />;
     if (this.state.books) {
       books = this.state.books.map(book => (
         <Book
           key={book.id}
-          onClick={() => this.selectBookHandler(book.id)}
+          clickBook={() => this.handleSelectBook(book.id)}
+          deleteBook={() => this.handleDeleteBook(book.id)}
+          toggleLoan={() => this.handleToggleLoan(book.id)}
+          loaned={book.loaned}
           title={book.title}
           image={book.image}
         />
