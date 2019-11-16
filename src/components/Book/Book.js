@@ -9,10 +9,18 @@ const Book = props => (
     {console.log(props)}
     <div className={classes.Book}>
       <BookButton clicked={props.deleteBook}>Delete</BookButton>
-      <div onClick={props.clickBook}>Book</div>
+      <img
+        src={props.image}
+        onClick={props.clickBook}
+        alt={props.title}
+        onError={err => {
+          err.target.onerror = null;
+          err.target.src = "./images/book-image-error.png";
+        }}
+      />
       <BookButton clicked={props.toggleLoan}>Loan</BookButton>
     </div>
-    <div className={classes.title}>Title</div>
+    <div className={classes.title}>{props.title}</div>
   </div>
 );
 
