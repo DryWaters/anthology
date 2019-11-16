@@ -28,9 +28,13 @@ class Anthology extends Component {
     });
   };
 
-  handleDeleteBook = id => {};
+  handleDeleteBook = id => {
+    console.log("Deleted book");
+  };
 
-  handleToggleLoan = id => {};
+  handleToggleLoan = id => {
+    console.log("Loaned book");
+  };
 
   handleSelectBook = id => {
     console.log("Clicked book");

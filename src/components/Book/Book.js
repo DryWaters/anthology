@@ -8,9 +8,9 @@ const Book = props => (
   <div>
     {console.log(props)}
     <div className={classes.Book}>
-      <BookButton>Delete</BookButton>
+      <BookButton clicked={props.deleteBook}>Delete</BookButton>
       <div onClick={props.clickBook}>Book</div>
-      <BookButton>Loan</BookButton>
+      <BookButton clicked={props.toggleLoan}>Loan</BookButton>
     </div>
     <div className={classes.title}>Title</div>
   </div>
