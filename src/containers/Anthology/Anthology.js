@@ -32,8 +32,14 @@ class Anthology extends Component {
     console.log("Deleted book");
   };
 
-  handleToggleLoan = id => {
-    console.log("Loaned book");
+  handleToggleLoan = selectedId => {
+    const newBooks = [...this.state.books];
+    const index = newBooks.findIndex(({ id }) => id === selectedId);
+    newBooks[index].loaned = !newBooks[index].loaned;
+
+    this.setState({
+      books: newBooks
+    });
   };
 
   handleSelectBook = id => {
