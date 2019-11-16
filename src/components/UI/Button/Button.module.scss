@@ -2,16 +2,16 @@
 
 .Button {
   background-color: transparent;
-  border: 5px solid #efeacc;
-  border-radius: 1.5rem;
+  border: 3px solid #efeacc;
+  border-radius: 1rem;
   color: #efeacc;
   cursor: pointer;
-  font: inherit;
+  font: $text-small-size;
   font-weight: bold;
-  letter-spacing: 1rem;
-  margin: 1rem;
+  letter-spacing: 0.2rem;
+  margin: 0.5rem;
   outline: none;
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
   text-transform: uppercase;
 
   &:disabled {
@@ -49,5 +49,24 @@
 
   &:hover {
     background-color: rgba($color-success, 0.3);
+  }
+}
+
+@media (min-width: 500px) {
+  .Button {
+    border: 5px solid #efeacc;
+    border-radius: 1.5rem;
+    font: $text-medium-size;
+    letter-spacing: 0.6rem;
+    margin: 1rem;
+    padding: 1.5rem 2rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .Button {
+    font: $text-large-size;
+    letter-spacing: 0.8rem;
+    line-height: 2rem;
   }
 }

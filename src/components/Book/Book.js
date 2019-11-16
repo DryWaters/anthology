@@ -2,11 +2,13 @@ import React from "react";
 
 import BookButton from "./BookButton/BookButton";
 
+import classes from "./Book.module.scss";
+
 const Book = props => (
-  <div>
-    <BookButton />
+  <div className={classes.Book}>
+    <BookButton>Delete</BookButton>
     <div>Book</div>
-    <BookButton />
+    <BookButton>Loan</BookButton>
   </div>
 );
 

@@ -1,0 +1,44 @@
+{
+  "books": [
+    {
+      "id": "7dd54c1f-1270-4c0b-8da8-8705c862e169",
+      "title": "Synergistic coherent hardware",
+      "author": "Reyes DuBuque",
+      "description": "Voluptate voluptas officia et necessitatibus. Aut consequatur officia sed in.",
+      "image": "http://lorempixel.com/640/480/nature",
+      "loaned": false
+    },
+    {
+      "id": "873c564b-95ab-403a-acf5-a66981716928",
+      "title": "Organic exuding hardware",
+      "author": "Devante Anderson",
+      "description": "Dolorum cumque enim aut quis explicabo ut non molestiae. Quis consequatur ab veniam inventore laudantium. Delectus dolore vero eligendi est maiores. Doloribus nihil necessitatibus.",
+      "image": "http://lorempixel.com/640/480/food",
+      "loaned": false
+    },
+    {
+      "id": "a874e7d8-b1b9-4dcf-892f-f48217ce85bf",
+      "title": "Distributed regional paradigm",
+      "author": "Carolina Weimann",
+      "description": "Officiis cum quasi. Similique dolore dolorem reiciendis hic nemo eum nam. Repellendus ad quam adipisci. Nihil provident aut. Dolores eum aut voluptatem sapiente eaque qui alias.",
+      "image": "http://lorempixel.com/640/480/transport",
+      "loaned": true
+    },
+    {
+      "id": "5a304b38-5217-4a20-9be8-87fb2178cba6",
+      "title": "Mandatory full-range utilisation",
+      "author": "Deion Haag",
+      "description": "Veritatis dolor dolor est consequuntur illo. Aut suscipit qui tempora aut enim rerum placeat ut. Dolorem ea ea occaecati ea et itaque rerum eveniet. Maxime quos esse qui neque.",
+      "image": "http://lorempixel.com/640/480/technics",
+      "loaned": true
+    },
+    {
+      "id": "8f6491a2-fd8e-446a-96aa-82b888072580",
+      "title": "Phased content-based approach",
+      "author": "Claud Metz",
+      "description": "Commodi qui quibusdam voluptas itaque qui ducimus. Aut laudantium natus et fugit tempora sit similique explicabo. Animi sequi reprehenderit quia blanditiis voluptatem.",
+      "image": "http://lorempixel.com/640/480/animals",
+      "loaned": true
+    }
+  ]
+}
