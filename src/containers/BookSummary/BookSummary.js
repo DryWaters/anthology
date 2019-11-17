@@ -3,8 +3,10 @@ import React, { Component } from "react";
 import uuidv4 from "uuid/v4";
 import { validateInput, validateForm } from "../../shared/utility";
 
+import BookImage from "../../components/Book/BookImage/BookImage";
 import Button from "../../components/UI/Button/Button";
 import Input from "../../components/UI/Input/Input";
+
 import classes from "./BookSummary.module.scss";
 
 class BookSummary extends Component {
@@ -168,18 +170,10 @@ class BookSummary extends Component {
       <div className={classes.BookSummary}>
         <h3>{this.props.status} Book</h3>
         <div>
-          <img
-            className={classes.image}
-            src={
-              this.props.book
-                ? this.props.book.image
-                : "./images/book-image-error.png"
-            }
-            onError={err => {
-              err.target.onerror = null;
-              err.target.src = "./images/book-image-error.png";
-            }}
-            alt="Book"
+          <BookImage
+            loaned={this.state.bookForm.loaned.checked}
+            image={this.state.bookForm.image.value}
+            title={this.state.bookForm.title.value}
           />
         </div>
         {form}
