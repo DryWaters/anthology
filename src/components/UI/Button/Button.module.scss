@@ -1,10 +1,8 @@
 @import "../../../variables.scss";
 
 .Button {
-  background-color: transparent;
-  border: 3px solid #efeacc;
   border-radius: 1rem;
-  color: #efeacc;
+  color: $color-light-brown;
   cursor: pointer;
   font: $text-small-size;
   font-weight: bold;
@@ -20,41 +18,46 @@
   }
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(0, 0, 0, 0.3);
   }
 
   &:active {
-    box-shadow: inset 5px 5px 30px rgba(0, 0, 0, 0.7);
+    box-shadow: inset 5px 5px 30px rgba(0, 0, 0, 0.9);
   }
 }
 
 .primary {
-  background-color: transparent;
+  background-color: $color-secondary;
+  border: 5px solid $color-light-brown;
 
   &:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba($color-light-brown, 0.3);
+    color: $color-light-brown;
   }
 }
 
 .danger {
-  background-color: $color-danger;
+  background-color: $color-orange;
+  border: 5px solid $color-dark-orange;
 
   &:hover {
-    background-color: rgba($color-danger, 0.3);
+    background-color: rgba($color-orange, 0.5);
+    color: $color-dark-orange;
   }
 }
 
 .success {
   background-color: $color-success;
+  border: 5px solid $color-dark-orange;
 
   &:hover {
-    background-color: rgba($color-success, 0.3);
+    background-color: rgba($color-success, 0.5);
+    color: $color-dark-orange;
   }
 }
 
 @media (min-width: 500px) {
   .Button {
-    border: 5px solid #efeacc;
     border-radius: 1.5rem;
     font: $text-medium-size;
     letter-spacing: 0.6rem;

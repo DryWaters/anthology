@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import Book from "../../components/Book/Book";
+import BookDialog from "../../components/Book/BookDialog/BookDialog";
 import BookSummary from "../../containers/BookSummary/BookSummary";
 import Header from "../../components/UI/Header/Header";
 import Modal from "../../components/UI/Modal/Modal";
@@ -11,8 +12,8 @@ import classes from "./Anthology.module.scss";
 class Anthology extends Component {
   state = {
     books: [],
-    selectedBook: null,
-    showSummary: false
+    selectedBookId: null,
+    modalContent: null
   };
 
   componentDidMount() {
@@ -22,15 +23,20 @@ class Anthology extends Component {
       .catch(err => console.log(err));
   }
 
-  handleCloseSummary = () => {
+  handleCloseModal = () => {
     this.setState({
-      showSummary: false
+      modalContent: null
     });
   };
 
-  handleDeleteBook = id => {
-    console.log("Deleted book");
+  handleShowBookDialog = id => {
+    this.setState({
+      modalContent: "delete",
+      selectedBookId: id
+    });
   };
+
+  handleDeleteBook = id => {};
 
   handleToggleLoan = selectedId => {
     const newBooks = [...this.state.books];
@@ -43,17 +49,27 @@ class Anthology extends Component {
   };
 
   handleSelectBook = id => {
-    console.log("Clicked book");
+    this.setState({
+      modalContent: "update",
+      selectedBookId: id
+    });
+  };
+
+  getBookInformation = () => {
+    return this.state.books.filter(
+      ({ id }) => this.state.selectedBookId === id
+    )[0];
   };
 
   render() {
+    // if no books loaded yet, show spinner
     let books = <Spinner />;
     if (this.state.books.length > 0) {
       books = this.state.books.map(book => (
         <Book
           key={book.id}
           clickBook={() => this.handleSelectBook(book.id)}
-          deleteBook={() => this.handleDeleteBook(book.id)}
+          deleteBook={() => this.handleShowBookDialog(book.id)}
           toggleLoan={() => this.handleToggleLoan(book.id)}
           loaned={book.loaned}
           title={book.title}
@@ -62,14 +78,31 @@ class Anthology extends Component {
       ));
     }
 
+    let modalContent = null;
+    switch (this.state.modalContent) {
+      case "delete":
+        modalContent = (
+          <BookDialog
+            book={this.getBookInformation()}
+            clicked={this.handleDeleteBook}
+          />
+        );
+        break;
+      case "update":
+        modalContent = <BookSummary book={this.getBookInformation()} />;
+        break;
+      default:
+        break;
+    }
+
     return (
       <div className={classes.Anthology}>
         <Header />
         <Modal
-          show={this.state.showSummary}
-          modalClose={this.handleCloseSummary}
+          show={this.state.modalContent !== null}
+          modalClose={this.handleCloseModal}
         >
-          <BookSummary />
+          {modalContent}
         </Modal>
         {books}
       </div>
