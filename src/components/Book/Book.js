@@ -6,6 +6,10 @@ import classes from "./Book.module.scss";
 
 const Book = props => {
   const status = props.loaned ? "return" : "loan";
+  let title = props.title;
+  if (title.length > 50) {
+    title = title.slice(0, 47) + "...";
+  }
 
   return (
     <div>
@@ -23,7 +27,7 @@ const Book = props => {
         />
         <BookButton clicked={props.toggleLoan} btnType={status} />
       </div>
-      <div className={classes.title}>{props.title}</div>
+      <div className={classes.title}>{title}</div>
     </div>
   );
 };

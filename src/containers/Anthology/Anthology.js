@@ -101,23 +101,7 @@ class Anthology extends Component {
     )[0];
   };
 
-  render() {
-    // if no books loaded yet, show spinner
-    let books = <Spinner />;
-    if (this.state.books.length > 0) {
-      books = this.state.books.map(book => (
-        <Book
-          key={book.id}
-          clickBook={() => this.handleSelectBook(book.id)}
-          deleteBook={() => this.handleShowBookDialog(book.id)}
-          toggleLoan={() => this.handleToggleLoan(book.id)}
-          loaned={book.loaned}
-          title={book.title}
-          image={book.image}
-        />
-      ));
-    }
-
+  displayModalContent = () => {
     let modalContent = null;
     switch (this.state.modalContent) {
       case "delete":
@@ -135,6 +119,27 @@ class Anthology extends Component {
       default:
         break;
     }
+    return modalContent;
+  };
+
+  render() {
+    // if no books loaded yet, show spinner
+    let books = <Spinner />;
+    if (this.state.books.length > 0) {
+      books = this.state.books.map(book => (
+        <Book
+          key={book.id}
+          clickBook={() => this.handleSelectBook(book.id)}
+          deleteBook={() => this.handleShowBookDialog(book.id)}
+          toggleLoan={() => this.handleToggleLoan(book.id)}
+          loaned={book.loaned}
+          title={book.title}
+          image={book.image}
+        />
+      ));
+    }
+
+    let modalContent = this.displayModalContent();
 
     return (
       <div className={classes.Anthology}>
