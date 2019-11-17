@@ -7,6 +7,10 @@
   background-color: $color-dark-brown;
 }
 
+.loaned {
+  filter: grayscale(100%) brightness(30%);
+}
+
 @media (min-width: 800px) {
   .BookImage {
     height: 30rem;
