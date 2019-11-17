@@ -148,7 +148,7 @@ class Anthology extends Component {
       case "delete":
         modalContent = (
           <BookDialog
-            book={this.getBookInformation()}
+            {...this.getBookInformation()}
             delete={() => this.handleDeleteBook(this.state.selectedBookId)}
             cancel={this.handleCloseModal}
           />
