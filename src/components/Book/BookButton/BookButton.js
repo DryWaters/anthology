@@ -26,7 +26,6 @@ const bookButton = props => {
   }
   return (
     <button
-      disabled={props.disabled}
       className={[classes.BookButton, classes[props.btnType]].join(" ")}
       onClick={props.clicked}
     >

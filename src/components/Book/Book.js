@@ -16,7 +16,9 @@ const Book = props => {
     <div className={classes.Book}>
       <div className={classes.bookControls}>
         <BookButton clicked={props.deleteBook} btnType={"delete"} />
-        <BookImage {...props} />
+        <button className={classes.imageButton} onClick={props.clickImage}>
+          <BookImage {...props} />
+        </button>
         <BookButton clicked={props.toggleLoan} btnType={status} />
       </div>
       <div className={classes.title}>{title}</div>

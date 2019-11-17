@@ -98,7 +98,8 @@ class BookSummary extends Component {
     this.setState({ bookForm: newForm, isFormValid });
   };
 
-  formSubmitHandler = () => {
+  formSubmitHandler = event => {
+    event.preventDefault();
     if (!this.state.isFormValid) {
       return;
     }
@@ -149,6 +150,17 @@ class BookSummary extends Component {
             changed={event => this.inputChangedHandler(event, formElement.id)}
           />
         ))}
+        <Button btnType="danger" type="button" onCancel={this.props.cancel}>
+          Cancel
+        </Button>
+        <Button
+          type="submit"
+          btnType="success"
+          disabled={!this.state.isFormValid}
+          onSubmit={this.formSubmitHandler}
+        >
+          {this.props.status}
+        </Button>
       </form>
     );
 
@@ -171,16 +183,6 @@ class BookSummary extends Component {
           />
         </div>
         {form}
-        <Button btnType="danger" clicked={this.props.cancel}>
-          Cancel
-        </Button>
-        <Button
-          btnType="success"
-          disabled={!this.state.isFormValid}
-          clicked={this.formSubmitHandler}
-        >
-          {this.props.status}
-        </Button>
       </div>
     );
   }

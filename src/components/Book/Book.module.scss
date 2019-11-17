@@ -9,10 +9,14 @@
 
 .bookControls {
   display: flex;
+  box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5);
 }
 
-.return {
-  filter: grayscale(100%) brightness(40%);
+.imageButton {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  height: 13rem;
 }
 
 .title {
@@ -28,8 +32,12 @@
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .Book {
     margin: 2rem;
+  }
+
+  .imageButton {
+    height: 30rem;
   }
 }
