@@ -38,7 +38,8 @@ class BookSummary extends Component {
         elementType: "textarea",
         elementConfig: {
           type: "textarea",
-          placeholder: "Description"
+          placeholder: "Description",
+          rows: 5
         },
         value: this.props.book ? this.props.book.description : "",
         touched: false

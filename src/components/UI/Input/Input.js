@@ -4,7 +4,7 @@ import classes from "./Input.module.scss";
 
 const input = props => {
   let inputElement = null;
-  const inputClasses = [classes.InputElement];
+  const inputClasses = [classes.inputElement];
 
   if (props.invalid && props.touched) {
     inputClasses.push(classes.invalid);
