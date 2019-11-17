@@ -11,6 +11,10 @@ const BookDialog = props => (
         className={classes.image}
         src={props.book.image}
         alt={props.book.title}
+        onError={err => {
+          err.target.onerror = null;
+          err.target.src = "./images/book-image-error.png";
+        }}
       />
     </div>
     <div>
