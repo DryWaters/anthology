@@ -1,5 +1,6 @@
 import React from "react";
 
+import { isValidURL } from "../../../shared/utility";
 import classes from "./BookImage.module.scss";
 
 const bookImage = props => {
@@ -8,10 +9,16 @@ const bookImage = props => {
     styles.push(classes.loaned);
   }
 
+  // if given a image url use it, or fall back image
+  let url = "./images/book-image-error.png";
+  if (props.image && isValidURL(props.image)) {
+    url = props.image;
+  }
+
   return (
     <img
       className={styles.join(" ")}
-      src={props.image ? props.image : "./images/book-image-error.png"}
+      src={url}
       onError={err => {
         err.target.onerror = null;
         err.target.src = "./images/book-image-error.png";
