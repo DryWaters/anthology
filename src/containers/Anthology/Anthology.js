@@ -95,6 +95,10 @@ class Anthology extends Component {
     });
   };
 
+  handleUpdateBook = id => {
+    console.log("Updating book");
+  };
+
   getBookInformation = () => {
     return this.state.books.filter(
       ({ id }) => this.state.selectedBookId === id
@@ -114,7 +118,17 @@ class Anthology extends Component {
         );
         break;
       case "update":
-        modalContent = <BookSummary book={this.getBookInformation()} />;
+        modalContent = (
+          <BookSummary
+            status="Update"
+            cancel={this.handleCloseModal}
+            update={this.handleUpdateBook}
+            book={this.getBookInformation()}
+          />
+        );
+        break;
+      case "add":
+        modalContent = <BookSummary status="add" />;
         break;
       default:
         break;

@@ -1,0 +1,16 @@
+@import "../../variables.scss";
+
+.BookSummary {
+  text-align: center;
+  background-color: $color-light-brown;
+}
+
+.image {
+  max-height: 20rem;
+}
+
+@media (min-width: 500px) {
+  .image {
+    max-height: 100%;
+  }
+}

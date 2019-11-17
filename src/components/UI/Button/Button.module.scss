@@ -14,11 +14,12 @@
 
   &:disabled {
     color: $color-dark;
+    background-color: rgba(0, 0, 0, 0.9);
     cursor: not-allowed;
   }
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+  &:hover:not([disabled]) {
+    background-color: rgba(0, 0, 0, 3);
   }
 
   &:active {
@@ -30,7 +31,7 @@
   background-color: $color-secondary;
   border: 5px solid $color-light-brown;
 
-  &:hover {
+  &:hover:not([disabled]) {
     background-color: rgba($color-light-brown, 0.3);
     color: $color-light-brown;
   }
@@ -40,7 +41,7 @@
   background-color: $color-orange;
   border: 5px solid $color-dark-orange;
 
-  &:hover {
+  &:hover:not([disabled]) {
     background-color: rgba($color-orange, 0.5);
     color: $color-dark-orange;
   }
@@ -50,7 +51,7 @@
   background-color: $color-success;
   border: 5px solid $color-dark-orange;
 
-  &:hover {
+  &:hover:not([disabled]) {
     background-color: rgba($color-success, 0.5);
     color: $color-dark-orange;
   }
