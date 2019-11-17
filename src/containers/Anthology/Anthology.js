@@ -9,6 +9,8 @@ import Spinner from "../../components/UI/Spinner/Spinner";
 
 import classes from "./Anthology.module.scss";
 
+const jsonURL = "http://localhost:5000";
+
 class Anthology extends Component {
   state = {
     books: [],
@@ -17,7 +19,7 @@ class Anthology extends Component {
   };
 
   componentDidMount() {
-    fetch("http://localhost:5000/books")
+    fetch(jsonURL + "/books")
       .then(response => response.json())
       .then(books => this.setState({ books }))
       .catch(err => console.log(err));
@@ -29,23 +31,61 @@ class Anthology extends Component {
     });
   };
 
-  handleShowBookDialog = id => {
+  handleShowBookDialog = selectedId => {
     this.setState({
       modalContent: "delete",
-      selectedBookId: id
+      selectedBookId: selectedId
     });
   };
 
-  handleDeleteBook = id => {};
+  handleDeleteBook = selectedId => {
+    const newBooks = [...this.state.books].filter(
+      ({ id }) => id !== selectedId
+    );
+
+    // update backend with new state
+    fetch(jsonURL + "/books/" + selectedId, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      method: "DELETE"
+    })
+      .then(res => {
+        // if able to update backend, update app state
+        if (res.status === 200) {
+          this.setState({
+            books: newBooks,
+            modalContent: null
+          });
+        }
+      })
+      .catch(err => console.log(err));
+  };
 
   handleToggleLoan = selectedId => {
     const newBooks = [...this.state.books];
     const index = newBooks.findIndex(({ id }) => id === selectedId);
     newBooks[index].loaned = !newBooks[index].loaned;
 
-    this.setState({
-      books: newBooks
-    });
+    // update backend with new state
+    fetch(jsonURL + "/books/" + selectedId, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      method: "PATCH",
+      body: JSON.stringify({ loaned: newBooks[index].loaned })
+    })
+      .then(res => {
+        // if able to update backend, update app state
+        if (res.status === 200) {
+          this.setState({
+            books: newBooks
+          });
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   handleSelectBook = id => {
@@ -84,7 +124,8 @@ class Anthology extends Component {
         modalContent = (
           <BookDialog
             book={this.getBookInformation()}
-            clicked={this.handleDeleteBook}
+            delete={() => this.handleDeleteBook(this.state.selectedBookId)}
+            cancel={this.handleCloseModal}
           />
         );
         break;

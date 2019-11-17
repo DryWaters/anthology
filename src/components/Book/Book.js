@@ -5,7 +5,7 @@ import BookButton from "./BookButton/BookButton";
 import classes from "./Book.module.scss";
 
 const Book = props => {
-  const status = props.loaned ? "loan" : "return";
+  const status = props.loaned ? "return" : "loan";
 
   return (
     <div>
