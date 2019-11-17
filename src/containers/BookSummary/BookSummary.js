@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 
+import uuidv4 from "uuid/v4";
+import { validateInput, validateForm } from "../../shared/utility";
+
 import Button from "../../components/UI/Button/Button";
 import Input from "../../components/UI/Input/Input";
 import classes from "./BookSummary.module.scss";
@@ -13,9 +16,10 @@ class BookSummary extends Component {
           type: "text",
           placeholder: "Book Title"
         },
-        value: this.props.book.title || "",
-        required: true,
-        valid: false,
+        validation: {
+          required: true
+        },
+        value: this.props.book ? this.props.book.title : "",
         touched: false
       },
       author: {
@@ -24,9 +28,10 @@ class BookSummary extends Component {
           type: "text",
           placeholder: "Author"
         },
-        value: this.props.book.author || "",
-        required: true,
-        valid: false,
+        validation: {
+          required: true
+        },
+        value: this.props.book ? this.props.book.author : "",
         touched: false
       },
       description: {
@@ -35,9 +40,7 @@ class BookSummary extends Component {
           type: "textarea",
           placeholder: "Description"
         },
-        value: this.props.book.description || "",
-        required: false,
-        valid: false,
+        value: this.props.book ? this.props.book.description : "",
         touched: false
       },
       image: {
@@ -46,9 +49,11 @@ class BookSummary extends Component {
           type: "text",
           placeholder: "Image URL"
         },
-        value: this.props.book.image || "",
-        required: false,
-        valid: false,
+        validation: {
+          required: true,
+          validURL: true
+        },
+        value: this.props.book ? this.props.book.image : "",
         touched: false
       },
       loaned: {
@@ -56,71 +61,71 @@ class BookSummary extends Component {
         elementConfig: {
           type: "checkbox"
         },
-        value: this.props.book.loaned || false,
-        required: false,
-        valid: false,
+        checked: this.props.book ? this.props.book.loaned : false,
         touched: false
       }
     }
   };
 
   componentDidMount() {
-    this.validateForm();
+    // validate form on passed in props
+    let isFormValid = true;
+    const newForm = { ...this.state.bookForm };
+    for (let input in newForm) {
+      newForm[input].valid = validateInput(newForm[input]);
+      isFormValid = newForm[input].valid && isFormValid;
+    }
+
+    this.setState({
+      bookForm: newForm,
+      isFormValid
+    });
   }
 
-  inputChangedHandler = (event, inputId) => {
-    const updatedFormElement = this.updateObject(this.state.bookForm[inputId], {
-      value: event.target.value,
-      valid: this.validateInput(
-        this.state.bookForm[inputId].required,
-        event.target.value
-      ),
-      touched: true
-    });
+  inputChangedHandler = (event, input) => {
+    const newForm = { ...this.state.bookForm };
+    if (newForm[input].elementConfig.type === "checkbox") {
+      newForm[input].checked = event.target.checked;
+    } else {
+      newForm[input].value = event.target.value;
+    }
+    newForm[input].valid = validateInput(newForm[input]);
+    newForm[input].touched = true;
 
-    const updatedBookForm = this.updateObject(this.state.bookForm, {
-      [inputId]: updatedFormElement
-    });
+    const isFormValid = validateForm(newForm);
 
-    this.setState({ bookForm: updatedBookForm }, this.validateForm());
+    this.setState({ bookForm: newForm, isFormValid });
   };
 
-  formSubmitHandler = event => {
-    console.log(event);
-    event.preventDefault();
-    console.log("form going up!");
-    if (!this.state.formIsValid) {
+  formSubmitHandler = () => {
+    if (!this.state.isFormValid) {
       return;
     }
-    this.props.update();
-  };
 
-  validateInput = (required, value) => {
-    if (!required) {
-      return true;
-    }
-    return value.trim().length > 0;
-  };
+    const { bookForm } = this.state;
 
-  validateForm = () => {
-    let formIsValid = true;
-    for (let input in this.state.bookForm) {
-      console.log(input);
-      formIsValid = this.state.bookForm[input].valid && formIsValid;
-    }
-    this.setState({
-      formIsValid
-    });
-  };
-
-  updateObject = (oldObject, updatedProperties) => {
-    return {
-      ...oldObject,
-      ...updatedProperties
+    const newBook = {
+      title: bookForm.title.value,
+      author: bookForm.author.value,
+      description: bookForm.description.value,
+      image: bookForm.image.value,
+      loaned: bookForm.loaned.checked
     };
+
+    // updating a book
+    if (this.props.book && this.props.book.id) {
+      newBook.id = this.props.book.id;
+      this.props.update(newBook, false);
+    } else {
+      // creating a new book
+      newBook.id = uuidv4();
+      this.props.update(newBook, true);
+    }
   };
 
   render() {
+    // convert obj of input fields to
+    // array so that can be mapped over
     const formElementsArray = [];
     for (const key in this.state.bookForm) {
       formElementsArray.push({
@@ -136,6 +141,7 @@ class BookSummary extends Component {
             label={formElement.id}
             elementType={formElement.config.elementType}
             elementConfig={formElement.config.elementConfig}
+            checked={formElement.config.checked}
             value={formElement.config.value}
             invalid={!formElement.config.valid}
             touched={formElement.config.touched}
@@ -151,7 +157,15 @@ class BookSummary extends Component {
         <div>
           <img
             className={classes.image}
-            src={this.props.book.image || "./images/book-image-error.png"}
+            src={
+              this.props.book
+                ? this.props.book.image
+                : "./images/book-image-error.png"
+            }
+            onError={err => {
+              err.target.onerror = null;
+              err.target.src = "./images/book-image-error.png";
+            }}
             alt="Book"
           />
         </div>
@@ -161,7 +175,7 @@ class BookSummary extends Component {
         </Button>
         <Button
           btnType="success"
-          disabled={!this.state.formIsValid}
+          disabled={!this.state.isFormValid}
           clicked={this.formSubmitHandler}
         >
           Submit

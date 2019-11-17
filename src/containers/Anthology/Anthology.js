@@ -27,11 +27,12 @@ class Anthology extends Component {
 
   handleCloseModal = () => {
     this.setState({
-      modalContent: null
+      modalContent: null,
+      selectedBookId: null
     });
   };
 
-  handleShowBookDialog = selectedId => {
+  handleShowBookDeleteDialog = selectedId => {
     this.setState({
       modalContent: "delete",
       selectedBookId: selectedId
@@ -95,8 +96,40 @@ class Anthology extends Component {
     });
   };
 
-  handleUpdateBook = id => {
-    console.log("Updating book");
+  handleUpdateBooks = (book, isNewBook) => {
+    const newBooks = [...this.state.books];
+    let method;
+    let url = "";
+    if (isNewBook) {
+      newBooks.push(book);
+      method = "POST";
+    } else {
+      const index = newBooks.findIndex(({ id }) => id === book.id);
+      newBooks[index] = book;
+      method = "PUT";
+      url = book.id;
+    }
+
+    // update backend with new state
+    fetch(jsonURL + "/books/" + url, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      },
+      method,
+      body: JSON.stringify({ ...book })
+    })
+      .then(res => {
+        // if able to update backend, update app state
+        if (res.status === 200 || res.status === 201) {
+          this.setState({
+            books: newBooks,
+            modalContent: null,
+            selectedBookId: null
+          });
+        }
+      })
+      .catch(err => console.log(err));
   };
 
   getBookInformation = () => {
@@ -122,13 +155,20 @@ class Anthology extends Component {
           <BookSummary
             status="Update"
             cancel={this.handleCloseModal}
-            update={this.handleUpdateBook}
+            update={this.handleUpdateBooks}
             book={this.getBookInformation()}
           />
         );
         break;
       case "add":
-        modalContent = <BookSummary status="add" />;
+        modalContent = (
+          <BookSummary
+            status="Add"
+            cancel={this.handleCloseModal}
+            update={this.handleUpdateBooks}
+            book={this.getBookInformation()}
+          />
+        );
         break;
       default:
         break;
@@ -139,12 +179,12 @@ class Anthology extends Component {
   render() {
     // if no books loaded yet, show spinner
     let books = <Spinner />;
-    if (this.state.books.length > 0) {
+    if (this.state.books && this.state.books.length > 0) {
       books = this.state.books.map(book => (
         <Book
           key={book.id}
           clickBook={() => this.handleSelectBook(book.id)}
-          deleteBook={() => this.handleShowBookDialog(book.id)}
+          deleteBook={() => this.handleShowBookDeleteDialog(book.id)}
           toggleLoan={() => this.handleToggleLoan(book.id)}
           loaned={book.loaned}
           title={book.title}
@@ -157,7 +197,7 @@ class Anthology extends Component {
 
     return (
       <div className={classes.Anthology}>
-        <Header />
+        <Header clicked={() => this.setState({ modalContent: "add" })} />
         <Modal
           show={this.state.modalContent !== null}
           modalClose={this.handleCloseModal}
