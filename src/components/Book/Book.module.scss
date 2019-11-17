@@ -1,3 +1,5 @@
+@import "../../variables.scss";
+
 .Book {
   height: 30rem;
   display: flex;
@@ -5,9 +7,10 @@
 
 .image {
   position: relative;
-  max-width: 100%;
+  width: 225px;
   box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
+  background-color: $color-dark-brown;
 }
 
 .return {
