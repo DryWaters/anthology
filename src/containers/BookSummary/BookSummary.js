@@ -178,7 +178,7 @@ class BookSummary extends Component {
           disabled={!this.state.isFormValid}
           clicked={this.formSubmitHandler}
         >
-          Submit
+          {this.props.status}
         </Button>
       </div>
     );
