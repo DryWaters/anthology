@@ -1,1 +1,0 @@
-#Anthology Book Library
