@@ -133,9 +133,13 @@ class Anthology extends Component {
   };
 
   getBookInformation = () => {
-    return this.state.books.filter(
+    const selectedBook = this.state.books.filter(
       ({ id }) => this.state.selectedBookId === id
-    )[0];
+    );
+    // if id matches book still available.
+    if (selectedBook.length !== 0) {
+      return { ...selectedBook[0] };
+    }
   };
 
   displayModalContent = () => {
@@ -183,12 +187,10 @@ class Anthology extends Component {
       books = this.state.books.map(book => (
         <Book
           key={book.id}
-          clickBook={() => this.handleSelectBook(book.id)}
+          clickImage={() => this.handleSelectBook(book.id)}
           deleteBook={() => this.handleShowBookDeleteDialog(book.id)}
           toggleLoan={() => this.handleToggleLoan(book.id)}
-          loaned={book.loaned}
-          title={book.title}
-          image={book.image}
+          {...book}
         />
       ));
     }

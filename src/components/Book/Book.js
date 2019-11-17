@@ -1,30 +1,22 @@
 import React from "react";
 
 import BookButton from "./BookButton/BookButton";
+import BookImage from "./BookImage/BookImage";
 
 import classes from "./Book.module.scss";
 
 const Book = props => {
   const status = props.loaned ? "return" : "loan";
   let title = props.title;
-  if (title.length > 50) {
-    title = title.slice(0, 47) + "...";
+  if (title.length > 70) {
+    title = title.slice(0, 67) + "...";
   }
 
   return (
-    <div>
-      <div className={classes.Book}>
+    <div className={classes.Book}>
+      <div className={classes.bookControls}>
         <BookButton clicked={props.deleteBook} btnType={"delete"} />
-        <img
-          className={[classes.image, classes[status]].join(" ")}
-          src={props.image}
-          onClick={props.clickBook}
-          alt={props.title}
-          onError={err => {
-            err.target.onerror = null;
-            err.target.src = "./images/book-image-error.png";
-          }}
-        />
+        <BookImage {...props} />
         <BookButton clicked={props.toggleLoan} btnType={status} />
       </div>
       <div className={classes.title}>{title}</div>

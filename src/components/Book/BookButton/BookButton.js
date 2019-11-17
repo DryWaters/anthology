@@ -5,7 +5,7 @@ import loanImg from "../../../assets/images/loan-book.png";
 import returnImg from "../../../assets/images/return-book.png";
 import classes from "./BookButton.module.scss";
 
-const BookButton = props => {
+const bookButton = props => {
   const altText =
     props.btnType.charAt(0).toUpperCase() + props.btnType.slice(1) + " Book";
 
@@ -35,4 +35,4 @@ const BookButton = props => {
   );
 };
 
-export default BookButton;
+export default bookButton;
