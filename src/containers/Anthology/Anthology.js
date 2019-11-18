@@ -27,19 +27,13 @@ class Anthology extends Component {
         if (res.status === 200) {
           return res.json();
         } else {
-          return "Error retrieving books:  Code " + res.status;
+          return Promise.reject("Error retrieving books:  Code " + res.status);
         }
       })
       .then(data => {
-        // if receiving an error message, display that instead of
-        // setting bad book state
-        if (typeof data === "string") {
-          this.setFetchErrorState(data);
-        } else {
-          this.setState({ books: data });
-        }
+        this.setState({ books: data });
       })
-      .catch(err => this.setFetchErrorState(err.toString()));
+      .catch(err => this.setFetchErrorState(err));
   }
 
   // Helper method to set error state from different
@@ -48,6 +42,11 @@ class Anthology extends Component {
     let modalContent = this.state.modalContent;
     if (!modalContent) {
       modalContent = "Error";
+    }
+
+    // if receives an Error object, just pull off the message
+    if (typeof errorMessage === "object") {
+      errorMessage = errorMessage.toString();
     }
 
     this.setState({
@@ -134,14 +133,10 @@ class Anthology extends Component {
             selectedBookId: null
           });
         } else {
-          this.setFetchErrorState(
-            "Error processing update: Code " + res.status
-          );
+          return Promise.reject("Error processing update: Code " + res.status);
         }
       })
-      .catch(err => {
-        this.setFetchErrorState(err.toString());
-      });
+      .catch(err => this.setFetchErrorState(err));
   };
 
   // get book information that is passed down into modals

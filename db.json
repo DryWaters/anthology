@@ -1,148 +1,193 @@
 {
   "books": [
     {
-      "title": "Fundamental zero defect time-frames",
-      "author": "Shanna Borer",
-      "description": "Ipsa sequi sit non. Accusantium consectetur aut.",
-      "image": "https://lorempixel.com/190/250",
+      "isbn": "0991344626",
+      "title": "Fullstack React",
+      "author": "Accomazzo Anthony",
+      "description": "LEARN REACT TODAY The up-to-date, in-depth, complete guide to React and friends. Become a ReactJS expert today",
+      "image": "http://books.google.com/books/content?id=ppjUtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "loaned": false,
       "id": "0b2c552d-11b4-451c-bbdc-eee101ada855"
     },
     {
-      "id": "af500c57-bc5d-4b12-8c88-6dedee24f8fd",
-      "title": "Vision-oriented reciprocal extranet",
-      "author": "Kayla Leuschke",
-      "description": "Voluptatem rem sed. Pariatur voluptatem veritatis et. Sint fugit dolor earum molestias quae. Unde dolor aut veniam neque quia et. Voluptas rerum et. Magnam nihil ipsam qui aliquid sint totam eaque.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "1484244516",
+      "title": "Pro React 16",
+      "author": "Adam Freeman",
+      "description": "Use the enormously popular React framework to build dynamic JavaScript applications that take advantage of the capabilities of modern browsers and devices. You will learn how React brings the power of strong architecture and responsive data to the client, providing the foundation for complex and rich user interfaces. Best-selling author Adam Freeman explains how to get the most from React. He begins by describing the React architecture and the benefits it offers and then shows you how to use React and its associated tools and libraries in your projects, starting from the nuts and bolts and building up to the most advanced and sophisticated features, going in-depth to give you the knowledge you need. Each topic is presented clearly and concisely. Chapters include common problems and how to avoid them. What You’ll Learn Gain a solid understanding of the React design Create rich and dynamic web app clients using React Create data stores using Redux Consume data using REST and GraphQL Test your React projects Who This Book Is For JavaScript developers who want to use React to create dynamic client-side applications",
+      "image": "http://books.google.com/books/content?id=SM2NDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "af500c57-bc5d-4b12-8c88-6dedee24f8fd"
     },
     {
-      "id": "a45cfe13-b3c8-4f51-bb6e-7f7c58f886a0",
-      "title": "User-centric non-volatile database",
-      "author": "Aurelie Harris",
-      "description": "Velit corrupti officia esse ipsum. Quia non repudiandae distinctio vitae accusamus. Enim asperiores a.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
+      "isbn": "1484212606",
+      "title": "Pro React",
+      "author": "Cassio de Sousa Antonio",
+      "description": "Pro React teaches you how to successfully structure increasingly complex front-end applications and interfaces. This book explores the React library in depth, as well as detailing additional tools and libraries in the React ecosystem, enabling you to create complete, complex applications. You will learn how to use React completely, and learn best practices for creating interfaces in a composable way. You will also cover additional tools and libraries in the React ecosystem (such as React Router and Flux architecture). Each topic is covered clearly and concisely and is packed with the details you need to learn to be truly effective. The most important features are given no-nonsense, in-depth treatment, and every chapter details common problems and how to avoid them. If you already have experience creating front-end apps using jQuery or perhaps other JavaScript frameworks, but need to solve the increasingly common problem of structuring complex front-end applications, then this book is for you. Start working with React like a pro - add Pro React to your library today.",
+      "image": "http://books.google.com/books/content?id=PKpPCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": true,
+      "id": "a45cfe13-b3c8-4f51-bb6e-7f7c58f886a0"
     },
     {
-      "id": "00a6a52b-3ece-4b42-9c8e-c37ca984f49d",
-      "title": "Ameliorated exuding superstructure",
-      "author": "Hailie Schroeder",
-      "description": "Qui sit modi quidem reiciendis quo. Eos aperiam et veritatis.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "1782174621",
+      "title": "React.js Essentials",
+      "author": "Artemij Fedosejev",
+      "description": "A fast-paced guide to designing and building scalable and maintainable web apps with React.js About This Book Build maintainable and performant user interfaces for your web applications using React.js Create reusable React.js components to save time and effort in maintaining your user interfaces Learn how to build a ready-to-deploy React.js web application, following our step-by-step tutorial Who This Book Is For If you're a front-end developer with knowledge of jQuery and its libraries, along with frameworks, such as Angular.JS and Backbone.JS, or native JavaScript development, and you wish to use the fastest web user interface library there is, then this book is ideal for you. What You Will Learn Install powerful React.js tools to make development much more efficient Create React elements with properties and children Get started with stateless and stateful React components Use JSX to speed up your React.js development process Add reactivity to your React components with lifecycle methods Integrate your React components with other JavaScript libraries Utilize the Flux application architecture with your React components Test your React components with Jest test framework In Detail Building web applications with maintainable and performant user interfaces is a challenge that many have faced for more than a decade, but no one has risen to this challenge quite like React.js. Today React.js is used by Facebook, Instagram, Khan Academy, and Imperial College London, to name a few. Many new users recognize the benefits of React.js and adopt it in their own projects, forming a fast-growing community. The speed at which React.js has evolved promises a bright future for those who invest in learning it today. React.js Essentials will take you on a fast-paced journey through building your own maintainable React.js application. Begin by exploring how you can create single and multiple user interface elements. Create stateless and stateful components and make them reactive, learn to interact between your components and lifecycle methods and gauge how to effectively integrate your user interface components with other JavaScript libraries. Delve deep into the core elements of the Flux architecture and learn how to manage your application using stores. Finish by going that extra mile with the Jest test framework, running multiple tests on your application and find solutions to scale it further without complexity. Style and approach The book adopts a step-by-step, hands-on approach with ample codes to ensure you learn React.js at a fast pace.",
+      "image": "http://books.google.com/books/content?id=Rhl1CgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "00a6a52b-3ece-4b42-9c8e-c37ca984f49d"
     },
     {
-      "id": "1b90364d-e958-44c8-8ef5-e8c3a8047af1",
-      "title": "Ergonomic user-facing knowledge user",
-      "author": "Maurice Reynolds",
-      "description": "Et vel aliquid culpa. Non nulla dolorum et quis ea tempora temporibus. Mollitia omnis vero repellendus et itaque.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "1680507036",
+      "title": "Test-Driven React",
+      "author": "Trevor Burnham",
+      "description": "You work in a loop: write code, get feedback, iterate. The faster you get feedback, the faster you can learn and become a more effective developer. Test-Driven React helps you refine your React workflow to give you the feedback you need as quickly as possible. Write strong tests and run them continuously as you work, split complex code up into manageable pieces, and stay focused on what's important by automating away mundane, trivial tasks. Adopt these techniques and you'll be able to avoid productivity traps and start building React components at a stunning pace!",
+      "image": "http://books.google.com/books/content?id=wtilDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "1b90364d-e958-44c8-8ef5-e8c3a8047af1"
     },
     {
-      "id": "ad32210c-3570-4337-a5bd-05798ed20b80",
-      "title": "Ameliorated web-enabled concept",
-      "author": "Michel Predovic",
-      "description": "Magnam dolore voluptatem aliquid exercitationem beatae ratione itaque. Officiis repellendus velit dolores optio beatae possimus repudiandae eos. In architecto est. Quos eligendi enim architecto voluptatem soluta dolorem nisi.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "1491931779",
+      "title": "React: Up & Running",
+      "author": "Stoyan Stefanov",
+      "description": "Hit the ground running with React, the open-source technology from Facebook for building rich web applications fast. With this practical guide, Yahoo! web developer Stoyan Stefanov teaches you how to build components—React’s basic building blocks—and organize them into maintainable, large-scale apps. If you’re familiar with basic JavaScript syntax, you’re ready to get started. Once you understand how React works, you’ll build a complete custom Whinepad app that helps users rate wines and keep notes. You’ll quickly learn why some developers consider React the key to the web app development puzzle. Set up React and write your first \"Hello world\" web app Create and use custom React components alongside generic DOM components Build a data table component that lets you edit, sort, search, and export its contents Use the JSX syntax extension as an alternative to function calls Set up a lean, low-level build process that helps you focus on React Build a complete custom app that lets you store data on the client Use ESLint, Flow, and Jest tools to check and test your code as your app evolves Manage communication between components with Flux",
+      "image": "http://books.google.com/books/content?id=a_asDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "ad32210c-3570-4337-a5bd-05798ed20b80"
     },
     {
-      "id": "2ef91833-a7dc-4be6-9c29-d5d2bfe50319",
-      "title": "Networked asymmetric solution",
-      "author": "Jordan Klein",
-      "description": "Tempora possimus dolorem. Perspiciatis et atque magnam. Omnis facilis dolorem qui et aperiam. Odio ut minima doloribus totam qui et mollitia eos.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "9781720043997",
+      "title": "The Road to Learn React: Your Journey to Master Plain Yet Pragmatic React.Js",
+      "author": "Robin Wieruch",
+      "description": "The Road to learn React teaches you the fundamentals of React. You will build a real world application along the way in plain React without complicated tooling. Everything from project setup to deployment on a server will be explained. The book comes with additional referenced reading material and exercises with each chapter. After reading the book, you will be able to build your own applications in React. The material is kept up to date by me and the community. In the Road to learn React, I want to offer a foundation before you start to dive into the broader React ecosystem. It has less tooling and less external state management, but a lot of information around React. It explains general concepts, patterns and best practices in a real world React application. You will learn to build your own React application. It covers real world features like pagination, client-side caching and interactions like searching and sorting. Additionally you will transition from JavaScript ES5 to JavaScript ES6 along the way. I hope this book captures my enthusiasm for React and JavaScript and helps you to get started.",
+      "image": "http://books.google.com/books/content?id=6sT0uwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "loaned": false,
+      "id": "2ef91833-a7dc-4be6-9c29-d5d2bfe50319"
     },
     {
-      "id": "476b5bd7-13b5-4b44-b3bb-13871c8e2d0a",
-      "title": "Optimized background workforce",
-      "author": "Ciara Keebler",
-      "description": "Ipsam aliquam id est eos nobis. Est reprehenderit a amet odit id aliquid est quia quibusdam.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
+      "isbn": "1484212452",
+      "title": "Introduction to React",
+      "author": "Cory Gackenheimer",
+      "description": "Introduction to React teaches you React, the JavaScript framework created by developers at Facebook, to solve the problem of building complex user interfaces in a consistent and maintainable way. React.js shrugs away common front-end conventions in an effort to make things more efficient - use Introduction to React to learn about this framework and more today. Get to know the React API and it’s specific JavaScript extension, JSX, which makes authoring React components easier and maintainable. You will also learn how to test your React applications and about the tools you can use while building. Once you understand these core concepts, you can build applications with React. This will help you cement the ideas and fundamentals of React and prepare you to utilize React in your own use case. What You'll Learn: How to use React to maintain complex user interfaces in an efficient way How to integrate existing user interfaces and move forward with React How to manage application architecture using Flux How to easily utilize JSX, React's JavaScript extension",
+      "image": "http://books.google.com/books/content?id=NZCKCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "476b5bd7-13b5-4b44-b3bb-13871c8e2d0a"
     },
     {
-      "id": "65cfd406-a115-4c1c-9b9c-f9531fad5d6c",
-      "title": "Digitized human-resource firmware",
-      "author": "Martina Glover",
-      "description": "Numquam et veritatis quidem sint. Ducimus voluptatum praesentium animi quas officia et architecto possimus. Itaque velit omnis incidunt commodi sed incidunt est. Modi est sunt error modi maxime quos. Nisi dolore aut et earum dignissimos.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "1491948612",
+      "title": "JavaScript & jQuery: The Missing Manual",
+      "author": "David Sawyer McFarland",
+      "description": "JavaScript lets you supercharge your HTML with animation, interactivity, and visual effects—but many web designers find the language hard to learn. This easy-to-read guide not only covers JavaScript basics, but also shows you how to save time and effort with the jQuery and jQuery UI libraries of prewritten JavaScript code. You’ll build web pages that feel and act like desktop programs—with little or no programming. The important stuff you need to know: Pull back the curtain on JavaScript. Learn how to build a basic program with this language. Get up to speed on jQuery. Quickly assemble JavaScript programs that work well on multiple web browsers. Transform your user interface. Learn jQuery UI, the JavaScript library for interface features like design themes and controls. Make your pages interactive. Create JavaScript events that react to visitor actions. Use animations and effects. Build drop-down navigation menus, pop-ups, automated slideshows, and more. Collect data with web forms. Create easy-to-use forms that ensure more accurate visitor responses. Practice with living examples. Get step-by-step tutorials for web projects you can build yourself.",
+      "image": "http://books.google.com/books/content?id=ptiYBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "65cfd406-a115-4c1c-9b9c-f9531fad5d6c"
     },
     {
-      "id": "70c30938-8a7e-407a-918f-8b6dd367665c",
-      "title": "Profit-focused coherent ability",
-      "author": "Angelita Miller",
-      "description": "Fugiat cupiditate vero nihil. Rerum cumque iusto voluptas porro. Mollitia fugit ut et blanditiis magni laudantium voluptatem libero aspernatur.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "0596554478",
+      "title": "JavaScript: The Definitive Guide",
+      "author": "David Flanagan",
+      "description": "This Fifth Edition is completely revised and expanded to cover JavaScript as it is used in today's Web 2.0 applications. This book is both an example-driven programmer's guide and a keep-on-your-desk reference, with new chapters that explain everything you need to know to get the most out of JavaScript, including: Scripted HTTP and Ajax XML processing Client-side graphics using the canvas tag Namespaces in JavaScript--essential when writing complex programs Classes, closures, persistence, Flash, and JavaScript embedded in Java applications Part I explains the core JavaScript language in detail. If you are new to JavaScript, it will teach you the language. If you are already a JavaScript programmer, Part I will sharpen your skills and deepen your understanding of the language. Part II explains the scripting environment provided by web browsers, with a focus on DOM scripting with unobtrusive JavaScript. The broad and deep coverage of client-side JavaScript is illustrated with many sophisticated examples that demonstrate how to: Generate a table of contents for an HTML document Display DHTML animations Automate form validation Draw dynamic pie charts Make HTML elements draggable Define keyboard shortcuts for web applications Create Ajax-enabled tool tips Use XPath and XSLT on XML documents loaded with Ajax And much more Part III is a complete reference for core JavaScript. It documents every class, object, constructor, method, function, property, and constant defined by JavaScript 1.5 and ECMAScript Version 3. Part IV is a reference for client-side JavaScript, covering legacy web browser APIs, the standard Level 2 DOM API, and emerging standards such as the XMLHttpRequest object and the canvas tag. More than 300,000 JavaScript programmers around the world have madethis their indispensable reference book for building JavaScript applications. \"A must-have reference for expert JavaScript programmers...well-organized and detailed.\" -- Brendan Eich, creator of JavaScript",
+      "image": "http://books.google.com/books/content?id=2weL0iAfrEMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "70c30938-8a7e-407a-918f-8b6dd367665c"
     },
     {
-      "id": "6f2894db-8bc5-47a0-8497-567469f82b96",
-      "title": "Mandatory interactive function",
-      "author": "Ophelia Moore",
-      "description": "Non optio itaque ut aut nesciunt sed qui. Aliquam totam magnam magnam. Repellendus est distinctio et vero enim qui natus qui.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "1449364993",
+      "title": "Speaking JavaScript",
+      "author": "Axel Rauschmayer",
+      "description": "Like it or not, JavaScript is everywhere these days—from browser to server to mobile—and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who once found himself in the same position. Speaking JavaScript helps you approach the language with four standalone sections. First, a quick-start guide teaches you just enough of the language to help you be productive right away. More experienced JavaScript programmers will find a complete and easy-to-read reference that covers each language feature in depth. Complete contents include: JavaScript quick start: Familiar with object-oriented programming? This part helps you learn JavaScript quickly and properly. JavaScript in depth: Learn details of ECMAScript 5, from syntax, variables, functions, and object-oriented programming to regular expressions and JSON with lots of examples. Pick a topic and jump in. Background: Understand JavaScript’s history and its relationship with other programming languages. Tips, tools, and libraries: Survey existing style guides, best practices, advanced techniques, module systems, package managers, build tools, and learning resources.",
+      "image": "http://books.google.com/books/content?id=qU3rAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "6f2894db-8bc5-47a0-8497-567469f82b96"
     },
     {
-      "id": "73d65642-1b2c-4a3f-b7fe-02cf16648bd6",
-      "title": "Advanced web-enabled moderator",
-      "author": "Lazaro Watsica",
-      "description": "Magni quia iure voluptas eum iure neque quas. Quam ratione et eligendi aliquam modi dolorem. Beatae perspiciatis beatae. Vero nulla sed asperiores veniam qui quia facilis sapiente. Ea ratione itaque aliquid ullam harum vero dolorem sunt. Aperiam perspiciatis fuga enim vel nemo earum rem.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "9780321812186",
+      "title": "Effective JavaScript",
+      "author": "David Herman",
+      "description": "Provides information on how to write better JavaScript programs, covering such topics as functions, arrays, library and API design, and concurrency.",
+      "image": "http://books.google.com/books/content?id=Nz9iAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "73d65642-1b2c-4a3f-b7fe-02cf16648bd6"
     },
     {
-      "id": "d5756f1e-a4cf-4119-961c-1b0a0e8665d3",
-      "title": "Object-based analyzing customer loyalty",
-      "author": "Keara Schmeler",
-      "description": "Doloribus odio dolor voluptatem quibusdam exercitationem necessitatibus dolor deleniti deserunt. Est eligendi minima numquam laudantium quia.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "1449396933",
+      "title": "Building Android Apps with HTML, CSS, and JavaScript",
+      "author": "Jonathan Stark",
+      "description": "If you know HTML, CSS, and JavaScript, you already have the tools you need to develop Android applications. This hands-on book shows you how to use these open source web standards to design and build apps that can be adapted for any Android device -- without having to use Java. You'll learn how to create an Android-friendly web app on the platform of your choice, and then convert it to a native Android app with the free PhoneGap framework. Discover why device-agnostic mobile apps are the wave of the future, and start building apps that offer greater flexibility and a broader reach. Learn the basics for making a web page look great on the Android web browser Convert a website into a web application, complete with progress indicators and more Add animation with jQTouch to make your web app look and feel like a native Android app Take advantage of client-side data storage with apps that run even when the Android device is offline Use PhoneGap to hook into advanced Android features -- including the accelerometer, geolocation, and alerts Test and debug your app on the Web under load with real users, and then submit the finished product to the Android Market This book received valuable community input through O'Reilly's Open Feedback Publishing System (OFPS). Learn more at http://labs.oreilly.com/ofps.html.",
+      "image": "http://books.google.com/books/content?id=4RCEGbMrZ7oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "d5756f1e-a4cf-4119-961c-1b0a0e8665d3"
     },
     {
-      "id": "60ffedc3-1c44-46f2-8827-50901943e533",
-      "title": "Reverse-engineered actuating paradigm",
-      "author": "Litzy Boehm",
-      "description": "Eum ut cumque velit. Sed aut dolor quia quos sed. Delectus ut excepturi ex quas consequatur repudiandae autem iure. Cumque qui voluptate voluptate consequatur voluptatum minima consequatur. Et cumque minus. Doloribus qui blanditiis.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "9781491979099",
+      "title": "Learning PHP, MySQL & JavaScript",
+      "author": "Robin Nixon",
+      "description": "Build interactive, data-driven websites with the potent combination of open source technologies and web standards, even if you have only basic HTML knowledge. In this update to this popular hands-on guide, you’ll tackle dynamic web programming with the latest versions of today’s core technologies: PHP, MySQL, JavaScript, CSS, HTML5, and key jQuery libraries. Web designers will learn how to use these technologies together and pick up valuable web programming practices along the way—including how to optimize websites for mobile devices. At the end of the book, you’ll put everything together to build a fully functional social networking site suitable for both desktop and mobile browsers. Explore MySQL, from database structure to complex queries Use the MySQLi extension, PHP’s improved MySQL interface Create dynamic PHP web pages that tailor themselves to the user Manage cookies and sessions and maintain a high level of security Enhance the JavaScript language with jQuery and jQuery mobile libraries Use Ajax calls for background browser-server communication Style your web pages by acquiring CSS2 and CSS3 skills Implement HTML5 features, including geolocation, audio, video, and the canvas element Reformat your websites into mobile web apps",
+      "image": "http://books.google.com/books/content?id=vlZaDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "60ffedc3-1c44-46f2-8827-50901943e533"
     },
     {
-      "id": "c86efaee-05de-4f9b-9e8d-f5c7ef92db89",
-      "title": "Up-sized 24/7 internet solution",
-      "author": "Eileen Dare",
-      "description": "Assumenda ab et voluptas maiores ea qui. Maiores in tenetur quibusdam.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "1449396941",
+      "title": "JavaScript Patterns",
+      "author": "Stoyan Stefanov",
+      "description": "What's the best approach for developing an application with JavaScript? This book helps you answer that question with numerous JavaScript coding patterns and best practices. If you're an experienced developer looking to solve problems related to objects, functions, inheritance, and other language-specific categories, the abstractions and code templates in this guide are ideal—whether you're using JavaScript to write a client-side, server-side, or desktop application. Written by JavaScript expert Stoyan Stefanov—Senior Yahoo! Technical and architect of YSlow 2.0, the web page performance optimization tool—JavaScript Patterns includes practical advice for implementing each pattern discussed, along with several hands-on examples. You'll also learn about anti-patterns: common programming approaches that cause more problems than they solve. Explore useful habits for writing high-quality JavaScript code, such as avoiding globals, using single var declarations, and more Learn why literal notation patterns are simpler alternatives to constructor functions Discover different ways to define a function in JavaScript Create objects that go beyond the basic patterns of using object literals and constructor functions Learn the options available for code reuse and inheritance in JavaScript Study sample JavaScript approaches to common design patterns such as Singleton, Factory, Decorator, and more Examine patterns that apply specifically to the client-side browser environment",
+      "image": "http://books.google.com/books/content?id=WTZqecc9olUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "c86efaee-05de-4f9b-9e8d-f5c7ef92db89"
     },
     {
-      "id": "1ad7f5cc-c36f-406c-83db-e3fb2c3ce9ca",
-      "title": "Compatible leading edge data-warehouse",
-      "author": "Carolyn Pouros",
-      "description": "Minima et dolor modi. Dolores non voluptatem qui ullam iure. Asperiores consequatur voluptates modi sequi sint laborum non dolores aut. Numquam debitis unde molestiae quos. Excepturi dolorem sunt est aut.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
+      "isbn": "9781491947616",
+      "title": "Flask Web Development",
+      "author": "Miguel Grinberg",
+      "description": "Take full creative control of your web applications with Flask, the Python-based microframework. With this hands-on book, you’ll learn Flask from the ground up by developing a complete social blogging application step-by-step. Author Miguel Grinberg walks you through the framework’s core functionality, and shows you how to extend applications with advanced web techniques such as database migration and web service communication. Rather than impose development guidelines as other frameworks do, Flask leaves the business of extensions up to you. If you have Python experience, this book shows you how to take advantage of that creative freedom. Learn Flask’s basic application structure and write an example app Work with must-have components—templates, databases, web forms, and email support Use packages and modules to structure a large application that scales Implement user authentication, roles, and profiles Build a blogging feature by reusing templates, paginating item lists, and working with rich text Use a Flask-based RESTful API to expose app functionality to smartphones, tablets, and other third-party clients Learn how to run unit tests and enhance application performance Explore options for deploying your web app to a production server",
+      "image": "http://books.google.com/books/content?id=VKRwAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "1ad7f5cc-c36f-406c-83db-e3fb2c3ce9ca"
     },
     {
-      "id": "0021f959-8647-4161-9d7a-c5e53e21c760",
-      "title": "Balanced encompassing installation",
-      "author": "Aditya Ortiz",
-      "description": "Ut maiores ex accusantium minima recusandae ut. Deleniti perspiciatis repudiandae quis autem omnis. Ut velit tempore veritatis sapiente natus quia dolorem et accusamus. Laborum ea ducimus id debitis non aut. Aperiam eveniet sunt sit numquam perferendis sunt quo natus et.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
+      "isbn": "9780763734237",
+      "title": "Java Web Development Illuminated",
+      "author": "Kai Qian",
+      "description": "This text introduces students to the concepts of building Web-distributed applications and helps develop the necessary skills through numerous examples, projects, case studies and hands-on examples.",
+      "image": "http://books.google.com/books/content?id=oY9fShrQyUgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": true,
+      "id": "0021f959-8647-4161-9d7a-c5e53e21c760"
     },
     {
-      "id": "56dc10e3-7a87-4ab3-969e-e05a964cce9a",
-      "title": "Stand-alone upward-trending Graphical User Interface",
-      "author": "Javon Hodkiewicz",
-      "description": "Similique nam nostrum ipsam at placeat ratione ipsa saepe adipisci. Quod doloribus voluptas quidem maiores ut illum.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
+      "isbn": "9781785287459",
+      "title": "Web Development with MongoDB and NodeJS",
+      "author": "Mithun Satheesh",
+      "description": "Build an interactive and full-featured web application from scratch using Node.js and MongoDB About This Book Configure your development environment to use Node.js and MongoDB Use Node.js to connect to a MongoDB database and perform data manipulations A practical guide with clear instructions to design and develop a complete web application from start to finish Who This Book Is For This book is designed for JavaScript developers of any skill level that want to get up and running using Node.js and MongoDB to build full-featured web applications. A basic understanding of JavaScript and HTML is the only requirement for this book. What You Will Learn Configure your development environment to use Node.js and MongoDB Write and configure a web server using Node.js powered by the Express.js framework Build dynamic HTML pages using the Handlebars template engine Persist application data using MongoDB and Mongoose ODM Test your code using automated testing tools such as the Mocha framework Deploy the development environment to the cloud using services such as Heroku, Amazon Web Services, and Microsoft Azure Explore Single-Page application frameworks to take your web applications to the next level In Detail Node.js and MongoDB are quickly becoming one of the most popular tech stacks for the web. Powered by Google's V8 engine, Node.js caters to easily building fast, scalable network applications while MongoDB is the perfect fit as a scalable, high-performance, open source NoSQL database solution. Using these two technologies together, web applications can be built quickly and easily and deployed to the cloud with very little difficulty. The book will begin by introducing you to the groundwork needed to set up the development environment. Here, you will quickly run through the steps necessary to get the main application server up and running. Then you will see how to use Node.js to connect to a MongoDB database and perform data manipulations. From here on, the book will take you through integration with third-party tools for interaction with web apps. It then moves on to show you how to use controllers and view models to generate reusable code that will reduce development time. Toward the end of the book, we will cover tests to properly execute the code and some popular frameworks for developing web applications. By the end of the book, you will have a running web application developed with MongoDB and Node.js along with it's popular frameworks. Style and approach An easy guide to Node.js and MongoDB, which will quickly introduce you to the relevant concepts by taking you through the different steps involved in building a full-fledged web application.",
+      "image": "http://books.google.com/books/content?id=4QKACwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": true,
+      "id": "56dc10e3-7a87-4ab3-969e-e05a964cce9a"
+    },
+    {
+      "isbn": "9780764558689",
+      "title": "Dreamweaver MX",
+      "author": "Gareth Downes-Powell",
+      "description": "What is this book about? PHP is one of the most popular server-side scripting languages available. It's powerful and easy to learn. Combined with MySQL — a fast, cross-platform, and free open source database — it makes a very effective tool for developing database-driven websites. This book is all about developing PHP/MySQL websites with Macromedia Dreamweaver MX, the premier visual website design tool. It will show you how to use Dreamweaver MX to rapidly develop database-driven PHP web applications with the minimum of fuss. Throughout the book, we use a real-world example application, a hotel room booking system, to demonstrate just how quick and easy it is to build dynamic PHP sites with Dreamweaver MX. What does this book cover? Here are just a few of the things you'll find covered in this book: Overview of Dreamweaver MX, PHP, and MySQL Designing a site Using server behaviors to interact with the database Hand-coding and debugging in Dreamweaver Who is this book for? This book is for the web professional looking to develop database-driven PHP web applications using Macromedia Dreamweaver MX. Some knowledge of HTML and web design is assumed, but you don't need to know any PHP or MySQL.",
+      "image": "http://books.google.com/books/content?id=cF7vD11_xDsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "e6ee4563-5d8c-4aee-88e8-df00d223db11"
+    },
+    {
+      "isbn": "9781593274870",
+      "title": "The Modern Web",
+      "author": "Peter Gasston",
+      "description": "Provides information on Web development for multiple devices, covering such topics as structure and semantics, device APIs, multimedia, and Web apps.",
+      "image": "http://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "2deda325-e9fd-48bf-b4a1-e43ea91c8bcd"
+    },
+    {
+      "isbn": "9780763734237",
+      "title": "Java Web Development Illuminated",
+      "author": "Kai Qian",
+      "description": "This text introduces students to the concepts of building Web-distributed applications and helps develop the necessary skills through numerous examples, projects, case studies and hands-on examples.",
+      "image": "http://books.google.com/books/content?id=oY9fShrQyUgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "53d7da8c-4c02-4247-b883-eb2390555078"
     }
   ]
 }

@@ -24,6 +24,7 @@ const input = props => {
           value={props.value}
           onChange={props.changed}
           checked={props.checked}
+          onBlur={props.blurred}
         />
       );
       break;

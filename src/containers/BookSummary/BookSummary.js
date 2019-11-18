@@ -8,11 +8,26 @@ import { validateInput, validateForm } from "../../shared/utility";
 
 import classes from "./BookSummary.module.scss";
 
+const GOOGLE_BOOKS_API_KEY = process.env.REACT_APP_API_KEY;
+
 class BookSummary extends Component {
   // bookForm contains dynamic input element configuration
   // that will be generated in the render() function
   state = {
     bookForm: {
+      isbn: {
+        elementType: "input",
+        elementConfig: {
+          type: "text",
+          placeholder: "ISBN 10/13"
+        },
+        validation: {
+          validISBN: true
+        },
+        value: this.props.book ? this.props.book.isbn : "",
+        touched: false,
+        valid: false
+      },
       title: {
         elementType: "input",
         elementConfig: {
@@ -96,7 +111,80 @@ class BookSummary extends Component {
     });
   }
 
-  inputChangedHandler = (event, input) => {
+  fetchBookDetails = () => {
+    let url =
+      "https://www.googleapis.com/books/v1/volumes?q=isbn:" +
+      this.state.bookForm.isbn.value +
+      "&key=" +
+      GOOGLE_BOOKS_API_KEY;
+    fetch(url, {
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json"
+      }
+    })
+      .then(res => {
+        if (res.status === 200) {
+          return res.json();
+        } else {
+          return Promise.reject("Unable to get book details, don't update");
+        }
+      })
+      .then(json => {
+        // if received some book data
+        if (json.items && json.items.length > 0) {
+          if (json.items[0].volumeInfo) {
+            let isFormValid = true;
+            const newForm = { ...this.state.bookForm };
+
+            // deconstruct values off valid JSON return
+            const {
+              title,
+              authors,
+              description,
+              imageLinks
+            } = json.items[0].volumeInfo;
+
+            // set new form values to either returned JSON book data if found
+            // or if not available, use user's entered ata
+            newForm.isbn.value = this.state.bookForm.isbn.value;
+            newForm.title.value = title || newForm.title.value;
+            newForm.author.value =
+              authors.length > 0 ? authors[0] : newForm.author.value;
+            newForm.description.value =
+              description || newForm.description.value;
+            newForm.image.value = imageLinks.hasOwnProperty("thumbnail")
+              ? imageLinks.thumbnail
+              : newForm.image.value;
+
+            // validate the form fields
+            for (let input in newForm) {
+              newForm[input].valid = validateInput(newForm[input]);
+              isFormValid = newForm[input].valid && isFormValid;
+            }
+
+            this.setState({
+              bookForm: newForm,
+              isFormValid
+            });
+          }
+        }
+      })
+      // not able to get book details, just keep user's input
+      .catch(err => {});
+  };
+
+  handleBlurChanged = (event, input) => {
+    if (
+      input === "isbn" &&
+      this.state.bookForm.isbn.valid &&
+      this.state.bookForm.isbn.value.length !== 0
+    ) {
+      this.fetchBookDetails();
+    }
+  };
+
+  handleInputChanged = (event, input) => {
     const newForm = { ...this.state.bookForm };
     if (newForm[input].elementConfig.type === "checkbox") {
       newForm[input].checked = event.target.checked;
@@ -105,6 +193,15 @@ class BookSummary extends Component {
     }
     newForm[input].valid = validateInput(newForm[input]);
     newForm[input].touched = true;
+
+    // if user enters a valid ISBN, try and fetch details
+    if (
+      input === "isbn" &&
+      newForm[input].valid &&
+      newForm[input].value.length !== 0
+    ) {
+      this.fetchBookDetails();
+    }
 
     const isFormValid = validateForm(newForm);
 
@@ -123,6 +220,7 @@ class BookSummary extends Component {
     const { bookForm } = this.state;
 
     const newBook = {
+      isbn: bookForm.isbn.value,
       title: bookForm.title.value,
       author: bookForm.author.value,
       description: bookForm.description.value,
@@ -169,7 +267,8 @@ class BookSummary extends Component {
             value={formElement.config.value}
             invalid={!formElement.config.valid}
             touched={formElement.config.touched}
-            changed={event => this.inputChangedHandler(event, formElement.id)}
+            blurred={event => this.handleBlurChanged(event, formElement.id)}
+            changed={event => this.handleInputChanged(event, formElement.id)}
           />
         ))}
         <Button btnType="cancel" clicked={this.props.cancel}>
