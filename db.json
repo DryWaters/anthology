@@ -143,51 +143,6 @@
       "image": "http://books.google.com/books/content?id=VKRwAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "1ad7f5cc-c36f-406c-83db-e3fb2c3ce9ca"
-    },
-    {
-      "isbn": "9780763734237",
-      "title": "Java Web Development Illuminated",
-      "author": "Kai Qian",
-      "description": "This text introduces students to the concepts of building Web-distributed applications and helps develop the necessary skills through numerous examples, projects, case studies and hands-on examples.",
-      "image": "http://books.google.com/books/content?id=oY9fShrQyUgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": true,
-      "id": "0021f959-8647-4161-9d7a-c5e53e21c760"
-    },
-    {
-      "isbn": "9781785287459",
-      "title": "Web Development with MongoDB and NodeJS",
-      "author": "Mithun Satheesh",
-      "description": "Build an interactive and full-featured web application from scratch using Node.js and MongoDB About This Book Configure your development environment to use Node.js and MongoDB Use Node.js to connect to a MongoDB database and perform data manipulations A practical guide with clear instructions to design and develop a complete web application from start to finish Who This Book Is For This book is designed for JavaScript developers of any skill level that want to get up and running using Node.js and MongoDB to build full-featured web applications. A basic understanding of JavaScript and HTML is the only requirement for this book. What You Will Learn Configure your development environment to use Node.js and MongoDB Write and configure a web server using Node.js powered by the Express.js framework Build dynamic HTML pages using the Handlebars template engine Persist application data using MongoDB and Mongoose ODM Test your code using automated testing tools such as the Mocha framework Deploy the development environment to the cloud using services such as Heroku, Amazon Web Services, and Microsoft Azure Explore Single-Page application frameworks to take your web applications to the next level In Detail Node.js and MongoDB are quickly becoming one of the most popular tech stacks for the web. Powered by Google's V8 engine, Node.js caters to easily building fast, scalable network applications while MongoDB is the perfect fit as a scalable, high-performance, open source NoSQL database solution. Using these two technologies together, web applications can be built quickly and easily and deployed to the cloud with very little difficulty. The book will begin by introducing you to the groundwork needed to set up the development environment. Here, you will quickly run through the steps necessary to get the main application server up and running. Then you will see how to use Node.js to connect to a MongoDB database and perform data manipulations. From here on, the book will take you through integration with third-party tools for interaction with web apps. It then moves on to show you how to use controllers and view models to generate reusable code that will reduce development time. Toward the end of the book, we will cover tests to properly execute the code and some popular frameworks for developing web applications. By the end of the book, you will have a running web application developed with MongoDB and Node.js along with it's popular frameworks. Style and approach An easy guide to Node.js and MongoDB, which will quickly introduce you to the relevant concepts by taking you through the different steps involved in building a full-fledged web application.",
-      "image": "http://books.google.com/books/content?id=4QKACwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": true,
-      "id": "56dc10e3-7a87-4ab3-969e-e05a964cce9a"
-    },
-    {
-      "isbn": "9780764558689",
-      "title": "Dreamweaver MX",
-      "author": "Gareth Downes-Powell",
-      "description": "What is this book about? PHP is one of the most popular server-side scripting languages available. It's powerful and easy to learn. Combined with MySQL — a fast, cross-platform, and free open source database — it makes a very effective tool for developing database-driven websites. This book is all about developing PHP/MySQL websites with Macromedia Dreamweaver MX, the premier visual website design tool. It will show you how to use Dreamweaver MX to rapidly develop database-driven PHP web applications with the minimum of fuss. Throughout the book, we use a real-world example application, a hotel room booking system, to demonstrate just how quick and easy it is to build dynamic PHP sites with Dreamweaver MX. What does this book cover? Here are just a few of the things you'll find covered in this book: Overview of Dreamweaver MX, PHP, and MySQL Designing a site Using server behaviors to interact with the database Hand-coding and debugging in Dreamweaver Who is this book for? This book is for the web professional looking to develop database-driven PHP web applications using Macromedia Dreamweaver MX. Some knowledge of HTML and web design is assumed, but you don't need to know any PHP or MySQL.",
-      "image": "http://books.google.com/books/content?id=cF7vD11_xDsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": false,
-      "id": "e6ee4563-5d8c-4aee-88e8-df00d223db11"
-    },
-    {
-      "isbn": "9781593274870",
-      "title": "The Modern Web",
-      "author": "Peter Gasston",
-      "description": "Provides information on Web development for multiple devices, covering such topics as structure and semantics, device APIs, multimedia, and Web apps.",
-      "image": "http://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": false,
-      "id": "2deda325-e9fd-48bf-b4a1-e43ea91c8bcd"
-    },
-    {
-      "isbn": "9780763734237",
-      "title": "Java Web Development Illuminated",
-      "author": "Kai Qian",
-      "description": "This text introduces students to the concepts of building Web-distributed applications and helps develop the necessary skills through numerous examples, projects, case studies and hands-on examples.",
-      "image": "http://books.google.com/books/content?id=oY9fShrQyUgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": false,
-      "id": "53d7da8c-4c02-4247-b883-eb2390555078"
     }
   ]
 }
