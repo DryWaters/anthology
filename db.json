@@ -1,7 +1,7 @@
 {
   "books": [
     {
-      "title": "Fundamental zero defect time-frame",
+      "title": "Fundamental zero defect time-frames",
       "author": "Shanna Borer",
       "description": "Ipsa sequi sit non. Accusantium consectetur aut.",
       "image": "https://lorempixel.com/190/250",
@@ -175,126 +175,6 @@
       "description": "Quia perferendis optio ea velit non. Iusto officia quo alias est suscipit a non. Sit qui ex sapiente dolorum ut ut. Voluptate sed magnam laudantium explicabo iste rerum veritatis sunt.",
       "image": "https://fakeimg.pl/190x250",
       "loaned": false
-    },
-    {
-      "id": "3e381f57-3d40-414e-842d-d24766d6ce5b",
-      "title": "Multi-channelled well-modulated benchmark",
-      "author": "Robyn Kihn",
-      "description": "Est id autem dolorum sed dolores est ut laudantium. Nisi et optio est omnis sunt. Voluptatibus delectus ut veniam occaecati cupiditate ut eos qui ullam. Ipsam maiores est minus non doloremque. At consequatur enim quas dignissimos ad. Delectus hic eum animi vel.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
-    },
-    {
-      "id": "25c3ad5b-c721-4f88-9f91-521a13674a27",
-      "title": "Adaptive tertiary complexity",
-      "author": "Murl Leuschke",
-      "description": "Iure minima molestiae. Quod repellat repudiandae enim et delectus doloribus amet perferendis qui.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
-    },
-    {
-      "id": "430dbae0-e6d2-44e1-9124-0612758b006e",
-      "title": "Public-key intermediate instruction set",
-      "author": "Darwin Heller",
-      "description": "Aut nesciunt sapiente aut maiores non quia rerum. Impedit non tempora libero a in. Sapiente pariatur nulla laborum tempore error. Sint aut non autem qui. Eaque ea qui enim rerum consequatur id quis animi.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
-    },
-    {
-      "id": "2603ce6e-c1b6-4bc0-a432-a39660d2de91",
-      "title": "Diverse upward-trending flexibility",
-      "author": "Angelo Grady",
-      "description": "Incidunt minus aut veniam dicta corporis. Itaque nulla est voluptatem id dolorum voluptas voluptates. Quidem asperiores laborum eum sunt eius non deserunt. Ea earum debitis explicabo deserunt ducimus. Eius corrupti ut incidunt aut quisquam illum quia qui ipsum. Nihil numquam in et.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
-    },
-    {
-      "id": "0e47ab24-7e8a-410f-8741-0044bdc4fe64",
-      "title": "User-friendly mobile neural-net",
-      "author": "Savanna Feeney",
-      "description": "Vero dolorem unde nemo. Nulla et molestias cumque eaque voluptatem aut est illum voluptas. Sunt aut ipsa voluptatem et consequuntur veniam suscipit. Et et aperiam eos.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
-    },
-    {
-      "id": "cbe12241-0de3-4c19-a983-094cc55b15c3",
-      "title": "Configurable foreground hub",
-      "author": "Cory Lehner",
-      "description": "Autem harum laudantium. Architecto ab consequatur qui pariatur. Incidunt et temporibus optio commodi quia iusto odit voluptatem. Dolor esse praesentium ex aut sit. Veniam tenetur ipsam natus soluta aperiam illum assumenda officia eum. Esse voluptatem reiciendis harum.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
-    },
-    {
-      "id": "550e728f-075f-4fdf-b519-9b9b6d7e67ac",
-      "title": "Configurable fresh-thinking time-frame",
-      "author": "Rossie Gutkowski",
-      "description": "Non in ad. At id necessitatibus a autem officiis sed ut aut quia. Repellat velit atque non temporibus ipsa assumenda voluptas. Eos repellat dignissimos quam. Quidem fugit quia qui. Et tenetur quia veritatis consequatur delectus rerum est quibusdam ut.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
-    },
-    {
-      "id": "ad87dc1a-8d95-47ec-bbd7-dda92c19c637",
-      "title": "Multi-lateral content-based benchmark",
-      "author": "Raquel Goodwin",
-      "description": "Officia est ex. Autem fugiat magnam sunt labore et. Beatae quis quae magni impedit ea impedit asperiores perferendis. Commodi beatae ullam accusamus neque itaque ut tenetur nobis. Error molestias ut ipsam eaque. Id minus deleniti.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
-    },
-    {
-      "id": "f38cd4e4-f82b-4532-bcfb-1763cd04ba78",
-      "title": "Cloned homogeneous local area network",
-      "author": "Helena Windler",
-      "description": "Qui dolorum culpa omnis a non ut aspernatur quis. Aut molestiae placeat dolore soluta. Et quod dignissimos excepturi error. Illum molestiae id qui. Doloremque laborum et autem itaque ut.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
-    },
-    {
-      "id": "131fedcb-f35a-43c4-ad2e-68e488e3ca02",
-      "title": "Stand-alone global hardware",
-      "author": "Avery Mraz",
-      "description": "Pariatur sed consequatur. Harum expedita minima consequatur eos culpa ducimus. Facilis cupiditate non suscipit nesciunt sequi ratione. Repudiandae ipsam veniam nihil ab aut sunt iste. Fugit esse voluptas nobis libero veniam et quis.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
-    },
-    {
-      "id": "a96e0d0c-6f88-4424-8bce-c15fd29f5f5e",
-      "title": "Cloned value-added methodology",
-      "author": "Patience Reilly",
-      "description": "Odit corporis ducimus error velit reprehenderit magnam. Nihil in id autem esse ipsa. Odio ipsam culpa aliquam. Dolorem sed et incidunt a est quasi iste adipisci iste. Porro sunt eos ipsam est delectus hic.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
-    },
-    {
-      "id": "1ed1d630-42c1-4ff9-b834-b097224019a9",
-      "title": "Ergonomic multi-tasking challenge",
-      "author": "Faustino Abernathy",
-      "description": "Cum iusto cumque exercitationem magnam enim aut et. Occaecati quaerat neque sed et reiciendis qui. Et consequuntur unde earum ad inventore.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
-    },
-    {
-      "id": "8327c181-7c20-4cfe-9a48-3ae4fa7806fc",
-      "title": "Triple-buffered upward-trending Graphical User Interface",
-      "author": "Marilyne Medhurst",
-      "description": "Omnis voluptate mollitia. Est labore aut ratione dolorem cum maxime. Molestiae quo eaque praesentium. Officiis sit et. Rerum sed est praesentium dolor ut velit in laborum non.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": false
-    },
-    {
-      "id": "8b010fdd-4e00-4e61-84d9-9b4dbc84d947",
-      "title": "Operative fresh-thinking support",
-      "author": "Katrina Blanda",
-      "description": "Nam dolore beatae pariatur omnis. Dignissimos rerum sapiente est. Aut natus quaerat aliquam esse unde eius et natus vel.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
-    },
-    {
-      "id": "9a36e67e-0863-4b85-b11e-21ce653bf1a7",
-      "title": "Assimilated human-resource toolset",
-      "author": "Talia Rutherford",
-      "description": "Et iusto quas. Reprehenderit voluptatem totam rem quis iusto laborum. Officiis veritatis atque dolores est necessitatibus eum. Fugiat recusandae dolor.",
-      "image": "https://fakeimg.pl/190x250",
-      "loaned": true
     }
   ]
 }
