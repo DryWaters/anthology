@@ -20,7 +20,7 @@ class Anthology extends Component {
     errorMessage: null
   };
 
-  // Show and error modal if unable to fetch books
+  // Show an error modal if unable to fetch books
   componentDidMount() {
     fetch(jsonURL + "/books")
       .then(res => {
@@ -36,6 +36,8 @@ class Anthology extends Component {
       .catch(err => this.setFetchErrorState(err));
   }
 
+  // Helper method to set error state from different
+  // fetch calls
   setFetchErrorState = errorMessage => {
     let modalContent = this.state.modalContent;
     if (!modalContent) {
@@ -59,7 +61,9 @@ class Anthology extends Component {
     });
   };
 
-  // Shows the modal if updating or deleting a book
+  // Shows the modal if updating or deleting a book.
+  // Adding a book sets the modalContent flag without
+  // this helper method
   handleShowModal = (id, modalType) => {
     this.setState({
       modalContent: modalType,
@@ -69,6 +73,8 @@ class Anthology extends Component {
 
   // handles updating backend API functions
   // and updating the local state
+  // method is a HTTP uppercase string, ex. POST
+  // data is the payload for the method
   handleUpdateBooks = (data, method) => {
     let newBooks = JSON.parse(JSON.stringify(this.state.books));
     let url = jsonURL + "/books/";
@@ -141,8 +147,7 @@ class Anthology extends Component {
     return selectedBook.length > 0 ? selectedBook[0] : null;
   };
 
-  // display different type of modal if deleting
-  // or updating/adding book.
+  // display different type of modals
   displayModalContent = () => {
     let modalContent = null;
     switch (this.state.modalContent) {
