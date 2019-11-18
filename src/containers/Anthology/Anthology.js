@@ -9,7 +9,7 @@ import Spinner from "../../components/UI/Spinner/Spinner";
 
 import classes from "./Anthology.module.scss";
 
-const jsonURL = "http://localhost:5000";
+const jsonURL = process.env.REACT_APP_API_URL;
 
 class Anthology extends Component {
   state = {
@@ -20,7 +20,16 @@ class Anthology extends Component {
   };
 
   componentDidMount() {
-    fetch(jsonURL + "/books")
+    let url = jsonURL;
+
+    // if using firebase, it requires a .json appended to URL
+    if (process.env.NODE_ENV === "production") {
+      url += "/books.json";
+    } else {
+      url += "/books";
+    }
+
+    fetch(url)
       .then(res => {
         if (res.status === 200) {
           return res.json();
@@ -87,6 +96,11 @@ class Anthology extends Component {
       default: {
         this.setState({ errorMessage: "Invalid HTTP Method" });
       }
+    }
+
+    // if using firebase, it requires a .json appended to URL
+    if (process.env.NODE_ENV === "production") {
+      url += ".json";
     }
 
     // update backend with new state
