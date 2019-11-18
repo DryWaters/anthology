@@ -4,6 +4,7 @@ import { shallow } from "enzyme";
 import Anthology from "./Anthology";
 import BookSummary from "../BookSummary/BookSummary";
 import BookDialog from "../../components/Book/BookDialog/BookDialog";
+import ErrorDialog from "../../components/UI/ErrorDialog/ErrorDialog";
 import Spinner from "../../components/UI/Spinner/Spinner";
 
 describe("<Anthology />", () => {
@@ -85,7 +86,7 @@ describe("<Anthology />", () => {
     expect(wrapper.containsMatchingElement(<BookSummary />)).toEqual(true);
   });
 
-  it("should return a BookSummary if modalContent is set incorrectly", () => {
+  it("should return null if modalContent is set incorrectly", () => {
     const wrapper = shallow(<Anthology />);
     wrapper.setState({
       books: [],
@@ -93,8 +94,8 @@ describe("<Anthology />", () => {
       modalContent: "Something Else",
       selectedBookId: 1
     });
-    wrapper.instance().displayModalContent();
-    expect(wrapper.containsMatchingElement(<BookSummary />)).toEqual(true);
+    let modalContent = wrapper.instance().displayModalContent();
+    expect(modalContent).toEqual(null);
   });
 
   it("should return a BookDialog if modalContent is Delete", () => {
@@ -109,12 +110,14 @@ describe("<Anthology />", () => {
     expect(wrapper.containsMatchingElement(<BookDialog />)).toEqual(true);
   });
 
-  it("should display an error message if one is set", () => {
+  it("should display an error dialog if one is set", () => {
     const wrapper = shallow(<Anthology />);
     wrapper.setState({
+      modalContent: "Error",
       errorMessage: "Some error"
     });
-    expect(wrapper.find("p.error")).toHaveLength(1);
+    wrapper.instance().displayModalContent();
+    expect(wrapper.containsMatchingElement(<ErrorDialog />)).toEqual(true);
   });
 
   it("should display a spinner if no books are found", () => {

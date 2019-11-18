@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Book from "../../components/Book/Book";
 import BookDialog from "../../components/Book/BookDialog/BookDialog";
 import BookSummary from "../../containers/BookSummary/BookSummary";
+import ErrorDialog from "../../components/UI/ErrorDialog/ErrorDialog";
 import Header from "../../components/UI/Header/Header";
 import Modal from "../../components/UI/Modal/Modal";
 import Spinner from "../../components/UI/Spinner/Spinner";
@@ -19,18 +20,33 @@ class Anthology extends Component {
     errorMessage: null
   };
 
+  // Show and error modal if unable to fetch books
   componentDidMount() {
     fetch(jsonURL + "/books")
       .then(res => {
         if (res.status === 200) {
           return res.json();
         } else {
-          this.setState({ errorMessage: res.statusText });
+          this.setFetchErrorState(
+            "Error retrieving books:  Code " + res.status
+          );
         }
       })
       .then(books => this.setState({ books }))
-      .catch(err => this.setState({ errorMessage: err }));
+      .catch(err => this.setFetchErrorState(err));
   }
+
+  setFetchErrorState = errorMessage => {
+    let modalContent = this.state.modalContent;
+    if (!modalContent) {
+      modalContent = "Error";
+    }
+
+    this.setState({
+      modalContent,
+      errorMessage
+    });
+  };
 
   // Called by tapping outside of modal box and also
   // cancelling actions.  This is also the only way
@@ -54,7 +70,7 @@ class Anthology extends Component {
   // handles updating backend API functions
   // and updating the local state
   handleUpdateBooks = (data, method) => {
-    let newBooks = [...this.state.books];
+    let newBooks = JSON.parse(JSON.stringify(this.state.books));
     let url = jsonURL + "/books/";
     let payload;
     let index;
@@ -84,9 +100,8 @@ class Anthology extends Component {
         url += data;
         newBooks = newBooks.filter(({ id }) => data !== id);
         break;
-      default: {
-        this.setState({ errorMessage: "Invalid HTTP Method" });
-      }
+      default:
+        this.setFetchErrorState("Invalid HTTP Method");
     }
 
     // update backend with new state
@@ -107,11 +122,14 @@ class Anthology extends Component {
             selectedBookId: null
           });
         } else {
-          this.setState({ errorMessage: res.statusText });
+          this.setFetchErrorState(
+            "Error processing update: Code " + res.status
+          );
         }
       })
-      // else set error state that will show in modals
-      .catch(err => this.setState({ errorMessage: err }));
+      .catch(err => {
+        this.setFetchErrorState(err);
+      });
   };
 
   // get book information that is passed down into modals
@@ -127,38 +145,48 @@ class Anthology extends Component {
   // or updating/adding book.
   displayModalContent = () => {
     let modalContent = null;
-    if (this.state.modalContent === "Delete") {
-      modalContent = (
-        <BookDialog
-          errorMessage={this.state.errorMessage}
-          book={this.getBookInformation()}
-          delete={this.handleUpdateBooks}
-          cancel={this.handleCloseModal}
-        />
-      );
-    } else {
-      modalContent = (
-        <BookSummary
-          errorMessage={this.state.errorMessage}
-          status={this.state.modalContent}
-          cancel={this.handleCloseModal}
-          update={this.handleUpdateBooks}
-          book={this.getBookInformation()}
-        />
-      );
+    switch (this.state.modalContent) {
+      case "Error":
+        modalContent = (
+          <ErrorDialog
+            errorMessage={this.state.errorMessage}
+            cancel={this.handleCloseModal}
+          />
+        );
+        break;
+      case "Delete":
+        modalContent = (
+          <BookDialog
+            errorMessage={this.state.errorMessage}
+            book={this.getBookInformation()}
+            delete={this.handleUpdateBooks}
+            cancel={this.handleCloseModal}
+          />
+        );
+        break;
+      case "Update":
+      case "Add":
+        modalContent = (
+          <BookSummary
+            errorMessage={this.state.errorMessage}
+            status={this.state.modalContent}
+            cancel={this.handleCloseModal}
+            update={this.handleUpdateBooks}
+            book={this.getBookInformation()}
+          />
+        );
+        break;
+      default:
+        break;
     }
     return modalContent;
   };
 
   render() {
-    // if no books loaded yet show spinner and/or error message
+    // if no books loaded yet show spinner
     let books = (
       <div>
-        <p className={"error"}>
-          {this.state.errorMessage
-            ? "Error: " + this.state.errorMessage
-            : "Loading books..."}
-        </p>
+        Loading books...
         <Spinner />
       </div>
     );
