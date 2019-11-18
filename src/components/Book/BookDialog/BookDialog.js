@@ -8,11 +8,11 @@ import classes from "./BookDialog.module.scss";
 const BookDialog = props => (
   <div className={classes.BookDialog}>
     <div>
-      <BookImage title={props.title} image={props.image} />
+      <BookImage title={props.book.title} image={props.book.image} />
     </div>
     <div>
       <p className={classes.prompt}>Are you sure you want to delete</p>{" "}
-      <span className={classes.title}>{props.title}?</span>
+      <span className={classes.title}>{props.book.title}?</span>
     </div>
     <div>
       <Button btnType="success" clicked={props.cancel}>

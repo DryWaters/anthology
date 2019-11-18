@@ -34,7 +34,7 @@ class Anthology extends Component {
 
   handleShowBookDeleteDialog = selectedId => {
     this.setState({
-      modalContent: "delete",
+      modalContent: "Delete",
       selectedBookId: selectedId
     });
   };
@@ -91,7 +91,7 @@ class Anthology extends Component {
 
   handleSelectBook = id => {
     this.setState({
-      modalContent: "update",
+      modalContent: "Update",
       selectedBookId: id
     });
   };
@@ -136,18 +136,16 @@ class Anthology extends Component {
     const selectedBook = this.state.books.filter(
       ({ id }) => this.state.selectedBookId === id
     );
-    // if id matches book still available.
-    if (selectedBook.length !== 0) {
-      return { ...selectedBook[0] };
-    }
+
+    return selectedBook.length > 0 ? selectedBook[0] : null;
   };
 
   displayModalContent = () => {
     let modalContent = null;
-    if (this.state.modalContent === "delete") {
+    if (this.state.modalContent === "Delete") {
       modalContent = (
         <BookDialog
-          {...this.getBookInformation()}
+          book={this.getBookInformation()}
           delete={() => this.handleDeleteBook(this.state.selectedBookId)}
           cancel={this.handleCloseModal}
         />
@@ -184,7 +182,7 @@ class Anthology extends Component {
 
     return (
       <div className={classes.Anthology}>
-        <Header clicked={() => this.setState({ modalContent: "add" })} />
+        <Header clicked={() => this.setState({ modalContent: "Add" })} />
         <Modal
           show={this.state.modalContent !== null}
           modalClose={this.handleCloseModal}

@@ -152,7 +152,12 @@ class BookSummary extends Component {
             changed={event => this.inputChangedHandler(event, formElement.id)}
           />
         ))}
-        <Button btnType="danger" type="button" onCancel={this.props.cancel}>
+        <Button
+          btnType="danger"
+          type="button"
+          clicked={this.props.cancel}
+          onCancel={this.props.cancel}
+        >
           Cancel
         </Button>
         <Button
