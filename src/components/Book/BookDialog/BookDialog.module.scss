@@ -1,11 +1,11 @@
 @import "../../../variables.scss";
 
 .BookDialog {
+  align-content: center;
   background-color: $color-light-brown;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
   padding: 2rem;
   text-align: center;
 }

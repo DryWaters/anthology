@@ -1,26 +1,28 @@
 @import "../../../variables.scss";
 
 .Modal {
-  position: fixed;
-  z-index: 500;
   background-color: $color-secondary;
-  min-width: 30rem;
-  width: 50%;
   box-shadow: 1px 1px 1px $color-dark;
-  padding: 0.5rem;
   left: 50%;
+  max-height: 100%;
+  min-width: 30rem;
+  padding: 0.5rem;
+  position: fixed;
   top: 50%;
   transition: all 0.3s ease-out;
+  width: 50%;
+  z-index: 500;
+  overflow-y: auto;
 }
 
 .show {
-  transform: translate(-50%, -50%);
   opacity: 1;
+  transform: translate(-50%, -50%);
 }
 
 .hide {
-  transform: translate(-50%, -200vh);
   opacity: 0;
+  transform: translate(-50%, -200vh);
 }
 
 @media (min-width: 800px) {

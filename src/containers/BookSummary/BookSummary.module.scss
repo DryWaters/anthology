@@ -5,16 +5,3 @@
   text-align: center;
   background-color: $color-light-brown;
 }
-
-.image {
-  width: 10rem;
-  height: 13rem;
-  object-fit: contain;
-}
-
-@media (min-width: 800px) {
-  .image {
-    height: 300px;
-    width: 225px;
-  }
-}
