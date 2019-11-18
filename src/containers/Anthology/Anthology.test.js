@@ -4,6 +4,7 @@ import { shallow } from "enzyme";
 import Anthology from "./Anthology";
 import BookSummary from "../BookSummary/BookSummary";
 import BookDialog from "../../components/Book/BookDialog/BookDialog";
+import Spinner from "../../components/UI/Spinner/Spinner";
 
 describe("<Anthology />", () => {
   it("should render", () => {
@@ -84,6 +85,18 @@ describe("<Anthology />", () => {
     expect(wrapper.containsMatchingElement(<BookSummary />)).toEqual(true);
   });
 
+  it("should return a BookSummary if modalContent is set incorrectly", () => {
+    const wrapper = shallow(<Anthology />);
+    wrapper.setState({
+      books: [],
+      errorMessage: "Some error",
+      modalContent: "Something Else",
+      selectedBookId: 1
+    });
+    wrapper.instance().displayModalContent();
+    expect(wrapper.containsMatchingElement(<BookSummary />)).toEqual(true);
+  });
+
   it("should return a BookDialog if modalContent is Delete", () => {
     const wrapper = shallow(<Anthology />);
     wrapper.setState({
@@ -94,5 +107,21 @@ describe("<Anthology />", () => {
     });
     wrapper.instance().displayModalContent();
     expect(wrapper.containsMatchingElement(<BookDialog />)).toEqual(true);
+  });
+
+  it("should display an error message if one is set", () => {
+    const wrapper = shallow(<Anthology />);
+    wrapper.setState({
+      errorMessage: "Some error"
+    });
+    expect(wrapper.find("p.error")).toHaveLength(1);
+  });
+
+  it("should display a spinner if no books are found", () => {
+    const wrapper = shallow(<Anthology />);
+    wrapper.setState({
+      books: []
+    });
+    expect(wrapper.contains(<Spinner />)).toEqual(true);
   });
 });
