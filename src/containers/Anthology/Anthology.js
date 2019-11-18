@@ -27,13 +27,19 @@ class Anthology extends Component {
         if (res.status === 200) {
           return res.json();
         } else {
-          this.setFetchErrorState(
-            "Error retrieving books:  Code " + res.status
-          );
+          return "Error retrieving books:  Code " + res.status;
         }
       })
-      .then(books => this.setState({ books }))
-      .catch(err => this.setFetchErrorState(err));
+      .then(data => {
+        // if receiving an error message, display that instead of
+        // setting bad book state
+        if (typeof data === "string") {
+          this.setFetchErrorState(data);
+        } else {
+          this.setState({ books: data });
+        }
+      })
+      .catch(err => this.setFetchErrorState(err.toString()));
   }
 
   // Helper method to set error state from different
@@ -134,7 +140,7 @@ class Anthology extends Component {
         }
       })
       .catch(err => {
-        this.setFetchErrorState(err);
+        this.setFetchErrorState(err.toString());
       });
   };
 
