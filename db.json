@@ -89,60 +89,6 @@
       "image": "http://books.google.com/books/content?id=2weL0iAfrEMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "70c30938-8a7e-407a-918f-8b6dd367665c"
-    },
-    {
-      "isbn": "1449364993",
-      "title": "Speaking JavaScript",
-      "author": "Axel Rauschmayer",
-      "description": "Like it or not, JavaScript is everywhere these days—from browser to server to mobile—and now you, too, need to learn the language or dive deeper than you have. This concise book guides you into and through JavaScript, written by a veteran programmer who once found himself in the same position. Speaking JavaScript helps you approach the language with four standalone sections. First, a quick-start guide teaches you just enough of the language to help you be productive right away. More experienced JavaScript programmers will find a complete and easy-to-read reference that covers each language feature in depth. Complete contents include: JavaScript quick start: Familiar with object-oriented programming? This part helps you learn JavaScript quickly and properly. JavaScript in depth: Learn details of ECMAScript 5, from syntax, variables, functions, and object-oriented programming to regular expressions and JSON with lots of examples. Pick a topic and jump in. Background: Understand JavaScript’s history and its relationship with other programming languages. Tips, tools, and libraries: Survey existing style guides, best practices, advanced techniques, module systems, package managers, build tools, and learning resources.",
-      "image": "http://books.google.com/books/content?id=qU3rAgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": false,
-      "id": "6f2894db-8bc5-47a0-8497-567469f82b96"
-    },
-    {
-      "isbn": "9780321812186",
-      "title": "Effective JavaScript",
-      "author": "David Herman",
-      "description": "Provides information on how to write better JavaScript programs, covering such topics as functions, arrays, library and API design, and concurrency.",
-      "image": "http://books.google.com/books/content?id=Nz9iAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": false,
-      "id": "73d65642-1b2c-4a3f-b7fe-02cf16648bd6"
-    },
-    {
-      "isbn": "1449396933",
-      "title": "Building Android Apps with HTML, CSS, and JavaScript",
-      "author": "Jonathan Stark",
-      "description": "If you know HTML, CSS, and JavaScript, you already have the tools you need to develop Android applications. This hands-on book shows you how to use these open source web standards to design and build apps that can be adapted for any Android device -- without having to use Java. You'll learn how to create an Android-friendly web app on the platform of your choice, and then convert it to a native Android app with the free PhoneGap framework. Discover why device-agnostic mobile apps are the wave of the future, and start building apps that offer greater flexibility and a broader reach. Learn the basics for making a web page look great on the Android web browser Convert a website into a web application, complete with progress indicators and more Add animation with jQTouch to make your web app look and feel like a native Android app Take advantage of client-side data storage with apps that run even when the Android device is offline Use PhoneGap to hook into advanced Android features -- including the accelerometer, geolocation, and alerts Test and debug your app on the Web under load with real users, and then submit the finished product to the Android Market This book received valuable community input through O'Reilly's Open Feedback Publishing System (OFPS). Learn more at http://labs.oreilly.com/ofps.html.",
-      "image": "http://books.google.com/books/content?id=4RCEGbMrZ7oC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": false,
-      "id": "d5756f1e-a4cf-4119-961c-1b0a0e8665d3"
-    },
-    {
-      "isbn": "9781491979099",
-      "title": "Learning PHP, MySQL & JavaScript",
-      "author": "Robin Nixon",
-      "description": "Build interactive, data-driven websites with the potent combination of open source technologies and web standards, even if you have only basic HTML knowledge. In this update to this popular hands-on guide, you’ll tackle dynamic web programming with the latest versions of today’s core technologies: PHP, MySQL, JavaScript, CSS, HTML5, and key jQuery libraries. Web designers will learn how to use these technologies together and pick up valuable web programming practices along the way—including how to optimize websites for mobile devices. At the end of the book, you’ll put everything together to build a fully functional social networking site suitable for both desktop and mobile browsers. Explore MySQL, from database structure to complex queries Use the MySQLi extension, PHP’s improved MySQL interface Create dynamic PHP web pages that tailor themselves to the user Manage cookies and sessions and maintain a high level of security Enhance the JavaScript language with jQuery and jQuery mobile libraries Use Ajax calls for background browser-server communication Style your web pages by acquiring CSS2 and CSS3 skills Implement HTML5 features, including geolocation, audio, video, and the canvas element Reformat your websites into mobile web apps",
-      "image": "http://books.google.com/books/content?id=vlZaDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": false,
-      "id": "60ffedc3-1c44-46f2-8827-50901943e533"
-    },
-    {
-      "isbn": "1449396941",
-      "title": "JavaScript Patterns",
-      "author": "Stoyan Stefanov",
-      "description": "What's the best approach for developing an application with JavaScript? This book helps you answer that question with numerous JavaScript coding patterns and best practices. If you're an experienced developer looking to solve problems related to objects, functions, inheritance, and other language-specific categories, the abstractions and code templates in this guide are ideal—whether you're using JavaScript to write a client-side, server-side, or desktop application. Written by JavaScript expert Stoyan Stefanov—Senior Yahoo! Technical and architect of YSlow 2.0, the web page performance optimization tool—JavaScript Patterns includes practical advice for implementing each pattern discussed, along with several hands-on examples. You'll also learn about anti-patterns: common programming approaches that cause more problems than they solve. Explore useful habits for writing high-quality JavaScript code, such as avoiding globals, using single var declarations, and more Learn why literal notation patterns are simpler alternatives to constructor functions Discover different ways to define a function in JavaScript Create objects that go beyond the basic patterns of using object literals and constructor functions Learn the options available for code reuse and inheritance in JavaScript Study sample JavaScript approaches to common design patterns such as Singleton, Factory, Decorator, and more Examine patterns that apply specifically to the client-side browser environment",
-      "image": "http://books.google.com/books/content?id=WTZqecc9olUC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": false,
-      "id": "c86efaee-05de-4f9b-9e8d-f5c7ef92db89"
-    },
-    {
-      "isbn": "9781491947616",
-      "title": "Flask Web Development",
-      "author": "Miguel Grinberg",
-      "description": "Take full creative control of your web applications with Flask, the Python-based microframework. With this hands-on book, you’ll learn Flask from the ground up by developing a complete social blogging application step-by-step. Author Miguel Grinberg walks you through the framework’s core functionality, and shows you how to extend applications with advanced web techniques such as database migration and web service communication. Rather than impose development guidelines as other frameworks do, Flask leaves the business of extensions up to you. If you have Python experience, this book shows you how to take advantage of that creative freedom. Learn Flask’s basic application structure and write an example app Work with must-have components—templates, databases, web forms, and email support Use packages and modules to structure a large application that scales Implement user authentication, roles, and profiles Build a blogging feature by reusing templates, paginating item lists, and working with rich text Use a Flask-based RESTful API to expose app functionality to smartphones, tablets, and other third-party clients Learn how to run unit tests and enhance application performance Explore options for deploying your web app to a production server",
-      "image": "http://books.google.com/books/content?id=VKRwAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": false,
-      "id": "1ad7f5cc-c36f-406c-83db-e3fb2c3ce9ca"
     }
   ]
 }
