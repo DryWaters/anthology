@@ -23,3 +23,9 @@ body {
   line-height: 1.6;
   font-size: $text-medium-size;
 }
+
+.error {
+  font-weight: bold;
+  color: $color-danger;
+  font-size: $text-large-size;
+}

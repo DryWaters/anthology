@@ -22,7 +22,8 @@ class BookSummary extends Component {
           required: true
         },
         value: this.props.book ? this.props.book.title : "",
-        touched: false
+        touched: false,
+        valid: false
       },
       author: {
         elementType: "input",
@@ -34,7 +35,8 @@ class BookSummary extends Component {
           required: true
         },
         value: this.props.book ? this.props.book.author : "",
-        touched: false
+        touched: false,
+        valid: false
       },
       description: {
         elementType: "textarea",
@@ -44,7 +46,8 @@ class BookSummary extends Component {
           rows: 5
         },
         value: this.props.book ? this.props.book.description : "",
-        touched: false
+        touched: false,
+        valid: true
       },
       image: {
         elementType: "input",
@@ -57,7 +60,8 @@ class BookSummary extends Component {
           validURL: true
         },
         value: this.props.book ? this.props.book.image : "",
-        touched: false
+        touched: false,
+        valid: false
       },
       loaned: {
         elementType: "input",
@@ -65,7 +69,8 @@ class BookSummary extends Component {
           type: "checkbox"
         },
         checked: this.props.book ? this.props.book.loaned : false,
-        touched: false
+        touched: false,
+        valid: true
       }
     }
   };
@@ -75,6 +80,7 @@ class BookSummary extends Component {
     if (!this.props.book) {
       return;
     }
+
     // check if passed in book props are valid
     let isFormValid = true;
     const newForm = { ...this.state.bookForm };
@@ -123,15 +129,19 @@ class BookSummary extends Component {
     // updating a book
     if (this.props.book && this.props.book.id) {
       newBook.id = this.props.book.id;
-      this.props.update(newBook, false);
+      this.props.update(newBook, "PUT");
     } else {
       // creating a new book
       newBook.id = uuidv4();
-      this.props.update(newBook, true);
+      this.props.update(newBook, "POST");
     }
   };
 
   render() {
+    let errorMessage = null;
+    if (this.props.errorMessage) {
+      errorMessage = <p className="error">ERROR: {this.props.errorMessage}</p>;
+    }
     // convert obj of input fields to
     // array so that can be mapped over
     const formElementsArray = [];
@@ -168,7 +178,7 @@ class BookSummary extends Component {
     return (
       <div className={classes.BookSummary}>
         <h2>{this.props.status} Book</h2>
-        {this.props.errorMessage}
+        {errorMessage}
         <div>
           <BookImage
             loaned={this.state.bookForm.loaned.checked}

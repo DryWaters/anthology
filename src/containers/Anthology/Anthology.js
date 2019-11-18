@@ -21,11 +21,11 @@ class Anthology extends Component {
 
   componentDidMount() {
     fetch(jsonURL + "/books")
-      .then(response => {
-        if (response.status === 200) {
-          return response.json();
+      .then(res => {
+        if (res.status === 200) {
+          return res.json();
         } else {
-          this.setState({ errorMessage: response.statusText });
+          this.setState({ errorMessage: res.statusText });
         }
       })
       .then(books => this.setState({ books }))
@@ -47,56 +47,6 @@ class Anthology extends Component {
     });
   };
 
-  handleDeleteBook = selectedId => {
-    const newBooks = [...this.state.books].filter(
-      ({ id }) => id !== selectedId
-    );
-
-    // update backend with new state
-    fetch(jsonURL + "/books/" + selectedId, {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      method: "DELETE"
-    })
-      .then(res => {
-        // if able to update backend, update app state
-        if (res.status === 200) {
-          this.setState({
-            books: newBooks,
-            modalContent: null
-          });
-        }
-      })
-      .catch(err => console.log(err));
-  };
-
-  handleToggleLoan = selectedId => {
-    const newBooks = [...this.state.books];
-    const index = newBooks.findIndex(({ id }) => id === selectedId);
-    newBooks[index].loaned = !newBooks[index].loaned;
-
-    // update backend with new state
-    fetch(jsonURL + "/books/" + selectedId, {
-      headers: {
-        Accept: "application/json",
-        "Content-Type": "application/json"
-      },
-      method: "PATCH",
-      body: JSON.stringify({ loaned: newBooks[index].loaned })
-    })
-      .then(res => {
-        // if able to update backend, update app state
-        if (res.status === 200) {
-          this.setState({
-            books: newBooks
-          });
-        }
-      })
-      .catch(err => console.log(err));
-  };
-
   handleSelectBook = id => {
     this.setState({
       modalContent: "Update",
@@ -104,28 +54,49 @@ class Anthology extends Component {
     });
   };
 
-  handleUpdateBooks = (book, isNewBook) => {
-    const newBooks = [...this.state.books];
-    let method;
-    let url = "";
-    if (isNewBook) {
-      newBooks.push(book);
-      method = "POST";
-    } else {
-      const index = newBooks.findIndex(({ id }) => id === book.id);
-      newBooks[index] = book;
-      method = "PUT";
-      url = book.id;
+  handleUpdateBooks = (data, method) => {
+    let newBooks = [...this.state.books];
+    let url = jsonURL + "/books/";
+    let payload;
+    let index;
+
+    switch (method) {
+      // update loan status
+      case "PATCH":
+        url += data.id;
+        index = newBooks.findIndex(({ id }) => id === data.id);
+        newBooks[index].loaned = !newBooks[index].loaned;
+        payload = { loaned: newBooks[index].loaned };
+        break;
+      // add new book
+      case "POST":
+        newBooks.push(data);
+        payload = { ...data };
+        break;
+      // update book
+      case "PUT":
+        url += data.id;
+        index = newBooks.findIndex(({ id }) => id === data.id);
+        newBooks[index] = { ...data };
+        payload = { ...data };
+        break;
+      case "DELETE":
+        url += data;
+        newBooks = newBooks.filter(({ id }) => data !== id);
+        break;
+      default: {
+        this.setState({ errorMessage: "Invalid HTTP Method" });
+      }
     }
 
     // update backend with new state
-    fetch(jsonURL + "/books/" + url, {
+    fetch(url, {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
       },
       method,
-      body: JSON.stringify({ ...book })
+      body: JSON.stringify({ ...payload })
     })
       .then(res => {
         // if able to update backend, update app state
@@ -135,9 +106,11 @@ class Anthology extends Component {
             modalContent: null,
             selectedBookId: null
           });
+        } else {
+          this.setState({ errorMessage: res.statusText });
         }
       })
-      .catch(err => console.log(err));
+      .catch(err => this.setState({ errorMessage: err }));
   };
 
   getBookInformation = () => {
@@ -155,7 +128,7 @@ class Anthology extends Component {
         <BookDialog
           errorMessage={this.state.errorMessage}
           book={this.getBookInformation()}
-          delete={() => this.handleDeleteBook(this.state.selectedBookId)}
+          delete={this.handleUpdateBooks}
           cancel={this.handleCloseModal}
         />
       );
@@ -174,7 +147,7 @@ class Anthology extends Component {
   };
 
   render() {
-    // if no books loaded yet, show spinner
+    // if no books loaded yet show spinner with error message
     let books = (
       <div>
         <p className={classes.error}>
@@ -191,7 +164,7 @@ class Anthology extends Component {
           key={book.id}
           clickImage={() => this.handleSelectBook(book.id)}
           deleteBook={() => this.handleShowBookDeleteDialog(book.id)}
-          toggleLoan={() => this.handleToggleLoan(book.id)}
+          toggleLoan={() => this.handleUpdateBooks(book, "PATCH")}
           {...book}
         />
       ));
