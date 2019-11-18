@@ -15,7 +15,7 @@ const BookDialog = props => (
       <span className={classes.title}>{props.book.title}?</span>
     </div>
     <div>
-      <Button btnType="success" clicked={props.cancel}>
+      <Button btnType="cancel" clicked={props.cancel}>
         Cancel
       </Button>
       <Button btnType="danger" clicked={props.delete}>

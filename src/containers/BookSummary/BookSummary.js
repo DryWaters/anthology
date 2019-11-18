@@ -152,20 +152,10 @@ class BookSummary extends Component {
             changed={event => this.inputChangedHandler(event, formElement.id)}
           />
         ))}
-        <Button
-          btnType="danger"
-          type="button"
-          clicked={this.props.cancel}
-          onCancel={this.props.cancel}
-        >
+        <Button btnType="cancel" clicked={this.props.cancel}>
           Cancel
         </Button>
-        <Button
-          type="submit"
-          btnType="success"
-          disabled={!this.state.isFormValid}
-          onSubmit={this.formSubmitHandler}
-        >
+        <Button btnType="submit" disabled={!this.state.isFormValid}>
           {this.props.status}
         </Button>
       </form>
