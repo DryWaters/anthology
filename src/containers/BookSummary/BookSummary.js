@@ -142,11 +142,13 @@ class BookSummary extends Component {
   };
 
   render() {
+    // display error message if fetch() pushes error downstream
     let errorMessage = null;
     if (this.props.errorMessage) {
       errorMessage = <p className="error">ERROR: {this.props.errorMessage}</p>;
     }
-    // convert obj of input fields to
+
+    // convert object of input fields to
     // array so that can be mapped over
     const formElementsArray = [];
     for (const key in this.state.bookForm) {

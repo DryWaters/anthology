@@ -6,7 +6,11 @@ export const validateInput = input => {
 
   // check for input length
   if (input.validation.required) {
-    isValid = input.value.trim() !== "" && isValid;
+    if (!input.value) {
+      isValid = false;
+    } else {
+      isValid = input.value.trim() !== "" && isValid;
+    }
   }
 
   // check if string is a validURL for images

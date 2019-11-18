@@ -4,17 +4,9 @@
       "title": "Fundamental zero defect time-frame",
       "author": "Shanna Borer",
       "description": "Ipsa sequi sit non. Accusantium consectetur aut.",
-      "image": "https://fakeimg.pl/225x300",
+      "image": "https://lorempixel.com/225/300",
       "loaned": false,
       "id": "0b2c552d-11b4-451c-bbdc-eee101ada855"
-    },
-    {
-      "id": "195e6aea-6b34-447e-8ccd-9311e8116a1e",
-      "title": "Persistent neutral moratorium",
-      "author": "Marcelle Schmitt",
-      "description": "Similique iusto nihil enim est ut ut. Asperiores necessitatibus aliquam. Minus dolore aut pariatur officia voluptatem delectus deleniti. Sint culpa occaecati exercitationem voluptatibus et illum et qui. Iusto dolore sequi quae.",
-      "image": "https://fakeimg.pl/225x300",
-      "loaned": false
     },
     {
       "id": "af500c57-bc5d-4b12-8c88-6dedee24f8fd",
@@ -719,6 +711,14 @@
       "description": "Laborum pariatur veniam. Quisquam quod dolores beatae officia.",
       "image": "https://fakeimg.pl/225x300",
       "loaned": true
+    },
+    {
+      "title": "Some Book",
+      "author": "Some Author",
+      "description": "",
+      "image": "http://lorempixel.com/200/200",
+      "loaned": true,
+      "id": "2564b60d-8bbf-454c-a55b-e1a4197a8838"
     }
   ]
 }
