@@ -5,7 +5,7 @@
       "title": "Fullstack React",
       "author": "Accomazzo Anthony",
       "description": "LEARN REACT TODAY The up-to-date, in-depth, complete guide to React and friends. Become a ReactJS...",
-      "image": "http://books.google.com/books/content?id=ppjUtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=ppjUtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "loaned": false,
       "id": "0b2c552d-11b4-451c-bbdc-eee101ada855"
     },
@@ -14,7 +14,7 @@
       "title": "Pro React 16",
       "author": "Adam Freeman",
       "description": "Use the enormously popular React framework to build dynamic JavaScript applications that take adv...",
-      "image": "http://books.google.com/books/content?id=SM2NDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=SM2NDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "af500c57-bc5d-4b12-8c88-6dedee24f8fd"
     },
@@ -23,7 +23,7 @@
       "title": "Pro React",
       "author": "Cassio de Sousa Antonio",
       "description": "Pro React teaches you how to successfully structure increasingly complex front-end applications a...",
-      "image": "http://books.google.com/books/content?id=PKpPCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=PKpPCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": true,
       "id": "a45cfe13-b3c8-4f51-bb6e-7f7c58f886a0"
     },
@@ -32,7 +32,7 @@
       "title": "React.js Essentials",
       "author": "Artemij Fedosejev",
       "description": "A fast-paced guide to designing and building scalable and maintainable web apps with React.js Abo...",
-      "image": "http://books.google.com/books/content?id=Rhl1CgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=Rhl1CgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "00a6a52b-3ece-4b42-9c8e-c37ca984f49d"
     },
@@ -50,7 +50,7 @@
       "title": "React: Up & Running",
       "author": "Stoyan Stefanov",
       "description": "Hit the ground running with React, the open-source technology from Facebook for building rich web...",
-      "image": "http://books.google.com/books/content?id=a_asDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=a_asDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "ad32210c-3570-4337-a5bd-05798ed20b80"
     },
@@ -59,7 +59,7 @@
       "title": "The Road to Learn React: Your Journey to Master Plain Yet Pragmatic React.Js",
       "author": "Robin Wieruch",
       "description": "The Road to learn React teaches you the fundamentals of React. You will build a real world applic...",
-      "image": "http://books.google.com/books/content?id=6sT0uwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=6sT0uwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "loaned": false,
       "id": "2ef91833-a7dc-4be6-9c29-d5d2bfe50319"
     },
@@ -68,7 +68,7 @@
       "title": "Introduction to React",
       "author": "Cory Gackenheimer",
       "description": "Introduction to React teaches you React, the JavaScript framework created by developers at Facebo...",
-      "image": "http://books.google.com/books/content?id=NZCKCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=NZCKCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "476b5bd7-13b5-4b44-b3bb-13871c8e2d0a"
     },
@@ -77,7 +77,7 @@
       "title": "JavaScript & jQuery: The Missing Manual",
       "author": "David Sawyer McFarland",
       "description": "JavaScript lets you supercharge your HTML with animation, interactivity, and visual effects—but m...",
-      "image": "http://books.google.com/books/content?id=ptiYBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=ptiYBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "65cfd406-a115-4c1c-9b9c-f9531fad5d6c"
     },
@@ -86,7 +86,7 @@
       "title": "JavaScript: The Definitive Guide",
       "author": "David Flanagan",
       "description": "This Fifth Edition is completely revised and expanded to cover JavaScript as it is used in today'...",
-      "image": "http://books.google.com/books/content?id=2weL0iAfrEMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=2weL0iAfrEMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "70c30938-8a7e-407a-918f-8b6dd367665c"
     },
@@ -95,7 +95,7 @@
       "title": "Dreamweaver MX",
       "author": "Gareth Downes-Powell",
       "description": "What is this book about? PHP is one of the most popular server-side scripting languages available...",
-      "image": "http://books.google.com/books/content?id=cF7vD11_xDsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=cF7vD11_xDsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "4f605434-e02d-4dc6-8d04-8eeb192d5685"
     },
@@ -104,7 +104,7 @@
       "title": "The Modern Web",
       "author": "Peter Gasston",
       "description": "Provides information on Web development for multiple devices, covering such topics as structure a...",
-      "image": "http://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "4bbaccd4-dfcd-4f1b-9975-06210dab615f"
     },
@@ -113,7 +113,7 @@
       "title": "HTML5 Boilerplate Web Development",
       "author": "Divya Manian",
       "description": "\"HTML5 Boilerplate Web Development\" is a practical guide rich with information on getting the bes...",
-      "image": "http://books.google.com/books/content?id=aaHXYmZLYNQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=aaHXYmZLYNQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "9e33b3c7-997b-4534-b13b-ac2a1edbdbde"
     },
@@ -122,7 +122,7 @@
       "title": "Java Web Development Illuminated",
       "author": "Kai Qian",
       "description": "This text introduces students to the concepts of building Web-distributed applications and helps ...",
-      "image": "http://books.google.com/books/content?id=oY9fShrQyUgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "image": "https://books.google.com/books/content?id=oY9fShrQyUgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "a47c213b-ddb6-44ef-98e4-7d4ee09f8b7d"
     }

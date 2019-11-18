@@ -149,6 +149,19 @@ class BookSummary extends Component {
             if (description.length > 100) {
               description = description.slice(0, 97) + "...";
             }
+
+            // if has thumbnail image, replace the http with https
+            // Google API returns http links for images
+            // but https is available
+            if (imageLinks.hasOwnProperty("thumbnail")) {
+              imageLinks.thumbnail = imageLinks.thumbnail.replace(
+                /^http/i,
+                "https"
+              );
+            } else {
+              imageLinks.thumbnail = null;
+            }
+
             // set new form values to either returned JSON book data if found
             // or if not available, use user's entered ata
             newForm.isbn.value = this.state.bookForm.isbn.value;
@@ -157,9 +170,7 @@ class BookSummary extends Component {
               authors.length > 0 ? authors[0] : newForm.author.value;
             newForm.description.value =
               description || newForm.description.value;
-            newForm.image.value = imageLinks.hasOwnProperty("thumbnail")
-              ? imageLinks.thumbnail
-              : newForm.image.value;
+            newForm.image.value = imageLinks.thumbnail || newForm.image.value;
 
             // validate the form fields
             for (let input in newForm) {
