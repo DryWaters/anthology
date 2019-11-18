@@ -71,7 +71,11 @@ class BookSummary extends Component {
   };
 
   componentDidMount() {
-    // validate form on passed in props
+    // if adding a book, nothing to validate
+    if (!this.props.book) {
+      return;
+    }
+    // check if passed in book props are valid
     let isFormValid = true;
     const newForm = { ...this.state.bookForm };
     for (let input in newForm) {
