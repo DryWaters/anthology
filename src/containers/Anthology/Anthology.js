@@ -144,38 +144,23 @@ class Anthology extends Component {
 
   displayModalContent = () => {
     let modalContent = null;
-    switch (this.state.modalContent) {
-      case "delete":
-        modalContent = (
-          <BookDialog
-            {...this.getBookInformation()}
-            delete={() => this.handleDeleteBook(this.state.selectedBookId)}
-            cancel={this.handleCloseModal}
-          />
-        );
-        break;
-      case "update":
-        modalContent = (
-          <BookSummary
-            status="Update"
-            cancel={this.handleCloseModal}
-            update={this.handleUpdateBooks}
-            book={this.getBookInformation()}
-          />
-        );
-        break;
-      case "add":
-        modalContent = (
-          <BookSummary
-            status="Add"
-            cancel={this.handleCloseModal}
-            update={this.handleUpdateBooks}
-            book={this.getBookInformation()}
-          />
-        );
-        break;
-      default:
-        break;
+    if (this.state.modalContent === "delete") {
+      modalContent = (
+        <BookDialog
+          {...this.getBookInformation()}
+          delete={() => this.handleDeleteBook(this.state.selectedBookId)}
+          cancel={this.handleCloseModal}
+        />
+      );
+    } else if (this.state.modalContent !== null) {
+      modalContent = (
+        <BookSummary
+          status={this.state.modalContent}
+          cancel={this.handleCloseModal}
+          update={this.handleUpdateBooks}
+          book={this.getBookInformation()}
+        />
+      );
     }
     return modalContent;
   };

@@ -15,11 +15,11 @@ const BookDialog = props => (
       <span className={classes.title}>{props.title}?</span>
     </div>
     <div>
-      <Button btnType="danger" clicked={props.delete}>
-        Delete
-      </Button>
       <Button btnType="success" clicked={props.cancel}>
         Cancel
+      </Button>
+      <Button btnType="danger" clicked={props.delete}>
+        Delete
       </Button>
     </div>
   </div>
