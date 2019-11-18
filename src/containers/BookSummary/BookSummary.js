@@ -138,13 +138,17 @@ class BookSummary extends Component {
             const newForm = { ...this.state.bookForm };
 
             // deconstruct values off valid JSON return
-            const {
+            let {
               title,
               authors,
               description,
               imageLinks
             } = json.items[0].volumeInfo;
 
+            // trim description length for test data
+            if (description.length > 100) {
+              description = description.slice(0, 97) + "...";
+            }
             // set new form values to either returned JSON book data if found
             // or if not available, use user's entered ata
             newForm.isbn.value = this.state.bookForm.isbn.value;
@@ -211,8 +215,8 @@ class BookSummary extends Component {
   formSubmitHandler = event => {
     event.preventDefault();
 
-    // check form app state valid in case
-    // user modifies disabled state on button
+    // check form app state isvalid again. CASE:
+    // could modifiy the DOM disabled state on button
     if (!this.state.isFormValid) {
       return;
     }

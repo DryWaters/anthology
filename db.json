@@ -4,7 +4,7 @@
       "isbn": "0991344626",
       "title": "Fullstack React",
       "author": "Accomazzo Anthony",
-      "description": "LEARN REACT TODAY The up-to-date, in-depth, complete guide to React and friends. Become a ReactJS expert today",
+      "description": "LEARN REACT TODAY The up-to-date, in-depth, complete guide to React and friends. Become a ReactJS...",
       "image": "http://books.google.com/books/content?id=ppjUtAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "loaned": false,
       "id": "0b2c552d-11b4-451c-bbdc-eee101ada855"
@@ -13,7 +13,7 @@
       "isbn": "1484244516",
       "title": "Pro React 16",
       "author": "Adam Freeman",
-      "description": "Use the enormously popular React framework to build dynamic JavaScript applications that take advantage of the capabilities of modern browsers and devices. You will learn how React brings the power of strong architecture and responsive data to the client, providing the foundation for complex and rich user interfaces. Best-selling author Adam Freeman explains how to get the most from React. He begins by describing the React architecture and the benefits it offers and then shows you how to use React and its associated tools and libraries in your projects, starting from the nuts and bolts and building up to the most advanced and sophisticated features, going in-depth to give you the knowledge you need. Each topic is presented clearly and concisely. Chapters include common problems and how to avoid them. What You’ll Learn Gain a solid understanding of the React design Create rich and dynamic web app clients using React Create data stores using Redux Consume data using REST and GraphQL Test your React projects Who This Book Is For JavaScript developers who want to use React to create dynamic client-side applications",
+      "description": "Use the enormously popular React framework to build dynamic JavaScript applications that take adv...",
       "image": "http://books.google.com/books/content?id=SM2NDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "af500c57-bc5d-4b12-8c88-6dedee24f8fd"
@@ -22,7 +22,7 @@
       "isbn": "1484212606",
       "title": "Pro React",
       "author": "Cassio de Sousa Antonio",
-      "description": "Pro React teaches you how to successfully structure increasingly complex front-end applications and interfaces. This book explores the React library in depth, as well as detailing additional tools and libraries in the React ecosystem, enabling you to create complete, complex applications. You will learn how to use React completely, and learn best practices for creating interfaces in a composable way. You will also cover additional tools and libraries in the React ecosystem (such as React Router and Flux architecture). Each topic is covered clearly and concisely and is packed with the details you need to learn to be truly effective. The most important features are given no-nonsense, in-depth treatment, and every chapter details common problems and how to avoid them. If you already have experience creating front-end apps using jQuery or perhaps other JavaScript frameworks, but need to solve the increasingly common problem of structuring complex front-end applications, then this book is for you. Start working with React like a pro - add Pro React to your library today.",
+      "description": "Pro React teaches you how to successfully structure increasingly complex front-end applications a...",
       "image": "http://books.google.com/books/content?id=PKpPCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": true,
       "id": "a45cfe13-b3c8-4f51-bb6e-7f7c58f886a0"
@@ -31,7 +31,7 @@
       "isbn": "1782174621",
       "title": "React.js Essentials",
       "author": "Artemij Fedosejev",
-      "description": "A fast-paced guide to designing and building scalable and maintainable web apps with React.js About This Book Build maintainable and performant user interfaces for your web applications using React.js Create reusable React.js components to save time and effort in maintaining your user interfaces Learn how to build a ready-to-deploy React.js web application, following our step-by-step tutorial Who This Book Is For If you're a front-end developer with knowledge of jQuery and its libraries, along with frameworks, such as Angular.JS and Backbone.JS, or native JavaScript development, and you wish to use the fastest web user interface library there is, then this book is ideal for you. What You Will Learn Install powerful React.js tools to make development much more efficient Create React elements with properties and children Get started with stateless and stateful React components Use JSX to speed up your React.js development process Add reactivity to your React components with lifecycle methods Integrate your React components with other JavaScript libraries Utilize the Flux application architecture with your React components Test your React components with Jest test framework In Detail Building web applications with maintainable and performant user interfaces is a challenge that many have faced for more than a decade, but no one has risen to this challenge quite like React.js. Today React.js is used by Facebook, Instagram, Khan Academy, and Imperial College London, to name a few. Many new users recognize the benefits of React.js and adopt it in their own projects, forming a fast-growing community. The speed at which React.js has evolved promises a bright future for those who invest in learning it today. React.js Essentials will take you on a fast-paced journey through building your own maintainable React.js application. Begin by exploring how you can create single and multiple user interface elements. Create stateless and stateful components and make them reactive, learn to interact between your components and lifecycle methods and gauge how to effectively integrate your user interface components with other JavaScript libraries. Delve deep into the core elements of the Flux architecture and learn how to manage your application using stores. Finish by going that extra mile with the Jest test framework, running multiple tests on your application and find solutions to scale it further without complexity. Style and approach The book adopts a step-by-step, hands-on approach with ample codes to ensure you learn React.js at a fast pace.",
+      "description": "A fast-paced guide to designing and building scalable and maintainable web apps with React.js Abo...",
       "image": "http://books.google.com/books/content?id=Rhl1CgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "00a6a52b-3ece-4b42-9c8e-c37ca984f49d"
@@ -40,7 +40,7 @@
       "isbn": "1680507036",
       "title": "Test-Driven React",
       "author": "Trevor Burnham",
-      "description": "You work in a loop: write code, get feedback, iterate. The faster you get feedback, the faster you can learn and become a more effective developer. Test-Driven React helps you refine your React workflow to give you the feedback you need as quickly as possible. Write strong tests and run them continuously as you work, split complex code up into manageable pieces, and stay focused on what's important by automating away mundane, trivial tasks. Adopt these techniques and you'll be able to avoid productivity traps and start building React components at a stunning pace!",
+      "description": "You work in a loop: write code, get feedback, iterate. The faster you get feedback, the faster yo...",
       "image": "http://books.google.com/books/content?id=wtilDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "1b90364d-e958-44c8-8ef5-e8c3a8047af1"
@@ -49,7 +49,7 @@
       "isbn": "1491931779",
       "title": "React: Up & Running",
       "author": "Stoyan Stefanov",
-      "description": "Hit the ground running with React, the open-source technology from Facebook for building rich web applications fast. With this practical guide, Yahoo! web developer Stoyan Stefanov teaches you how to build components—React’s basic building blocks—and organize them into maintainable, large-scale apps. If you’re familiar with basic JavaScript syntax, you’re ready to get started. Once you understand how React works, you’ll build a complete custom Whinepad app that helps users rate wines and keep notes. You’ll quickly learn why some developers consider React the key to the web app development puzzle. Set up React and write your first \"Hello world\" web app Create and use custom React components alongside generic DOM components Build a data table component that lets you edit, sort, search, and export its contents Use the JSX syntax extension as an alternative to function calls Set up a lean, low-level build process that helps you focus on React Build a complete custom app that lets you store data on the client Use ESLint, Flow, and Jest tools to check and test your code as your app evolves Manage communication between components with Flux",
+      "description": "Hit the ground running with React, the open-source technology from Facebook for building rich web...",
       "image": "http://books.google.com/books/content?id=a_asDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "ad32210c-3570-4337-a5bd-05798ed20b80"
@@ -58,7 +58,7 @@
       "isbn": "9781720043997",
       "title": "The Road to Learn React: Your Journey to Master Plain Yet Pragmatic React.Js",
       "author": "Robin Wieruch",
-      "description": "The Road to learn React teaches you the fundamentals of React. You will build a real world application along the way in plain React without complicated tooling. Everything from project setup to deployment on a server will be explained. The book comes with additional referenced reading material and exercises with each chapter. After reading the book, you will be able to build your own applications in React. The material is kept up to date by me and the community. In the Road to learn React, I want to offer a foundation before you start to dive into the broader React ecosystem. It has less tooling and less external state management, but a lot of information around React. It explains general concepts, patterns and best practices in a real world React application. You will learn to build your own React application. It covers real world features like pagination, client-side caching and interactions like searching and sorting. Additionally you will transition from JavaScript ES5 to JavaScript ES6 along the way. I hope this book captures my enthusiasm for React and JavaScript and helps you to get started.",
+      "description": "The Road to learn React teaches you the fundamentals of React. You will build a real world applic...",
       "image": "http://books.google.com/books/content?id=6sT0uwEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
       "loaned": false,
       "id": "2ef91833-a7dc-4be6-9c29-d5d2bfe50319"
@@ -67,7 +67,7 @@
       "isbn": "1484212452",
       "title": "Introduction to React",
       "author": "Cory Gackenheimer",
-      "description": "Introduction to React teaches you React, the JavaScript framework created by developers at Facebook, to solve the problem of building complex user interfaces in a consistent and maintainable way. React.js shrugs away common front-end conventions in an effort to make things more efficient - use Introduction to React to learn about this framework and more today. Get to know the React API and it’s specific JavaScript extension, JSX, which makes authoring React components easier and maintainable. You will also learn how to test your React applications and about the tools you can use while building. Once you understand these core concepts, you can build applications with React. This will help you cement the ideas and fundamentals of React and prepare you to utilize React in your own use case. What You'll Learn: How to use React to maintain complex user interfaces in an efficient way How to integrate existing user interfaces and move forward with React How to manage application architecture using Flux How to easily utilize JSX, React's JavaScript extension",
+      "description": "Introduction to React teaches you React, the JavaScript framework created by developers at Facebo...",
       "image": "http://books.google.com/books/content?id=NZCKCgAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "476b5bd7-13b5-4b44-b3bb-13871c8e2d0a"
@@ -76,7 +76,7 @@
       "isbn": "1491948612",
       "title": "JavaScript & jQuery: The Missing Manual",
       "author": "David Sawyer McFarland",
-      "description": "JavaScript lets you supercharge your HTML with animation, interactivity, and visual effects—but many web designers find the language hard to learn. This easy-to-read guide not only covers JavaScript basics, but also shows you how to save time and effort with the jQuery and jQuery UI libraries of prewritten JavaScript code. You’ll build web pages that feel and act like desktop programs—with little or no programming. The important stuff you need to know: Pull back the curtain on JavaScript. Learn how to build a basic program with this language. Get up to speed on jQuery. Quickly assemble JavaScript programs that work well on multiple web browsers. Transform your user interface. Learn jQuery UI, the JavaScript library for interface features like design themes and controls. Make your pages interactive. Create JavaScript events that react to visitor actions. Use animations and effects. Build drop-down navigation menus, pop-ups, automated slideshows, and more. Collect data with web forms. Create easy-to-use forms that ensure more accurate visitor responses. Practice with living examples. Get step-by-step tutorials for web projects you can build yourself.",
+      "description": "JavaScript lets you supercharge your HTML with animation, interactivity, and visual effects—but m...",
       "image": "http://books.google.com/books/content?id=ptiYBAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "65cfd406-a115-4c1c-9b9c-f9531fad5d6c"
@@ -85,10 +85,46 @@
       "isbn": "0596554478",
       "title": "JavaScript: The Definitive Guide",
       "author": "David Flanagan",
-      "description": "This Fifth Edition is completely revised and expanded to cover JavaScript as it is used in today's Web 2.0 applications. This book is both an example-driven programmer's guide and a keep-on-your-desk reference, with new chapters that explain everything you need to know to get the most out of JavaScript, including: Scripted HTTP and Ajax XML processing Client-side graphics using the canvas tag Namespaces in JavaScript--essential when writing complex programs Classes, closures, persistence, Flash, and JavaScript embedded in Java applications Part I explains the core JavaScript language in detail. If you are new to JavaScript, it will teach you the language. If you are already a JavaScript programmer, Part I will sharpen your skills and deepen your understanding of the language. Part II explains the scripting environment provided by web browsers, with a focus on DOM scripting with unobtrusive JavaScript. The broad and deep coverage of client-side JavaScript is illustrated with many sophisticated examples that demonstrate how to: Generate a table of contents for an HTML document Display DHTML animations Automate form validation Draw dynamic pie charts Make HTML elements draggable Define keyboard shortcuts for web applications Create Ajax-enabled tool tips Use XPath and XSLT on XML documents loaded with Ajax And much more Part III is a complete reference for core JavaScript. It documents every class, object, constructor, method, function, property, and constant defined by JavaScript 1.5 and ECMAScript Version 3. Part IV is a reference for client-side JavaScript, covering legacy web browser APIs, the standard Level 2 DOM API, and emerging standards such as the XMLHttpRequest object and the canvas tag. More than 300,000 JavaScript programmers around the world have madethis their indispensable reference book for building JavaScript applications. \"A must-have reference for expert JavaScript programmers...well-organized and detailed.\" -- Brendan Eich, creator of JavaScript",
+      "description": "This Fifth Edition is completely revised and expanded to cover JavaScript as it is used in today'...",
       "image": "http://books.google.com/books/content?id=2weL0iAfrEMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
       "loaned": false,
       "id": "70c30938-8a7e-407a-918f-8b6dd367665c"
+    },
+    {
+      "isbn": "9780764558689",
+      "title": "Dreamweaver MX",
+      "author": "Gareth Downes-Powell",
+      "description": "What is this book about? PHP is one of the most popular server-side scripting languages available...",
+      "image": "http://books.google.com/books/content?id=cF7vD11_xDsC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "4f605434-e02d-4dc6-8d04-8eeb192d5685"
+    },
+    {
+      "isbn": "9781593274870",
+      "title": "The Modern Web",
+      "author": "Peter Gasston",
+      "description": "Provides information on Web development for multiple devices, covering such topics as structure a...",
+      "image": "http://books.google.com/books/content?id=Wfan6L9RGgYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "4bbaccd4-dfcd-4f1b-9975-06210dab615f"
+    },
+    {
+      "isbn": "1849518513",
+      "title": "HTML5 Boilerplate Web Development",
+      "author": "Divya Manian",
+      "description": "\"HTML5 Boilerplate Web Development\" is a practical guide rich with information on getting the bes...",
+      "image": "http://books.google.com/books/content?id=aaHXYmZLYNQC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "9e33b3c7-997b-4534-b13b-ac2a1edbdbde"
+    },
+    {
+      "isbn": "0763734233",
+      "title": "Java Web Development Illuminated",
+      "author": "Kai Qian",
+      "description": "This text introduces students to the concepts of building Web-distributed applications and helps ...",
+      "image": "http://books.google.com/books/content?id=oY9fShrQyUgC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
+      "loaned": false,
+      "id": "a47c213b-ddb6-44ef-98e4-7d4ee09f8b7d"
     }
   ]
 }
