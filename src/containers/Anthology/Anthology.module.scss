@@ -9,6 +9,11 @@
   flex-wrap: wrap;
 }
 
+.error {
+  font-size: $text-xlarge-size;
+  font-style: bold;
+}
+
 @media (min-width: 500px) {
   .Anthology {
     padding-top: 15rem;

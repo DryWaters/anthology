@@ -7,6 +7,8 @@ import classes from "./BookDialog.module.scss";
 
 const BookDialog = props => (
   <div className={classes.BookDialog}>
+    <h2>Delete Book</h2>
+    {props.errorMessage}
     <div>
       <BookImage title={props.book.title} image={props.book.image} />
     </div>

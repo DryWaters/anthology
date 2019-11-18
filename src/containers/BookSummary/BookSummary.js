@@ -163,7 +163,8 @@ class BookSummary extends Component {
 
     return (
       <div className={classes.BookSummary}>
-        <h3>{this.props.status} Book</h3>
+        <h2>{this.props.status} Book</h2>
+        {this.props.errorMessage}
         <div>
           <BookImage
             loaned={this.state.bookForm.loaned.checked}

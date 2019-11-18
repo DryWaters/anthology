@@ -15,20 +15,28 @@ class Anthology extends Component {
   state = {
     books: [],
     selectedBookId: null,
-    modalContent: null
+    modalContent: null,
+    errorMessage: null
   };
 
   componentDidMount() {
     fetch(jsonURL + "/books")
-      .then(response => response.json())
+      .then(response => {
+        if (response.status === 200) {
+          return response.json();
+        } else {
+          this.setState({ errorMessage: response.statusText });
+        }
+      })
       .then(books => this.setState({ books }))
-      .catch(err => console.log(err));
+      .catch(err => this.setState({ errorMessage: err }));
   }
 
   handleCloseModal = () => {
     this.setState({
       modalContent: null,
-      selectedBookId: null
+      selectedBookId: null,
+      errorMessage: null
     });
   };
 
@@ -145,6 +153,7 @@ class Anthology extends Component {
     if (this.state.modalContent === "Delete") {
       modalContent = (
         <BookDialog
+          errorMessage={this.state.errorMessage}
           book={this.getBookInformation()}
           delete={() => this.handleDeleteBook(this.state.selectedBookId)}
           cancel={this.handleCloseModal}
@@ -153,6 +162,7 @@ class Anthology extends Component {
     } else if (this.state.modalContent !== null) {
       modalContent = (
         <BookSummary
+          errorMessage={this.state.errorMessage}
           status={this.state.modalContent}
           cancel={this.handleCloseModal}
           update={this.handleUpdateBooks}
@@ -165,7 +175,16 @@ class Anthology extends Component {
 
   render() {
     // if no books loaded yet, show spinner
-    let books = <Spinner />;
+    let books = (
+      <div>
+        <p className={classes.error}>
+          {this.state.errorMessage
+            ? "Error: " + this.state.errorMessage
+            : "Loading books..."}
+        </p>
+        <Spinner />
+      </div>
+    );
     if (this.state.books && this.state.books.length > 0) {
       books = this.state.books.map(book => (
         <Book
