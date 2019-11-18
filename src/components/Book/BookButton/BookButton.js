@@ -29,7 +29,7 @@ const bookButton = props => {
       className={[classes.BookButton, classes[props.btnType]].join(" ")}
       onClick={props.clicked}
     >
-      <img className={classes.image} src={imageSrc} alt={altText} />
+      <img src={imageSrc} alt={altText} />
     </button>
   );
 };

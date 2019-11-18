@@ -7,6 +7,8 @@ import classes from "./Book.module.scss";
 
 const Book = props => {
   const status = props.loaned ? "return" : "loan";
+
+  // Guard against really long titles
   let title = props.title;
   if (title.length > 70) {
     title = title.slice(0, 67) + "...";

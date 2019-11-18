@@ -8,14 +8,13 @@
 }
 
 .bookControls {
-  display: flex;
   box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5);
+  display: flex;
 }
 
 .imageButton {
-  background-color: transparent;
-  cursor: pointer;
   border: none;
+  cursor: pointer;
   height: 13rem;
 }
 

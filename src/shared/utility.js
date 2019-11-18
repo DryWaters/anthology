@@ -9,9 +9,9 @@ export const validateInput = input => {
     isValid = input.value.trim() !== "" && isValid;
   }
 
+  // check if string is a validURL for images
   if (input.validation.validURL) {
     const validURL = isValidURL(input.value) && isValid;
-
     isValid = validURL && isValid;
   }
 

@@ -9,7 +9,7 @@ const bookImage = props => {
     styles.push(classes.loaned);
   }
 
-  // if given a image url use it, or fall back image
+  // if given a valid url use it or fall back image
   let url = "./images/book-image-error.png";
   if (props.image && isValidURL(props.image)) {
     url = props.image;

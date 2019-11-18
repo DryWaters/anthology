@@ -1,15 +1,16 @@
 import React, { Component } from "react";
-
 import uuidv4 from "uuid/v4";
-import { validateInput, validateForm } from "../../shared/utility";
 
 import BookImage from "../../components/Book/BookImage/BookImage";
 import Button from "../../components/UI/Button/Button";
 import Input from "../../components/UI/Input/Input";
+import { validateInput, validateForm } from "../../shared/utility";
 
 import classes from "./BookSummary.module.scss";
 
 class BookSummary extends Component {
+  // bookForm contains dynamic input element configuration
+  // that will be generated in the render() function
   state = {
     bookForm: {
       title: {
@@ -81,7 +82,7 @@ class BookSummary extends Component {
       return;
     }
 
-    // check if passed in book props are valid
+    // check if passed in book props are already valid
     let isFormValid = true;
     const newForm = { ...this.state.bookForm };
     for (let input in newForm) {
@@ -112,6 +113,9 @@ class BookSummary extends Component {
 
   formSubmitHandler = event => {
     event.preventDefault();
+
+    // check form app state valid in case
+    // user modifies disabled state on button
     if (!this.state.isFormValid) {
       return;
     }
@@ -126,12 +130,12 @@ class BookSummary extends Component {
       loaned: bookForm.loaned.checked
     };
 
-    // updating a book
+    // if updating a book, reuse same book id
+    // else generate a new UUID
     if (this.props.book && this.props.book.id) {
       newBook.id = this.props.book.id;
       this.props.update(newBook, "PUT");
     } else {
-      // creating a new book
       newBook.id = uuidv4();
       this.props.update(newBook, "POST");
     }

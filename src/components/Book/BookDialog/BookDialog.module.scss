@@ -1,33 +1,25 @@
 @import "../../../variables.scss";
 
 .BookDialog {
+  background-color: $color-light-brown;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  text-align: center;
   padding: 2rem;
-  background-color: $color-light-brown;
-}
-
-.image {
-  max-width: 100%;
-  box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
 .prompt {
-  margin-top: 0rem;
+  margin-top: 2rem;
 }
 
 .title {
-  font-weight: bold;
   font-size: $text-medium-size;
+  font-weight: bold;
 }
 
 @media (min-width: 500px) {
-  .prompt {
-    margin-top: 2rem;
-  }
   .title {
     font-size: $text-large-size;
   }

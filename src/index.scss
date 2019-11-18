@@ -1,5 +1,9 @@
+// normalize CSS
+// https://create-react-app.dev/docs/adding-css-reset/
 @import-normalize;
 @import "./variables.scss";
+
+// app wide CSS styles
 
 * {
   margin: 0;

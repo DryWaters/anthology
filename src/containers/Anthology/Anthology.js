@@ -32,6 +32,9 @@ class Anthology extends Component {
       .catch(err => this.setState({ errorMessage: err }));
   }
 
+  // Called by tapping outside of modal box and also
+  // cancelling actions.  This is also the only way
+  // to clear error messages from fetch() api
   handleCloseModal = () => {
     this.setState({
       modalContent: null,
@@ -40,20 +43,16 @@ class Anthology extends Component {
     });
   };
 
-  handleShowBookDeleteDialog = selectedId => {
+  // Shows the modal if updating or deleting a book
+  handleShowModal = (id, modalType) => {
     this.setState({
-      modalContent: "Delete",
-      selectedBookId: selectedId
-    });
-  };
-
-  handleSelectBook = id => {
-    this.setState({
-      modalContent: "Update",
+      modalContent: modalType,
       selectedBookId: id
     });
   };
 
+  // handles updating backend API functions
+  // and updating the local state
   handleUpdateBooks = (data, method) => {
     let newBooks = [...this.state.books];
     let url = jsonURL + "/books/";
@@ -61,7 +60,7 @@ class Anthology extends Component {
     let index;
 
     switch (method) {
-      // update loan status
+      // update loaned status
       case "PATCH":
         url += data.id;
         index = newBooks.findIndex(({ id }) => id === data.id);
@@ -73,13 +72,14 @@ class Anthology extends Component {
         newBooks.push(data);
         payload = { ...data };
         break;
-      // update book
+      // update existing book
       case "PUT":
         url += data.id;
         index = newBooks.findIndex(({ id }) => id === data.id);
         newBooks[index] = { ...data };
         payload = { ...data };
         break;
+      // delete book
       case "DELETE":
         url += data;
         newBooks = newBooks.filter(({ id }) => data !== id);
@@ -110,9 +110,11 @@ class Anthology extends Component {
           this.setState({ errorMessage: res.statusText });
         }
       })
+      // else set error state that will show in modals
       .catch(err => this.setState({ errorMessage: err }));
   };
 
+  // get book information that is passed down into modals
   getBookInformation = () => {
     const selectedBook = this.state.books.filter(
       ({ id }) => this.state.selectedBookId === id
@@ -121,6 +123,8 @@ class Anthology extends Component {
     return selectedBook.length > 0 ? selectedBook[0] : null;
   };
 
+  // display different type of modal if deleting
+  // or updating/adding book.
   displayModalContent = () => {
     let modalContent = null;
     if (this.state.modalContent === "Delete") {
@@ -132,7 +136,7 @@ class Anthology extends Component {
           cancel={this.handleCloseModal}
         />
       );
-    } else if (this.state.modalContent !== null) {
+    } else {
       modalContent = (
         <BookSummary
           errorMessage={this.state.errorMessage}
@@ -147,10 +151,10 @@ class Anthology extends Component {
   };
 
   render() {
-    // if no books loaded yet show spinner with error message
+    // if no books loaded yet show spinner and/or error message
     let books = (
       <div>
-        <p className={classes.error}>
+        <p className={"error"}>
           {this.state.errorMessage
             ? "Error: " + this.state.errorMessage
             : "Loading books..."}
@@ -158,19 +162,23 @@ class Anthology extends Component {
         <Spinner />
       </div>
     );
+
+    // create books to display by mapping over retrieved books
+    // from backend.
     if (this.state.books && this.state.books.length > 0) {
       books = this.state.books.map(book => (
         <Book
           key={book.id}
-          clickImage={() => this.handleSelectBook(book.id)}
-          deleteBook={() => this.handleShowBookDeleteDialog(book.id)}
+          clickImage={() => this.handleShowModal(book.id, "Update")}
+          deleteBook={() => this.handleShowModal(book.id, "Delete")}
           toggleLoan={() => this.handleUpdateBooks(book, "PATCH")}
           {...book}
         />
       ));
     }
 
-    let modalContent = this.displayModalContent();
+    // Display modal content if needed
+    let modalContent = this.state.modalContent && this.displayModalContent();
 
     return (
       <div className={classes.Anthology}>
