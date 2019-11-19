@@ -4,7 +4,6 @@
 @import "./variables.scss";
 
 // app wide CSS styles
-
 * {
   margin: 0;
   padding: 0;
@@ -26,6 +25,11 @@ body {
   font-weight: 400;
   line-height: 1.6;
   font-size: $text-medium-size;
+  color: $text-color-dark;
+}
+
+::placeholder {
+  color: $color-grey-3;
 }
 
 .error {

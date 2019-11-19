@@ -14,19 +14,20 @@
 }
 
 .inputElement {
-  background-color: $color-light;
-  border: 2px solid $color-primary;
+  background-color: $color-grey-1;
+  border: 2px solid $color-secondary;
   padding: 6px 5px;
   width: 25rem;
 }
 
 .inputElement:focus {
-  background-color: $color-primary;
+  background-color: lighten($color-grey-2, 30%);
 }
 
 .invalid {
-  background-color: $color-light-orange;
-  border: 2px solid $color-danger;
+  background-color: lighten($color-danger, 50%);
+  border: 3px solid $color-danger;
+  color: $text-color-light;
 }
 
 @media (min-width: 800px) {

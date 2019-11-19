@@ -1,5 +1,7 @@
+@import "../../../variables.scss";
+
 .Backdrop {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba($color-black, 0.7);
   height: 100%;
   left: 0;
   position: fixed;

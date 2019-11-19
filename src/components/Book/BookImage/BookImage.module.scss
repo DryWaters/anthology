@@ -1,14 +1,14 @@
 @import "../../../variables.scss";
 
 .BookImage {
-  background-color: $color-dark-brown;
+  background-color: $color-secondary;
   height: 13rem;
   object-fit: fit;
   width: 10rem;
 }
 
 .loaned {
-  filter: grayscale(100%) brightness(30%);
+  filter: grayscale(100%) brightness(50%);
 }
 
 @media (min-width: 800px) {

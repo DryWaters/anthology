@@ -2,8 +2,7 @@
 
 .BookButton {
   width: 3rem;
-  background-color: transparent;
-  border: 1px solid #000;
+  border: 1px solid $color-black;
   cursor: pointer;
 
   & img {
@@ -12,7 +11,7 @@
 }
 
 .delete {
-  background-color: $color-orange;
+  background-color: $color-danger;
 }
 
 .loan {

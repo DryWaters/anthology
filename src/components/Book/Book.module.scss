@@ -8,7 +8,7 @@
 }
 
 .bookControls {
-  box-shadow: 0px 15px 10px -10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 15px 10px -10px rgba($color-black, 0.5);
   display: flex;
 }
 
@@ -20,9 +20,9 @@
 
 .title {
   font-weight: bold;
-  text-align: center;
   line-height: 1.5rem;
   margin-top: 1rem;
+  text-align: center;
 }
 
 @media (min-width: 400px) {
@@ -37,6 +37,6 @@
   }
 
   .imageButton {
-    height: 25rem;
+    height: 30rem;
   }
 }

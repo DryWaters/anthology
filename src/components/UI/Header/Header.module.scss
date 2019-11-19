@@ -4,68 +4,43 @@
   align-items: center;
   background-image: linear-gradient(
     to bottom right,
-    $color-brown,
+    $color-grey-3,
     $color-secondary
   );
-  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 10px 10px rgba($color-black, 0.5);
   box-sizing: border-box;
   color: $text-color-light;
   display: flex;
+  justify-content: space-around;
   height: 7rem;
   left: 0;
-  padding: 0 2rem 0 0;
+  padding: 0 2rem;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 90;
 }
 
-.logo {
-  height: 120%;
-  position: relative;
-  top: -0.5rem;
-}
-
 .logoText {
-  font-family: "Domine", serif;
-  font-size: $text-medium-size;
-  font-weight: bold;
-  left: -1rem;
+  font-size: $text-large-size;
   letter-spacing: 0.5rem;
-  margin-right: auto;
-  position: relative;
 }
 
 @media (min-width: 500px) {
   .Header {
     height: 10rem;
-    padding: 0 6rem 0 0;
-  }
-
-  .logo {
-    height: 15rem;
-  }
-
-  .logoText {
-    font-size: $text-large-size;
-    left: -2rem;
-    letter-spacing: 1rem;
-  }
-}
-
-@media (min-width: 900px) {
-  .Header {
-    padding: 0 12rem 0 8rem;
-  }
-  .logo {
-    height: 25rem;
-    top: -1rem;
   }
 
   .logoText {
     font-size: $text-xlarge-size;
+  }
+}
+
+@media (min-width: 900px) {
+  .logoText {
+    font-size: $text-xlarge-size;
     // https://css-tricks.com/adding-stroke-to-web-text/
-    text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
-      -1px 1px 0 #000, 1px 1px 0 #000;
+    text-shadow: 3px 3px 0 $color-black, -1px -1px 0 $color-black,
+      1px -1px 0 $color-black, -1px 1px 0 $color-black, 1px 1px 0 $color-black;
   }
 }

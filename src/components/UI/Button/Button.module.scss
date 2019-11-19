@@ -1,9 +1,9 @@
 @import "../../../variables.scss";
 
 .Button {
-  border-width: 2px;
+  border: 2px solid $color-secondary;
   border-radius: 1rem;
-  color: $color-light-brown;
+  color: $color-primary;
   cursor: pointer;
   font: $text-small-size;
   font-weight: bold;
@@ -13,57 +13,53 @@
   text-transform: uppercase;
 
   &:disabled {
-    color: $color-dark;
-    background-color: rgba(0, 0, 0, 0.8);
+    color: $color-grey-2;
+    background-color: rgba($color-black, 0.7);
     cursor: not-allowed;
   }
 
   &:hover:not([disabled]) {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba($color-black, 0.3);
   }
 
   &:active {
-    box-shadow: inset 5px 5px 30px rgba(0, 0, 0, 0.9);
+    box-shadow: inset 5px 5px 30px rgba($color-black, 0.9);
   }
 }
 
 .primary {
   background-color: $color-secondary;
-  border-color: $color-light-brown;
+  color: $color-primary;
+  border-color: $color-primary;
 
   &:hover:not([disabled]) {
-    background-color: rgba($color-light-brown, 0.3);
-    color: $color-light-brown;
+    background-color: rgba($color-secondary, 0.3);
   }
 }
 
 .cancel {
   background-color: transparent;
-  border-color: $color-dark-orange;
-  color: $color-dark-orange;
+  color: $color-secondary;
 
   &:hover:not([disabled]) {
-    background-color: rgba($color-orange, 0.3);
+    background-color: rgba($color-secondary, 0.3);
   }
 }
 
 .danger {
-  background-color: $color-orange;
-  border-color: $color-dark-orange;
+  background-color: $color-danger;
 
   &:hover:not([disabled]) {
-    background-color: rgba($color-orange, 0.5);
+    background-color: rgba($color-danger, 0.7);
   }
 }
 
 .success,
 .submit {
   background-color: $color-success;
-  border-color: $color-dark-orange;
 
   &:hover:not([disabled]) {
-    background-color: rgba($color-success, 0.5);
-    color: $color-dark-orange;
+    background-color: rgba($color-success, 0.7);
   }
 }
 
