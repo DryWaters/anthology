@@ -1,13 +1,13 @@
 @import "../../../variables.scss";
 
 .BookButton {
-  width: 3rem;
   background-color: transparent;
   border: none;
   border-radius: 0.5rem;
-  margin: 2rem 0.5rem;
-  cursor: pointer;
   box-shadow: 0px 15px 10px -10px rgba($color-black, 0.5);
+  cursor: pointer;
+  margin: 2rem 0.5rem;
+  width: 3rem;
 
   & img {
     width: 80%;
@@ -25,14 +25,14 @@
 
 @media (min-width: 500px) {
   .BookButton {
-    width: 4rem;
     margin: 2rem 1rem;
+    width: 4rem;
   }
 }
 
 @media (min-width: 800px) {
   .BookButton {
-    width: 5rem;
     margin: 2rem 2rem;
+    width: 5rem;
   }
 }
