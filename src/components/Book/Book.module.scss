@@ -4,11 +4,10 @@
   display: flex;
   flex-direction: column;
   flex-basis: 0;
-  margin: 1rem 0;
+  margin: 3rem 0;
 }
 
 .bookControls {
-  box-shadow: 0px 15px 10px -10px rgba($color-black, 0.5);
   display: flex;
 }
 
@@ -16,10 +15,11 @@
   border: none;
   cursor: pointer;
   height: 13rem;
+  box-shadow: 0px 15px 10px -10px rgba($color-black, 0.5);
 }
 
 .title {
-  font-weight: bold;
+  // font-weight: bold;
   line-height: 1.5rem;
   margin-top: 1rem;
   text-align: center;
@@ -27,16 +27,12 @@
 
 @media (min-width: 400px) {
   .Book {
-    margin: 1rem;
+    margin: 3rem 1rem;
   }
 }
 
 @media (min-width: 800px) {
-  .Book {
-    margin: 2rem;
-  }
-
   .imageButton {
-    height: 30rem;
+    height: 25rem;
   }
 }

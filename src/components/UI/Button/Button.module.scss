@@ -3,7 +3,7 @@
 .Button {
   border: 2px solid $color-secondary;
   border-radius: 1rem;
-  color: $color-primary;
+  color: $text-color-dark;
   cursor: pointer;
   font: $text-small-size;
   font-weight: bold;
@@ -28,18 +28,17 @@
 }
 
 .primary {
-  background-color: $color-secondary;
+  background-color: $color-grey-3;
   color: $color-primary;
   border-color: $color-primary;
 
   &:hover:not([disabled]) {
-    background-color: rgba($color-secondary, 0.3);
+    background-color: rgba($color-secondary, 0.5);
   }
 }
 
 .cancel {
   background-color: transparent;
-  color: $color-secondary;
 
   &:hover:not([disabled]) {
     background-color: rgba($color-secondary, 0.3);
@@ -50,7 +49,7 @@
   background-color: $color-danger;
 
   &:hover:not([disabled]) {
-    background-color: rgba($color-danger, 0.7);
+    background-color: darken($color-danger, 15%);
   }
 }
 
@@ -59,7 +58,7 @@
   background-color: $color-success;
 
   &:hover:not([disabled]) {
-    background-color: rgba($color-success, 0.7);
+    background-color: darken($color-success, 15%);
   }
 }
 

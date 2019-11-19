@@ -24,7 +24,7 @@
       "author": "Cassio de Sousa Antonio",
       "description": "Pro React teaches you how to successfully structure increasingly complex front-end applications a...",
       "image": "https://books.google.com/books/content?id=PKpPCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": true,
+      "loaned": false,
       "id": "a45cfe13-b3c8-4f51-bb6e-7f7c58f886a0"
     },
     {
