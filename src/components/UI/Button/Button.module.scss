@@ -13,8 +13,8 @@
   text-transform: uppercase;
 
   &:disabled {
-    color: $color-grey-2;
     background-color: rgba($color-black, 0.7);
+    color: $color-grey-2;
     cursor: not-allowed;
   }
 
@@ -29,8 +29,8 @@
 
 .primary {
   background-color: $color-grey-3;
-  color: $color-primary;
   border-color: $color-primary;
+  color: $color-primary;
 
   &:hover:not([disabled]) {
     background-color: rgba($color-secondary, 0.5);
