@@ -27,7 +27,6 @@
 .invalid {
   background-color: lighten($color-danger, 50%);
   border: 3px solid $color-danger;
-  color: $text-color-light;
 }
 
 @media (min-width: 800px) {
