@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import classes from "./Input.module.scss";
 
-const input = props => {
+const Input = props => {
   let inputElement = null;
   const inputClasses = [classes.inputElement];
 
@@ -57,4 +58,15 @@ const input = props => {
   );
 };
 
-export default input;
+Input.propTypes = {
+  blurred: PropTypes.func.isRequired,
+  changed: PropTypes.func.isRequired,
+  checked: PropTypes.bool,
+  elementType: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  invalid: PropTypes.bool.isRequired,
+  touched: PropTypes.bool.isRequired,
+  value: PropTypes.string
+};
+
+export default Input;

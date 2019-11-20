@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import uuidv4 from "uuid/v4";
 
 import BookImage from "../../components/Book/BookImage/BookImage";
@@ -72,7 +73,6 @@ class BookSummary extends Component {
           placeholder: "Image URL"
         },
         validation: {
-          required: true,
           validURL: true
         },
         value: this.props.book ? this.props.book.image : "",
@@ -311,5 +311,20 @@ class BookSummary extends Component {
     );
   }
 }
+
+BookSummary.propTypes = {
+  book: PropTypes.shape({
+    author: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    id: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    isbn: PropTypes.string,
+    loaned: PropTypes.bool.isRequired,
+    title: PropTypes.string.isRequired
+  }),
+  status: PropTypes.string.isRequired,
+  update: PropTypes.func.isRequired,
+  errorMessage: PropTypes.string
+};
 
 export default BookSummary;

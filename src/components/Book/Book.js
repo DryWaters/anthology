@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import BookButton from "./BookButton/BookButton";
 import BookImage from "./BookImage/BookImage";
@@ -30,6 +31,14 @@ const Book = props => {
       <div className={classes.title}>{title}</div>
     </div>
   );
+};
+
+Book.propTypes = {
+  clickImage: PropTypes.func.isRequired,
+  image: PropTypes.string,
+  loaned: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired,
+  toggleLoan: PropTypes.func.isRequired
 };
 
 export default Book;

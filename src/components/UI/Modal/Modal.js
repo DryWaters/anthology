@@ -1,6 +1,8 @@
 import React, { Fragment } from "react";
+import PropTypes from "prop-types";
 
 import Backdrop from "../Backdrop/Backdrop";
+
 import classes from "./Modal.module.scss";
 
 const Modal = props => {
@@ -14,6 +16,11 @@ const Modal = props => {
       </div>
     </Fragment>
   );
+};
+
+Modal.propTypes = {
+  modalClose: PropTypes.func.isRequired,
+  show: PropTypes.bool.isRequired
 };
 
 export default Modal;

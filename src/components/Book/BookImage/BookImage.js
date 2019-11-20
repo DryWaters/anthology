@@ -1,9 +1,10 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import { isValidURL } from "../../../shared/utility";
 import classes from "./BookImage.module.scss";
 
-const bookImage = props => {
+const BookImage = props => {
   const styles = [classes.BookImage];
   if (props.loaned) {
     styles.push(classes.loaned);
@@ -28,4 +29,10 @@ const bookImage = props => {
   );
 };
 
-export default bookImage;
+BookImage.propTypes = {
+  image: PropTypes.string,
+  loaned: PropTypes.bool.isRequired,
+  title: PropTypes.string.isRequired
+};
+
+export default BookImage;

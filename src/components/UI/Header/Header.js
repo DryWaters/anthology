@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import Button from "../Button/Button";
 
@@ -12,5 +13,9 @@ const Header = props => (
     </Button>
   </div>
 );
+
+Header.propTypes = {
+  clicked: PropTypes.func.isRequired
+};
 
 export default Header;
