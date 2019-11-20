@@ -1,9 +1,11 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import Button from "../../UI/Button/Button";
 
 import classes from "./ErrorDialog.module.scss";
 
-const errorDialog = props => {
+const ErrorDialog = props => {
   // Generate error message output if passed in from fetch()
   // Note: error message is cleared when modal is closed
   let errorMessage = null;
@@ -23,4 +25,9 @@ const errorDialog = props => {
   );
 };
 
-export default errorDialog;
+ErrorDialog.propTypes = {
+  cancel: PropTypes.func.isRequired,
+  errorMessage: PropTypes.string
+};
+
+export default ErrorDialog;

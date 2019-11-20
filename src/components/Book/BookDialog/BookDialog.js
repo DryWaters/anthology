@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import BookImage from "../BookImage/BookImage";
 import Button from "../../UI/Button/Button";
@@ -37,6 +38,11 @@ const BookDialog = props => {
       </div>
     </div>
   );
+};
+
+BookDialog.propTypes = {
+  book: PropTypes.objectOf(PropTypes.string.isRequired),
+  errorMessage: PropTypes.string
 };
 
 export default BookDialog;

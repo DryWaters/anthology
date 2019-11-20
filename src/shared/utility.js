@@ -30,6 +30,9 @@ export const validateInput = input => {
 // check if url is valid
 // https://stackoverflow.com/questions/5717093/check-if-a-javascript-string-is-a-url
 export const isValidURL = url => {
+  if (url.trim().length === 0) {
+    return true;
+  }
   var pattern = new RegExp(
     "^(https?:\\/\\/)?" + // protocol
     "((([a-z\\d]([a-z\\d-]*[a-z\\d])*)\\.)+[a-z]{2,}|" + // domain name

@@ -1,11 +1,12 @@
 import React from "react";
+import PropTypes from "prop-types";
 
 import deleteImg from "../../../assets/images/delete-button.png";
 import loanImg from "../../../assets/images/loan-book.png";
 import returnImg from "../../../assets/images/return-book.png";
 import classes from "./BookButton.module.scss";
 
-const bookButton = props => {
+const BookButton = props => {
   const altText =
     props.btnType.charAt(0).toUpperCase() + props.btnType.slice(1) + " Book";
 
@@ -34,4 +35,9 @@ const bookButton = props => {
   );
 };
 
-export default bookButton;
+BookButton.propTypes = {
+  btnType: PropTypes.string.isRequired,
+  clicked: PropTypes.func.isRequired
+};
+
+export default BookButton;
