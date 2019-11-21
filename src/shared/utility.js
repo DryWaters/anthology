@@ -30,7 +30,7 @@ export const validateInput = input => {
 // check if url is valid
 // https://stackoverflow.com/questions/5717093/check-if-a-javascript-string-is-a-url
 export const isValidURL = url => {
-  if (url.trim().length === 0) {
+  if (!url || url.trim().length === 0) {
     return true;
   }
   var pattern = new RegExp(
