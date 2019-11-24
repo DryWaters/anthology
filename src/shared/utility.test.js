@@ -112,3 +112,22 @@ describe("validateForm", () => {
     expect(util.validateForm(validForm)).toBe(false);
   });
 });
+
+describe("isValidISBN", () => {
+  it("should pass on valid ISBNs", () => {
+    expect(util.isValidISBN("0316485616")).toBe(true);
+    expect(util.isValidISBN("9781942788003")).toBe(true);
+    expect(util.isValidISBN("9780321700698")).toBe(true);
+    expect(util.isValidISBN("1633430073")).toBe(true);
+    expect(util.isValidISBN("043942089x")).toBe(true);
+    expect(util.isValidISBN("043942089X")).toBe(true);
+  });
+
+  it("fail on invalid ISBNs", () => {
+    expect(util.isValidISBN("0316485612")).toBe(false);
+    expect(util.isValidISBN("9781942788002")).toBe(false);
+    expect(util.isValidISBN("9780321700692")).toBe(false);
+    expect(util.isValidISBN("1633430078")).toBe(false);
+    expect(util.isValidISBN("043942089y")).toBe(false);
+  });
+});
