@@ -91,6 +91,10 @@ class BookSummary extends Component {
     }
   };
 
+  // Add a instance of abortController to allow cancelling fetch
+  // requests if user does not let the request finish
+  abortController = new window.AbortController();
+
   componentDidMount() {
     // if adding a book, nothing to validate
     if (!this.props.book) {
@@ -111,6 +115,11 @@ class BookSummary extends Component {
     });
   }
 
+  componentWillUnmount() {
+    // abort any pending fetch requests
+    this.abortController.abort();
+  }
+
   fetchBookDetails = () => {
     let url =
       "https://www.googleapis.com/books/v1/volumes?q=isbn:" +
@@ -121,7 +130,8 @@ class BookSummary extends Component {
       headers: {
         Accept: "application/json",
         "Content-Type": "application/json"
-      }
+      },
+      signal: this.abortController.signal
     })
       .then(res => {
         if (res.status === 200) {
