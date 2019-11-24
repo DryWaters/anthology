@@ -77,7 +77,6 @@ export const isValidISBN = isbn => {
     const sum = charArray.reduce((acc, char) => {
       return (acc += parseInt(char) * multiplier--);
     }, 0);
-    console.log(sum);
     return sum % 11 === 0;
   } else if (isbn.length === 13) {
     // Check for valid ISBN13
