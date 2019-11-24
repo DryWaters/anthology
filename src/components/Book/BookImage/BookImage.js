@@ -31,7 +31,7 @@ const BookImage = props => {
 
 BookImage.propTypes = {
   image: PropTypes.string,
-  loaned: PropTypes.bool.isRequired,
+  loaned: PropTypes.bool,
   title: PropTypes.string.isRequired
 };
 

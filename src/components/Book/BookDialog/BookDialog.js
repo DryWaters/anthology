@@ -41,7 +41,15 @@ const BookDialog = props => {
 };
 
 BookDialog.propTypes = {
-  book: PropTypes.objectOf(PropTypes.string.isRequired),
+  book: PropTypes.shape({
+    author: PropTypes.string.isRequired,
+    description: PropTypes.string,
+    id: PropTypes.string.isRequired,
+    image: PropTypes.string,
+    isbn: PropTypes.string,
+    loaned: PropTypes.bool,
+    title: PropTypes.string.isRequired
+  }),
   errorMessage: PropTypes.string
 };
 
