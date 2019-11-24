@@ -72,12 +72,12 @@ export const isValidISBN = isbn => {
 
     // check if digits equal a valid isbn
     // https://www.instructables.com/id/How-to-verify-a-ISBN/
-    let sum = 0;
+    // let sum = 0;
     let multiplier = 10;
-    charArray.forEach(char => {
-      sum += parseInt(char) * multiplier;
-      multiplier--;
-    });
+    const sum = charArray.reduce((acc, char) => {
+      return (acc += parseInt(char) * multiplier--);
+    }, 0);
+    console.log(sum);
     return sum % 11 === 0;
   } else if (isbn.length === 13) {
     // Check for valid ISBN13
@@ -92,11 +92,10 @@ export const isValidISBN = isbn => {
 
     // check if digits equal a valid isbn
     // https://www.instructables.com/id/How-to-verify-a-ISBN/
-    let sum = 0;
     let multiplier = [1, 3];
-    [...isbn].forEach((char, index) => {
-      sum += parseInt(char) * multiplier[index % 2];
-    });
+    const sum = [...isbn].reduce((acc, char, index) => {
+      return (acc += parseInt(char) * multiplier[index % 2]);
+    }, 0);
     return sum % 10 === 0;
   } else {
     // neither isbn10 or 13...bad isbn
