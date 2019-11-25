@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import Book from "../../components/Book/Book";
 import BookDialog from "../../components/Book/BookDialog/BookDialog";
 import BookSummary from "../../containers/BookSummary/BookSummary";
+import Controls from "../../components/Controls/Controls";
 import ErrorDialog from "../../components/UI/ErrorDialog/ErrorDialog";
 import Header from "../../components/UI/Header/Header";
 import Modal from "../../components/UI/Modal/Modal";
@@ -223,6 +224,7 @@ class Anthology extends Component {
         >
           {modalContent}
         </Modal>
+        <Controls filter={this.handleFilterBooks} />
         {books}
       </div>
     );
