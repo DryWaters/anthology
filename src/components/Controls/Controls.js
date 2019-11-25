@@ -12,7 +12,7 @@ const Controls = props => (
       onChange={props.onFilterTextChange}
       type="text"
       value={props.filterText}
-      placeholder="Filter Text"
+      placeholder="Type to filter"
       name="filterText"
     />
     <select
