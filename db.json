@@ -6,7 +6,7 @@
       "author": "Marijn Haverbeke",
       "description": "Eloquent JavaScriptdives into the JavaScript language to show programmers how to write elegant, e...",
       "image": "http://books.google.com/books/content?id=ZwL9swEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "loaned": true,
+      "loaned": false,
       "id": "0b2c552d-11b4-451c-bbdc-eee101ada855"
     },
     {
@@ -14,8 +14,8 @@
       "title": "Selenium Testing Tools Cookbook Second Edition",
       "author": "Unmesh Gundecha",
       "description": "Over 90 recipes to help you build and run automated tests for your web applications with Selenium...",
-      "image": "https://books.google.com/books/content?id=HXC7jgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "loaned": true,
+      "image": "http://books.google.com/books/content?id=HXC7jgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
+      "loaned": false,
       "id": "af500c57-bc5d-4b12-8c88-6dedee24f8fd"
     },
     {

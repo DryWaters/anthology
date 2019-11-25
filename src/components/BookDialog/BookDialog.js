@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-import BookImage from "../BookImage/BookImage";
-import Button from "../../UI/Button/Button";
+import BookImage from "../Book/BookImage/BookImage";
+import Button from "../UI/Button/Button";
 
 import classes from "./BookDialog.module.scss";
 

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import Book from "../../components/Book/Book";
-import BookDialog from "../../components/Book/BookDialog/BookDialog";
+import BookDialog from "../../components/BookDialog/BookDialog";
 import BookSummary from "../../containers/BookSummary/BookSummary";
 import Controls from "../../components/Controls/Controls";
 import ErrorDialog from "../../components/UI/ErrorDialog/ErrorDialog";

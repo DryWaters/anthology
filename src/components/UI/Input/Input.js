@@ -23,8 +23,8 @@ const Input = props => {
           className={inputClasses.join(" ")}
           {...props.elementConfig}
           value={props.value}
-          onChange={props.onChanged}
           checked={props.checked}
+          onChange={props.onChanged}
           onBlur={props.onBlurred}
         />
       );
