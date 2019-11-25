@@ -26,7 +26,7 @@ const BookDialog = props => {
         <span className={classes.title}>{props.book.title}?</span>
       </div>
       <div>
-        <Button btnType="cancel" clicked={props.cancel}>
+        <Button btnType="cancel" clicked={props.onCancel}>
           Cancel
         </Button>
         <Button
@@ -51,6 +51,7 @@ BookDialog.propTypes = {
     title: PropTypes.string.isRequired
   }),
   onDelete: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
   errorMessage: PropTypes.string
 };
 
