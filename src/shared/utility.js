@@ -52,8 +52,8 @@ export const isValidISBN = isbn => {
     return true;
   }
 
-  const hypenRegex = /-/g;
-  isbn = isbn.trim().replace(hypenRegex, "");
+  //remove whitespace and remove hyphens in ISBN
+  isbn = isbn.trim().replace(/-/g, "");
 
   // Check for valid ISBN10
   if (isbn.length === 10) {

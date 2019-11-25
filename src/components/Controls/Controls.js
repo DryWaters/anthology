@@ -2,14 +2,24 @@ import React from "react";
 
 import classes from "./Controls.module.scss";
 
-const Controls = () => (
+const Controls = props => (
   <div className={classes.Controls}>
-    <input type="text" />
-    <select>
-      <option>ISBN</option>
-      <option>Title</option>
-      <option>Author</option>
-      <option>Description</option>
+    <input
+      className={classes.filterText}
+      onChange={props.onFilterTextChange}
+      type="text"
+      value={props.filterText}
+      placeholder="Search"
+    />
+    <select
+      className={classes.filterType}
+      onChange={props.onFilterTypeChange}
+      value={props.filterType}
+    >
+      <option value="isbn">ISBN</option>
+      <option value="title">Title</option>
+      <option value="author">Author</option>
+      <option value="description">Description</option>
     </select>
   </div>
 );

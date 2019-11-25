@@ -16,9 +16,12 @@ const jsonURL = process.env.REACT_APP_API_URL;
 class Anthology extends Component {
   state = {
     books: [],
+    filteredBooks: [],
     selectedBookId: null,
     modalContent: null,
-    errorMessage: null
+    errorMessage: null,
+    filterType: "title",
+    filterText: ""
   };
 
   // Show an error modal if unable to fetch books
@@ -32,7 +35,7 @@ class Anthology extends Component {
         }
       })
       .then(data => {
-        this.setState({ books: data });
+        this.setState({ books: data, filteredBooks: data });
       })
       .catch(err => this.setFetchErrorState(err));
   }
@@ -130,8 +133,11 @@ class Anthology extends Component {
         if (res.status === 200 || res.status === 201) {
           this.setState({
             books: newBooks,
+            filteredBooks: newBooks,
             modalContent: null,
-            selectedBookId: null
+            selectedBookId: null,
+            filterText: "",
+            filterType: "title"
           });
         } else {
           return Promise.reject("Error processing update: Code " + res.status);
@@ -140,7 +146,30 @@ class Anthology extends Component {
       .catch(err => this.setFetchErrorState(err));
   };
 
-  // get book information that is passed down into modals
+  handleFilterText = filterText => {
+    this.filterBooks(filterText.target.value, this.state.filterType);
+  };
+
+  handleFilterType = filterType => {
+    this.filterBooks(this.state.filterText, filterType.target.value);
+  };
+
+  // filter books based on filter type
+  filterBooks = (filterText, filterType) => {
+    // turn search case-insensitive and remove
+    // hyphens if searching for isbn
+    let modifiedFilterText = filterText.toLowerCase();
+    if (filterType === "isbn") {
+      modifiedFilterText = modifiedFilterText.trim().replace(/-/g, "");
+    }
+
+    const newBooks = [...this.state.books].filter(book =>
+      book[filterType].toLowerCase().includes(modifiedFilterText)
+    );
+    this.setState({ filterText, filterType, filteredBooks: newBooks });
+  };
+
+  // get book information that is passed down into modal
   getBookInformation = () => {
     const selectedBook = this.state.books.filter(
       ({ id }) => this.state.selectedBookId === id
@@ -190,18 +219,20 @@ class Anthology extends Component {
   };
 
   render() {
-    // if no books loaded yet show spinner
+    // if no books available show spinner
     let books = (
-      <div>
-        Loading books...
+      <div className={classes.spinnerContainer}>
+        <p className={classes.spinnerNotification}>
+          No books found. Check filter options.
+        </p>
         <Spinner />
       </div>
     );
 
     // create books to display by mapping over retrieved books
     // from backend.
-    if (this.state.books && this.state.books.length > 0) {
-      books = this.state.books.map(book => (
+    if (this.state.filteredBooks && this.state.filteredBooks.length > 0) {
+      books = this.state.filteredBooks.map(book => (
         <Book
           key={book.id}
           clickImage={() => this.handleShowModal(book.id, "Update")}
@@ -224,8 +255,13 @@ class Anthology extends Component {
         >
           {modalContent}
         </Modal>
-        <Controls filter={this.handleFilterBooks} />
-        {books}
+        <Controls
+          onFilterTypeChange={this.handleFilterType}
+          onFilterTextChange={this.handleFilterText}
+          filterText={this.state.filterText}
+          filterType={this.state.filterType}
+        />
+        <main className={classes.books}>{books}</main>
       </div>
     );
   }

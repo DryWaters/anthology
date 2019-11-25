@@ -60,7 +60,10 @@ describe("<Anthology />", () => {
       books: [],
       errorMessage: "Some error",
       modalContent: "Add",
-      selectedBookId: 1
+      selectedBookId: 1,
+      filteredBooks: [],
+      filterText: "",
+      filterType: "title"
     });
 
     wrapper.instance().handleCloseModal();
@@ -68,7 +71,10 @@ describe("<Anthology />", () => {
       books: [],
       modalContent: null,
       errorMessage: null,
-      selectedBookId: null
+      selectedBookId: null,
+      filteredBooks: [],
+      filterText: "",
+      filterType: "title"
     });
   });
 
