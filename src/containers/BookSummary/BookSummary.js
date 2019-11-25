@@ -95,7 +95,7 @@ class BookSummary extends Component {
   // requests if user does not let the request finish
   abortController = new window.AbortController();
 
-  componentDidMount() {
+  componentDidMount = () => {
     // if adding a book, nothing to validate
     if (!this.props.book) {
       return;
@@ -113,12 +113,12 @@ class BookSummary extends Component {
       bookForm: newForm,
       isFormValid
     });
-  }
+  };
 
-  componentWillUnmount() {
+  componentWillUnmount = () => {
     // abort any pending fetch requests
     this.abortController.abort();
-  }
+  };
 
   fetchBookDetails = () => {
     let url =
@@ -187,7 +187,7 @@ class BookSummary extends Component {
       .catch(err => {});
   };
 
-  handleBlurChanged = (event, input) => {
+  handleBlurChanged = (_, input) => {
     if (
       input === "isbn" &&
       this.state.bookForm.isbn.valid &&
@@ -252,7 +252,7 @@ class BookSummary extends Component {
     }
   };
 
-  render() {
+  render = () => {
     // display error message if fetch() pushes error downstream
     let errorMessage = null;
     if (this.props.errorMessage) {
@@ -307,7 +307,7 @@ class BookSummary extends Component {
         {form}
       </div>
     );
-  }
+  };
 }
 
 BookSummary.propTypes = {

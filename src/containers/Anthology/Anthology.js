@@ -25,7 +25,7 @@ class Anthology extends Component {
   };
 
   // Show an error modal if unable to fetch books
-  componentDidMount() {
+  componentDidMount = () => {
     fetch(jsonURL + "/books")
       .then(res => {
         if (res.status === 200) {
@@ -38,7 +38,7 @@ class Anthology extends Component {
         this.setState({ books: data, filteredBooks: data });
       })
       .catch(err => this.setFetchErrorState(err));
-  }
+  };
 
   // Helper method to set error state from different
   // fetch calls
@@ -218,7 +218,7 @@ class Anthology extends Component {
     return modalContent;
   };
 
-  render() {
+  render = () => {
     // if no books available show spinner
     let books = (
       <div className={classes.spinnerContainer}>
@@ -262,7 +262,7 @@ class Anthology extends Component {
         <main className={classes.books}>{books}</main>
       </div>
     );
-  }
+  };
 }
 
 export default Anthology;
