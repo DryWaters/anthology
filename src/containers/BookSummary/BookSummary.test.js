@@ -6,7 +6,7 @@ import BookSummary from "./BookSummary";
 describe("<BookSummary />", () => {
   it("should render", () => {
     const wrapper = shallow(
-      <BookSummary status="someStatus" update={() => {}} />
+      <BookSummary status="someStatus" onUpdate={() => {}} />
     );
     expect(wrapper).toMatchSnapshot();
   });

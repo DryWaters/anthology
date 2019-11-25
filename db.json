@@ -96,7 +96,7 @@
       "author": "Douglas Adams",
       "description": "A one-volume edition charting Arthur Dent's odyssey through space, comprising:\"The Hitchhikers Gu...",
       "image": "https://books.google.com/books/content?id=QlKlswEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "loaned": false,
+      "loaned": true,
       "id": "4f605434-e02d-4dc6-8d04-8eeb192d5685"
     },
     {
@@ -123,7 +123,7 @@
       "author": "George R. R. Martin",
       "description": "The three surviving contenders for the throne of the Seven Kingdoms continue to struggle among th...",
       "image": "https://books.google.com/books/content?id=Jw0exdlwSeMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": false,
+      "loaned": true,
       "id": "a47c213b-ddb6-44ef-98e4-7d4ee09f8b7d"
     },
     {

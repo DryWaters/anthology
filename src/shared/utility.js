@@ -6,7 +6,8 @@ export const validateInput = input => {
 
   // check for input length
   if (input.validation.required) {
-    if (!input.value) {
+    // fail if input has no value to check
+    if (!input.hasOwnProperty("value")) {
       isValid = false;
     } else {
       isValid = input.value.trim() !== "" && isValid;
@@ -19,6 +20,7 @@ export const validateInput = input => {
     isValid = validURL && isValid;
   }
 
+  // check if string is a valid ISBN for books
   if (input.validation.validISBN) {
     const validISBN = isValidISBN(input.value) && isValid;
     isValid = validISBN && isValid;
@@ -45,17 +47,16 @@ export const isValidURL = url => {
   return !!pattern.test(url);
 };
 
-// check if isbn is blank or valid ISBN
+// check if ISBN is blank or valid ISBN
 export const isValidISBN = isbn => {
   // Allow blank ISBN
   if (isbn.length === 0) {
     return true;
   }
 
-  //remove whitespace and remove hyphens in ISBN
+  //remove whitespace and hyphens in ISBN
   isbn = isbn.trim().replace(/-/g, "");
 
-  // Check for valid ISBN10
   if (isbn.length === 10) {
     // check if have valid characters
     // should contain only digits and ISBN10 last digit
@@ -79,8 +80,6 @@ export const isValidISBN = isbn => {
     }, 0);
     return sum % 11 === 0;
   } else if (isbn.length === 13) {
-    // Check for valid ISBN13
-
     // check if have valid characters
     // should contain only digits and ISBN13 last digit
     // checksum CANNOT be X

@@ -31,7 +31,7 @@ const BookDialog = props => {
         </Button>
         <Button
           btnType="danger"
-          clicked={() => props.delete(props.book.id, "DELETE")}
+          clicked={() => props.onDelete(props.book.id, "DELETE")}
         >
           Delete
         </Button>
@@ -50,6 +50,7 @@ BookDialog.propTypes = {
     loaned: PropTypes.bool,
     title: PropTypes.string.isRequired
   }),
+  onDelete: PropTypes.func.isRequired,
   errorMessage: PropTypes.string
 };
 

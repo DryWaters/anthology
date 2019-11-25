@@ -18,15 +18,15 @@ const Book = props => {
   return (
     <div className={classes.Book}>
       <div className={classes.bookControls}>
-        <BookButton clicked={props.deleteBook} btnType={"delete"} />
-        <button className={classes.imageButton} onClick={props.clickImage}>
+        <BookButton onClicked={props.onDeleteBook} btnType={"delete"} />
+        <button className={classes.imageButton} onClick={props.onClickImage}>
           <BookImage
             title={props.title}
             image={props.image}
             loaned={props.loaned}
           />
         </button>
-        <BookButton clicked={props.toggleLoan} btnType={status} />
+        <BookButton onClicked={props.onToggleLoan} btnType={status} />
       </div>
       <div className={classes.title}>{title}</div>
     </div>
@@ -34,11 +34,12 @@ const Book = props => {
 };
 
 Book.propTypes = {
-  clickImage: PropTypes.func.isRequired,
   image: PropTypes.string,
   loaned: PropTypes.bool.isRequired,
   title: PropTypes.string.isRequired,
-  toggleLoan: PropTypes.func.isRequired
+  onClickImage: PropTypes.func.isRequired,
+  onDeleteBook: PropTypes.func,
+  onToggleLoan: PropTypes.func.isRequired
 };
 
 export default Book;

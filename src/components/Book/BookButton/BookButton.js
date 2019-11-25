@@ -28,7 +28,7 @@ const BookButton = props => {
   return (
     <button
       className={[classes.BookButton, classes[props.btnType]].join(" ")}
-      onClick={props.clicked}
+      onClick={props.onClicked}
     >
       <img src={imageSrc} alt={altText} />
     </button>
@@ -37,7 +37,7 @@ const BookButton = props => {
 
 BookButton.propTypes = {
   btnType: PropTypes.string.isRequired,
-  clicked: PropTypes.func.isRequired
+  onClicked: PropTypes.func.isRequired
 };
 
 export default BookButton;

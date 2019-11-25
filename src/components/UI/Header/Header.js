@@ -8,14 +8,14 @@ import classes from "./Header.module.scss";
 const Header = props => (
   <header className={classes.Header}>
     <div className={classes.logoText}>ANTHOLOGY</div>
-    <Button clicked={props.clicked} btnType="primary">
+    <Button clicked={props.onClicked} btnType="primary">
       Add Book
     </Button>
   </header>
 );
 
 Header.propTypes = {
-  clicked: PropTypes.func.isRequired
+  onClicked: PropTypes.func.isRequired
 };
 
 export default Header;

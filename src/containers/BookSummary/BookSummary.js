@@ -27,7 +27,7 @@ class BookSummary extends Component {
         },
         value: this.props.book ? this.props.book.isbn : "",
         touched: false,
-        valid: false
+        valid: true
       },
       title: {
         elementType: "input",
@@ -77,7 +77,7 @@ class BookSummary extends Component {
         },
         value: this.props.book ? this.props.book.image : "",
         touched: false,
-        valid: false
+        valid: true
       },
       loaned: {
         elementType: "input",
@@ -245,10 +245,10 @@ class BookSummary extends Component {
     // else generate a new UUID
     if (this.props.book && this.props.book.id) {
       newBook.id = this.props.book.id;
-      this.props.update(newBook, "PUT");
+      this.props.onUpdate(newBook, "PUT");
     } else {
       newBook.id = uuidv4();
-      this.props.update(newBook, "POST");
+      this.props.onUpdate(newBook, "POST");
     }
   };
 
@@ -280,11 +280,11 @@ class BookSummary extends Component {
             value={formElement.config.value}
             invalid={!formElement.config.valid}
             touched={formElement.config.touched}
-            blurred={event => this.handleBlurChanged(event, formElement.id)}
-            changed={event => this.handleInputChanged(event, formElement.id)}
+            onBlurred={event => this.handleBlurChanged(event, formElement.id)}
+            onChanged={event => this.handleInputChanged(event, formElement.id)}
           />
         ))}
-        <Button btnType="cancel" clicked={this.props.cancel}>
+        <Button btnType="cancel" clicked={this.props.onCancel}>
           Cancel
         </Button>
         <Button btnType="submit" disabled={!this.state.isFormValid}>
@@ -321,7 +321,7 @@ BookSummary.propTypes = {
     title: PropTypes.string.isRequired
   }),
   status: PropTypes.string.isRequired,
-  update: PropTypes.func.isRequired,
+  onUpdate: PropTypes.func.isRequired,
   errorMessage: PropTypes.string
 };
 

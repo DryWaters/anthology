@@ -23,9 +23,9 @@ const Input = props => {
           className={inputClasses.join(" ")}
           {...props.elementConfig}
           value={props.value}
-          onChange={props.changed}
-          checked={props.checked}
-          onBlur={props.blurred}
+          onChange={props.onChanged}
+          checked={props.onChecked}
+          onBlur={props.onBlurred}
         />
       );
       break;
@@ -35,7 +35,7 @@ const Input = props => {
           className={inputClasses.join(" ")}
           {...props.elementConfig}
           value={props.value}
-          onChange={props.changed}
+          onChange={props.onChanged}
         />
       );
       break;
@@ -45,7 +45,7 @@ const Input = props => {
           className={inputClasses.join(" ")}
           {...props.elementConfig}
           value={props.value}
-          onChange={props.changed}
+          onChange={props.onChanged}
         />
       );
   }
@@ -59,9 +59,9 @@ const Input = props => {
 };
 
 Input.propTypes = {
-  blurred: PropTypes.func.isRequired,
-  changed: PropTypes.func.isRequired,
-  checked: PropTypes.bool,
+  onBlurred: PropTypes.func.isRequired,
+  onChanged: PropTypes.func.isRequired,
+  onChecked: PropTypes.bool,
   elementType: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   invalid: PropTypes.bool.isRequired,

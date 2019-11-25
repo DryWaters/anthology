@@ -186,7 +186,7 @@ class Anthology extends Component {
         modalContent = (
           <ErrorDialog
             errorMessage={this.state.errorMessage}
-            cancel={this.handleCloseModal}
+            onCancel={this.handleCloseModal}
           />
         );
         break;
@@ -195,8 +195,8 @@ class Anthology extends Component {
           <BookDialog
             errorMessage={this.state.errorMessage}
             book={this.getBookInformation()}
-            delete={this.handleUpdateBooks}
-            cancel={this.handleCloseModal}
+            onDelete={this.handleUpdateBooks}
+            onCancel={this.handleCloseModal}
           />
         );
         break;
@@ -206,8 +206,8 @@ class Anthology extends Component {
           <BookSummary
             errorMessage={this.state.errorMessage}
             status={this.state.modalContent}
-            cancel={this.handleCloseModal}
-            update={this.handleUpdateBooks}
+            onCancel={this.handleCloseModal}
+            onUpdate={this.handleUpdateBooks}
             book={this.getBookInformation()}
           />
         );
@@ -233,9 +233,9 @@ class Anthology extends Component {
       books = this.state.filteredBooks.map(book => (
         <Book
           key={book.id}
-          clickImage={() => this.handleShowModal(book.id, "Update")}
-          deleteBook={() => this.handleShowModal(book.id, "Delete")}
-          toggleLoan={() => this.handleUpdateBooks(book, "PATCH")}
+          onClickImage={() => this.handleShowModal(book.id, "Update")}
+          onDeleteBook={() => this.handleShowModal(book.id, "Delete")}
+          onToggleLoan={() => this.handleUpdateBooks(book, "PATCH")}
           {...book}
         />
       ));
@@ -246,10 +246,10 @@ class Anthology extends Component {
 
     return (
       <div className={classes.Anthology}>
-        <Header clicked={() => this.setState({ modalContent: "Add" })} />
+        <Header onClicked={() => this.setState({ modalContent: "Add" })} />
         <Modal
           show={this.state.modalContent !== null}
-          modalClose={this.handleCloseModal}
+          onModalClose={this.handleCloseModal}
         >
           {modalContent}
         </Modal>

@@ -10,7 +10,7 @@ const Modal = props => {
 
   return (
     <Fragment>
-      <Backdrop show={props.show} clicked={props.modalClose} />
+      <Backdrop show={props.show} onClicked={props.onModalClose} />
       <div className={[modalStyles, classes.Modal].join(" ")}>
         {props.children}
       </div>
@@ -19,7 +19,7 @@ const Modal = props => {
 };
 
 Modal.propTypes = {
-  modalClose: PropTypes.func.isRequired,
+  onModalClose: PropTypes.func.isRequired,
   show: PropTypes.bool.isRequired
 };
 
