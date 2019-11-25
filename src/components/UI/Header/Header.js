@@ -6,12 +6,12 @@ import Button from "../Button/Button";
 import classes from "./Header.module.scss";
 
 const Header = props => (
-  <div className={classes.Header}>
+  <header className={classes.Header}>
     <div className={classes.logoText}>ANTHOLOGY</div>
     <Button clicked={props.clicked} btnType="primary">
       Add Book
     </Button>
-  </div>
+  </header>
 );
 
 Header.propTypes = {

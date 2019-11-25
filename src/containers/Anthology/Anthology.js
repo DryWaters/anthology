@@ -223,7 +223,7 @@ class Anthology extends Component {
         >
           {modalContent}
         </Modal>
-        {books}
+        <main className={classes.books}>{books}</main>
       </div>
     );
   }

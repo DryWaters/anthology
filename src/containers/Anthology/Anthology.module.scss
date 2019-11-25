@@ -2,11 +2,14 @@
 
 .Anthology {
   background-color: $color-primary;
+  min-height: 100vh;
+  padding-top: 7rem;
+}
+
+.books {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  min-height: 100vh;
-  padding-top: 7rem;
 }
 
 @media (min-width: 500px) {
