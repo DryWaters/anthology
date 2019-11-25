@@ -4,12 +4,16 @@ import classes from "./Controls.module.scss";
 
 const Controls = props => (
   <div className={classes.Controls}>
+    <label htmlFor="filterText">
+      <span className={classes.screenReader}>Filter Text</span>
+    </label>
     <input
       className={classes.filterText}
       onChange={props.onFilterTextChange}
       type="text"
       value={props.filterText}
-      placeholder="Search"
+      placeholder="Filter Text"
+      name="filterText"
     />
     <select
       className={classes.filterType}

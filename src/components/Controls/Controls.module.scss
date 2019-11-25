@@ -8,6 +8,19 @@
   font-size: $text-xlarge-size;
 }
 
+//https://www.coolfields.co.uk/2016/05/text-for-screen-readers-only-updated/
+.screenReader {
+  border: 0;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  margin: -1px;
+  width: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  word-wrap: normal !important;
+}
+
 .filterText {
   background-color: $color-grey-1;
   border: 2px solid $color-secondary;
