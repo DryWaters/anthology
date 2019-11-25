@@ -13,12 +13,16 @@ const Controls = props => (
       type="text"
       value={props.filterText}
       placeholder="Type to filter..."
-      name="filterText"
+      id="filterText"
     />
+    <label htmlFor="filterType">
+      <span className={classes.screenReader}>Filter Type</span>
+    </label>
     <select
       className={classes.filterType}
       onChange={props.onFilterTypeChange}
       value={props.filterType}
+      id="filterType"
     >
       <option value="isbn">ISBN</option>
       <option value="title">Title</option>
