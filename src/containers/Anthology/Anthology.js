@@ -40,6 +40,16 @@ class Anthology extends Component {
       .catch(err => this.setFetchErrorState(err));
   };
 
+  componentDidUpdate = (_, prevState) => {
+    // if changing books, filter the new list with previous filtered selection
+    if (prevState.books !== this.state.books) {
+      this.filterBooks(prevState.filterText, prevState.filterType);
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   // Helper method to set error state from different
   // fetch calls
   setFetchErrorState = errorMessage => {
@@ -133,11 +143,8 @@ class Anthology extends Component {
         if (res.status === 200 || res.status === 201) {
           this.setState({
             books: newBooks,
-            filteredBooks: newBooks,
             modalContent: null,
-            selectedBookId: null,
-            filterText: "",
-            filterType: "title"
+            selectedBookId: null
           });
         } else {
           return Promise.reject("Error processing update: Code " + res.status);

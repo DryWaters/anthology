@@ -6,7 +6,7 @@
       "author": "Marijn Haverbeke",
       "description": "Eloquent JavaScriptdives into the JavaScript language to show programmers how to write elegant, e...",
       "image": "http://books.google.com/books/content?id=ZwL9swEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "loaned": false,
+      "loaned": true,
       "id": "0b2c552d-11b4-451c-bbdc-eee101ada855"
     },
     {
@@ -42,7 +42,7 @@
       "author": "Matt Frisbie",
       "description": "Update your skill set for ES 6 and 7 with the ultimate JavaScript guide for pros Professional Jav...",
       "image": "https://books.google.com/books/content?id=3GOuDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api",
-      "loaned": false,
+      "loaned": true,
       "id": "1b90364d-e958-44c8-8ef5-e8c3a8047af1"
     },
     {
