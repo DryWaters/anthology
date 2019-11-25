@@ -24,7 +24,7 @@ const Input = props => {
           {...props.elementConfig}
           value={props.value}
           onChange={props.onChanged}
-          checked={props.onChecked}
+          checked={props.checked}
           onBlur={props.onBlurred}
         />
       );
@@ -61,7 +61,7 @@ const Input = props => {
 Input.propTypes = {
   onBlurred: PropTypes.func.isRequired,
   onChanged: PropTypes.func.isRequired,
-  onChecked: PropTypes.bool,
+  checked: PropTypes.bool,
   elementType: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
   invalid: PropTypes.bool.isRequired,

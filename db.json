@@ -15,7 +15,7 @@
       "author": "Unmesh Gundecha",
       "description": "Over 90 recipes to help you build and run automated tests for your web applications with Selenium...",
       "image": "https://books.google.com/books/content?id=HXC7jgEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api",
-      "loaned": false,
+      "loaned": true,
       "id": "af500c57-bc5d-4b12-8c88-6dedee24f8fd"
     },
     {
