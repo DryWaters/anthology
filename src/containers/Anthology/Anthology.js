@@ -222,9 +222,7 @@ class Anthology extends Component {
     // if no books available show spinner
     let books = (
       <div className={classes.spinnerContainer}>
-        <p className={classes.spinnerNotification}>
-          No books found. Check filter options.
-        </p>
+        <p>No books found. Check filter options.</p>
         <Spinner />
       </div>
     );

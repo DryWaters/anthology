@@ -2,9 +2,6 @@ import React from "react";
 import { shallow } from "enzyme";
 
 import Anthology from "./Anthology";
-import BookSummary from "../BookSummary/BookSummary";
-import BookDialog from "../../components/Book/BookDialog/BookDialog";
-import ErrorDialog from "../../components/UI/ErrorDialog/ErrorDialog";
 import Spinner from "../../components/UI/Spinner/Spinner";
 
 describe("<Anthology />", () => {
