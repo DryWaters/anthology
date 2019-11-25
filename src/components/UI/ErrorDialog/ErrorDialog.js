@@ -17,7 +17,7 @@ const ErrorDialog = props => {
     <div className={classes.ErrorDialog}>
       {errorMessage}
       <div>
-        <Button btnType="cancel" clicked={props.cancel}>
+        <Button btnType="cancel" clicked={props.onCancel}>
           OK
         </Button>
       </div>
@@ -26,7 +26,7 @@ const ErrorDialog = props => {
 };
 
 ErrorDialog.propTypes = {
-  cancel: PropTypes.func.isRequired,
+  onCancel: PropTypes.func.isRequired,
   errorMessage: PropTypes.string
 };
 
