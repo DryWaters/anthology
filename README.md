@@ -38,7 +38,7 @@ See setup at [MY JSON Server](https://my-json-server.typicode.com/).
 and other great NPM packages.  See package.json for full list.
 
 ## Contributing
-Feel free to fork into your own repo to add additional features.
+Feel free to fork into your own repository to add additional features.
 
 ## Example
 As of this writing an example of the application can be located at:
